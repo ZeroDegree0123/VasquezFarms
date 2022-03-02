@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { signUp } from '../../utilities/users-service';
 
 export default class SignUpForm extends Component {
     state = {
@@ -16,10 +17,21 @@ export default class SignUpForm extends Component {
         });
     };
 
-    handleSubmit = (evt) => {
+    handleSubmit = async (evt) => {
         evt.preventDefault();
-        alert(JSON.stringify(this.state));
+        try {
+          const formData = {...this.state};
+          delete formData.confirm
+          delete formData.error
+          // the promise returned by the signup service method
+          // will resolve to the user object included in the 
+          // payload of hte JSON Web Token (JWT)
+          const user = await signUp(formData);
+        } catch {
+          // An error happened on the server
+          this.setState({ error: 'Sign Up failed - Try Again'})
 
+        }
     }
     //In classes we must override the render method
     // the render method is the equivalent to a function-based component
