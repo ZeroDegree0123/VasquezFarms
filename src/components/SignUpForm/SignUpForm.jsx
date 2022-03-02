@@ -27,6 +27,7 @@ export default class SignUpForm extends Component {
           // will resolve to the user object included in the 
           // payload of hte JSON Web Token (JWT)
           const user = await signUp(formData);
+          this.props.setUser(user)
         } catch {
           // An error happened on the server
           this.setState({ error: 'Sign Up failed - Try Again'})
