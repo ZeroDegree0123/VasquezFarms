@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
 import * as usersService from '../../utilities/users-service';
 
 
@@ -9,11 +8,6 @@ export default function LoginForm({ setUser, redirect }) {
     password: ''
   });
   const [error, setError] = useState('');
-  const navigate = useNavigate();
-
-  function handleNav() {
-    navigate("/orders")
-  }
 
   function handleChange(evt) {
     setCredentials({ ...credentials, [evt.target.name]: evt.target.value });

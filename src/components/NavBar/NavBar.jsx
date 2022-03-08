@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { getUser } from '../../utilities/users-service';
+// import { getUser } from '../../utilities/users-service';
 // Using the import below, we can call any exported function using: userService.someMethod()
 import * as userService from '../../utilities/users-service';
 
@@ -14,7 +14,7 @@ export default function NavBar( {user, setUser} ) {
         <nav>
             <Link to="/orders">OrderHistory</Link>
             &nbsp; | &nbsp; 
-            <Link to="/orders/new">New Order</Link>
+            <Link to="/soaps">New Order</Link>
             &nbsp;&nbsp; 
                 { user ?
                     <Link to="/" onClick={handleLogOut}>Log Out</Link>
