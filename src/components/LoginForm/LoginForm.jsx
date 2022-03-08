@@ -1,12 +1,19 @@
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import * as usersService from '../../utilities/users-service';
 
-export default function LoginForm({ setUser }) {
+
+export default function LoginForm({ setUser, redirect }) {
   const [credentials, setCredentials] = useState({
     email: '',
     password: ''
   });
   const [error, setError] = useState('');
+  const navigate = useNavigate();
+
+  function handleNav() {
+    navigate("/orders")
+  }
 
   function handleChange(evt) {
     setCredentials({ ...credentials, [evt.target.name]: evt.target.value });
@@ -22,9 +29,11 @@ export default function LoginForm({ setUser }) {
       // payload of the JSON Web Token (JWT)
       const user = await usersService.login(credentials);
       setUser(user);
+      redirect()
     } catch {
       setError('Log In Failed - Try Again');
     }
+
   }
 
   return (
@@ -35,10 +44,11 @@ export default function LoginForm({ setUser }) {
           <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
           <label>Password</label>
           <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
-          <button type="submit">LOG IN</button>
+          <button  type="submit">LOG IN</button>
         </form>
       </div>
       <p className="error-message">&nbsp;{error}</p>
     </div>
   );
 }
+// onClick={handleClick}

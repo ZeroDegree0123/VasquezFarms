@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import Auth from '../AuthPage/Auth';
 import NewOrder from '../NewOrderPage/NewOrder';
@@ -9,21 +9,24 @@ import NavBar from '../../components/NavBar/NavBar';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
+  const navigate = useNavigate()
+
+  function redirect() {
+    let path = `/`;
+    navigate(path);
+  };
+
   return (
     <main className="App">
-      { user ?
         <>
           <NavBar setUser={setUser} user={ user }/>
           <Routes>
             {/* route components in here */}
             <Route path="/orders/new" element={<NewOrder/>} />
             <Route path="/orders" element={<OrderHistory/>}/>
+            <Route path="/login" element={<Auth setUser={setUser} redirect={redirect}/>} />
           </Routes>
         </>
-          :
-          <Auth setUser={setUser}/>
-
-      }
     </main>
   );
 }
