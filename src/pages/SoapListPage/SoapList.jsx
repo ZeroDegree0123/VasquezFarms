@@ -1,3 +1,16 @@
+import {useState} from 'react';
+
 export default function SoapList() {
-    return <h1>soap list</h1>
+    const [loading, setLoading] = useState(true)
+
+    function getCategory() {
+        return true
+    }
+
+    return (
+        <div>
+            
+        </div>
+
+    )
 }

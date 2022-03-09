@@ -11,4 +11,22 @@ export default function SoapForm() {
         category: '',
 
     })
+    // function handleChange(evt) {
+    //     setSoap
+    // }
+
+    // function handleSubmit() {
+
+    // }
+    return (
+        <>
+            {/* <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" /> */}
+        </>
+    )
 }

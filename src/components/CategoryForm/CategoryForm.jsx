@@ -20,8 +20,6 @@ export default function CategoryForm() {
         })
     }
 
-    // name="email" value={credentials.email}
-
     return (
         <>
             <form autoComplete="off" onSubmit={handleSubmit}>

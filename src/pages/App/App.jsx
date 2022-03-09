@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import Auth from '../AuthPage/Auth';
+import AdminPage from '../AdminPage/AdminPage';
 import HomePage from '../HomePage/HomePage';
 import SoapList from '../SoapListPage/SoapList';
 import OrderHistory from '../OrderHistoryPage/OrderHistory';
@@ -23,6 +24,7 @@ export default function App() {
           <NavBar setUser={setUser} user={ user }/>
           <Routes>
             {/* route components in here */}
+            <Route path="/admin" element={<AdminPage/>}/>
             <Route path="/home" element={<HomePage/>}/>
             <Route path="/soaps" element={<SoapList/>} />
             <Route path="/orders" element={<OrderHistory/>}/>
