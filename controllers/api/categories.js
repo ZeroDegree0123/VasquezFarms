@@ -6,15 +6,15 @@ module.exports = {
 };
 
 async function index(req, res) {
+    console.log('ctrl happy')
     try {
-        const cats = await Category.find(req.body)
+        const cats = await Category.find({})
         res.json(cats)
     } catch{
         res.send(err);
     }
 }
 
-console.log('happy')
 async function create(req, res) {
     try {
         const newCat = new Category({

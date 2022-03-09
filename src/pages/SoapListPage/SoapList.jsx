@@ -10,19 +10,15 @@ export default function SoapList() {
             const cats = await data.json();
             setCat(cats);
         }
+        getCat();
     }, []);
 
     return (
         <div>
-            {
-                cat.map((category) => {
-                    <div>
-                        <p>{category.name}</p>
-                        <p>{category.sortOrder}</p>
-                    </div>
-                })
-
-            }
+            <div>
+                <p>{cat.name}</p>
+                <p>{cat.sortOrder}</p>
+            </div>
         </div>
 
     )
