@@ -6,7 +6,10 @@ const categorySchema = new Schema({
         type: String,
         required:true,
     },
-    sortOrder: Number
+    sortOrder: {
+        type: Number,
+        required: true,
+ }
 });
 
 module.exports = mongoose.model('Category', categorySchema);
