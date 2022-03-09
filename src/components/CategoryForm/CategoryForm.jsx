@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import * as categoriesApi from '../../utilities/categories-api'
+import * as categoryApi from '../../utilities/categories-api'
+
 
 export default function CategoryForm() {
     const [categories, setCategories] = useState({
@@ -13,11 +14,12 @@ export default function CategoryForm() {
 
     async function handleSubmit(evt) {
         evt.preventDefault();
-        categoriesApi.makeCategory(categories);
+        categoryApi.makeCategory(categories);
         setCategories({
             catName:'',
             sortOrder:'',
         })
+        
     }
 
     return (

@@ -7,7 +7,7 @@ module.exports = {
 
 async function index(req, res) {
     try {
-        const cats = await Category.find({})
+        const cats = await Category.find(req.body)
         res.json(cats)
     } catch{
         res.send(err);

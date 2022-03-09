@@ -1,0 +1,1 @@
+import * as categoriesAPI from "./categories-api";
