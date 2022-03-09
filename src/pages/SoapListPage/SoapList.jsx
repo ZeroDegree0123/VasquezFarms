@@ -16,9 +16,19 @@ export default function SoapList() {
     return (
         <div>
             <div>
-                <p>{cat.name}</p>
-                <p>{cat.sortOrder}</p>
+                <p>{cat}</p>
             </div>
+
+
+            {/* {
+                cat.map((category) => {
+                    <div>
+                        <p>{category.name}</p>
+                        <p>{category.sortOrder}</p>
+                    </div>
+                })
+
+            } */}
         </div>
 
     )
