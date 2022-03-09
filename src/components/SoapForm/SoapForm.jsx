@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import * as soapsAPI from '../../utilities/soaps-api'
 
 export default function SoapForm() {
-    const [soap, setSoap] = useState({
+    const [soaps, setSoaps] = useState({
         name: '',
         img: '',
         scent: '',
@@ -11,22 +12,50 @@ export default function SoapForm() {
         category: '',
 
     })
-    // function handleChange(evt) {
-    //     setSoap
-    // }
+    function handleChange(evt) {
+        setSoaps({...soaps, [evt.target.name]: evt.target.value});
+    }
 
-    // function handleSubmit() {
-
-    // }
+    async function handleSubmit(evt) {
+        evt.preventDefault();
+        soapsAPI.makeSoap(soaps);
+        setSoaps({
+            name: '',
+            img: '',
+            scent: '',
+            description: '',
+            ingredients: [],
+            price: '',
+            category: '',
+        })
+        
+    }
     return (
         <>
-            {/* <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" /> */}
+            <form action="">
+                <label htmlFor=""> add label
+                    <input type="text" />
+                </label>
+                <label htmlFor=""> add label
+                    <input type="text" />
+                </label>
+                <label htmlFor=""> add label
+                    <input type="text" />
+                </label>
+                <label htmlFor=""> add label
+                    <input type="text" />
+                </label>
+                <label htmlFor=""> add label
+                    <input type="text" />
+                </label>
+                <label htmlFor=""> add label
+                    <input type="text" />
+                </label>
+                <label htmlFor=""> add label
+                    <input type="text" />
+                </label>
+                <button>Add Soap</button>
+            </form>
         </>
     )
 }

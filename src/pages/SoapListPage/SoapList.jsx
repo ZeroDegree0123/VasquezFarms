@@ -7,28 +7,21 @@ export default function SoapList() {
     useEffect(function() {
         async function getCat() {
             const data = await categoryAPI.showCategory();
-            const cats = await data.json();
-            setCat(cats);
+            // const cats = await data.json();
+            setCat(data);
+            console.log('function hit');
         }
         getCat();
     }, []);
 
+
+    
     return (
         <div>
+            <h1>Soaps</h1>
             <div>
-                <p>{cat}</p>
+                {cat.name}
             </div>
-
-
-            {/* {
-                cat.map((category) => {
-                    <div>
-                        <p>{category.name}</p>
-                        <p>{category.sortOrder}</p>
-                    </div>
-                })
-
-            } */}
         </div>
 
     )
