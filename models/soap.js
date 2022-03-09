@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const Schema = require('mongoose').Schema;
+const Schema = mongoose.Schema;
 
 require('./category')
 
 const soapSchema = new Schema({
-    name:{
+    soapName:{
         type: String,
         required: true
     },

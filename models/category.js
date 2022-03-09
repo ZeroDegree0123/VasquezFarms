@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const categorySchema = new Schema({
-    name: {
+    catName: {
         type: String,
         required:true,
-        sortOrder: Number
-    }
+    },
+    sortOrder: Number
 });
 
 module.exports = mongoose.model('Category', categorySchema);
