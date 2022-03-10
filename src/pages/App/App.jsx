@@ -11,6 +11,7 @@ import NavBar from '../../components/NavBar/NavBar';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
+  const [cart, setCart] = useState(null)
   const navigate = useNavigate()
 
   function redirect() {

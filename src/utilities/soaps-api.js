@@ -3,6 +3,7 @@ const BASE_URL = '/api/soaps';
 
 
 export function makeSoap(soaps) {
+    console.log('api happy')
     return sendRequest(`${BASE_URL}/new`, "POST", soaps);
 }
 

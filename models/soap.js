@@ -8,11 +8,7 @@ const soapSchema = new Schema({
         type: String,
         required: true
     },
-    Image:{
-        type: String,
-        required: true
-    },
-    scent:{
+    image:{
         type: String,
         required: true
     },

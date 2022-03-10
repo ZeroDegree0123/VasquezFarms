@@ -1,28 +1,29 @@
 import {useState, useEffect} from 'react';
-import * as categoryAPI from '../../utilities/categories-api'
+import * as categoryAPI from '../../utilities/categories-api';
+import CategoryList from '../../components/CategoryList/CategoryList';
+
 export default function SoapList() {
+    const [soap, setSoap] = useState(null)
     const [loading, setLoading] = useState(true)
     const [cat, setCat] = useState([])
 
     useEffect(function() {
         async function getCat() {
             const data = await categoryAPI.showCategory();
+            // const catName = 
             // const cats = await data.json();
             setCat(data);
-            console.log('function hit');
         }
         getCat();
     }, []);
-
-
-    
+    // console.log('function hit');
     return (
-        <div>
-            <h1>Soaps</h1>
+        <main>
             <div>
-                {cat.name}
+                <CategoryList
+                    cat={cat}
+                />
             </div>
-        </div>
-
+        </main>
     )
 }
