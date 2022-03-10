@@ -5,7 +5,7 @@ import { getUser } from '../../utilities/users-service';
 import Auth from '../AuthPage/Auth';
 import AdminPage from '../AdminPage/AdminPage';
 import HomePage from '../HomePage/HomePage';
-import SoapList from '../SoapListPage/SoapList';
+import ProductsPage from '../ProductsPage/ProductsPage';
 import OrderHistory from '../OrderHistoryPage/OrderHistory';
 import NavBar from '../../components/NavBar/NavBar';
 
@@ -27,7 +27,7 @@ export default function App() {
             {/* route components in here */}
             <Route path="/admin" element={<AdminPage/>}/>
             <Route path="/home" element={<HomePage/>}/>
-            <Route path="/soaps" element={<SoapList/>} />
+            <Route path="/soaps" element={<ProductsPage/>} />
             <Route path="/orders" element={<OrderHistory/>}/>
             <Route path="/login" element={<Auth setUser={setUser} redirect={redirect}/>} />
           </Routes>

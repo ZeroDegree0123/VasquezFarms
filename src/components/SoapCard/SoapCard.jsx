@@ -1,15 +1,11 @@
 import { Link } from "react-router-dom"
 
-export default function SoapCard({soaps}) {
-    const soapList = soaps.map((soap) =>
-        <div key={soap.id}>
-            {soap.soapName}
-            {soap.image}
-            {soap.price}
-        </div> )
+export default function SoapCard({soapProp}) {
     return (
-        <div>
-            <div>{soapList}</div>
-        </div>
+       <div>
+           <div>{soapProp.image}</div>
+           <div>{soapProp.soapName}</div>
+           <span>${soapProp.price.toFixed(2)}</span>
+       </div>
     )
 }
