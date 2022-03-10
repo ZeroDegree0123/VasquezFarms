@@ -6,6 +6,6 @@ export function makeCategory(categories) {
     return sendRequest(`${BASE_URL}/new`, "POST", categories);
 }
 
-export function showCategory(categoriesData) {
+export function showCategory() {
     return sendRequest(BASE_URL);
 }

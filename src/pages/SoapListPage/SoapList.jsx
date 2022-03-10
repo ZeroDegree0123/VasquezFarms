@@ -1,21 +1,28 @@
 import {useState, useEffect, useRef} from 'react';
-import * as categoryAPI from '../../utilities/categories-api';
+import * as categorysAPI from '../../utilities/categories-api';
+import * as soapsAPI from '../../utilities/soaps-api';
 import CategoryList from '../../components/CategoryList/CategoryList';
-
+import SoapCard from '../../components/SoapCard/SoapCard';
 export default function SoapList() {
-    const [soap, setSoap] = useState([]);
+    const [soaps, setSoaps] = useState([]);
     const [toggleCat, setToggleCat] = useState('');
-    const [cat, setCat] = useState([]);
+    const [cats, setCats] = useState([]);
     const categoryRef = useRef([]);
     // const [loading, setLoading] = useState(true);
 
     useEffect(function() {
-        // async function 
+        async function getSoaps() {
+            const soapData = await soapsAPI.showSoap();
+            categoryRef.current = soapData.reduce((cats, soap) => {
+                const cat = soap.category.name;
+                return cats.includes(cat) ? cats : [...cats, cat]; 
+            }, []);
+            setToggleCat(categoryRef.current.name)
+        }
+        getSoaps();
         async function getCat() {
-            const data = await categoryAPI.showCategory();
-            // const catName = 
-            // const cats = await data.json();
-            setCat(data);
+            const data = await categorysAPI.showCategory();
+            setCats(data);
         }
         getCat();
     }, []);
@@ -24,9 +31,12 @@ export default function SoapList() {
         <main>
             <div>
                 <CategoryList
-                    cat={cat}
+                    cats={cats}
                 />
+                <SoapCard soaps={soaps}/>
+                
             </div>
         </main>
+        
     )
 }

@@ -1,12 +1,22 @@
 const Soap = require('../../models/soap');
 
 module.exports = {
-   create
+   create,
+   index
   };
 
+  async function index(req, res) {
+    console.log('ctrl happy')
+    try {
+      const soaps = await Soap.find({}).sort('name').populate('category').exec()
+      soaps.sort((a, b) => a.category.sortOrder - b.category.sortOrder);
+      res.json(soaps);
+    } catch {
+      res.send(err)
+    }
+  }
 
   async function create(req, res) {
-    console.log('ctrl happy')
     try {
         const newSoap = new Soap({
           soapName:req.body.soapName,

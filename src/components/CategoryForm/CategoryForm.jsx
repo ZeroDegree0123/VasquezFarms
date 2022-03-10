@@ -1,12 +1,8 @@
-import { useState } from 'react';
+
 import * as categoryApi from '../../utilities/categories-api'
 
 
-export default function CategoryForm() {
-    const [categories, setCategories] = useState({
-        catName: '',
-        sortOrder: '',
-    })
+export default function CategoryForm({categories, setCategories}) {
 
     function handleChange(evt) {
         setCategories({...categories, [evt.target.name]: evt.target.value});

@@ -1,15 +1,15 @@
 import './CategoryList.css';
 
-export default function CategoryList({cat}) {
-    const category = cat.map((cats) => 
+export default function CategoryList({cats}) {
+    const categoryList = cats.map((cat) => 
         <div key={cat.id}>
-             <div>.  {cats.catName}  |</div>
+             <div>.  {cat.catName}  |</div>
         </div>
     );
     return (
         <>
             <div className='category'>
-                {category}
+                {categoryList}
             </div>
         </>
     )
