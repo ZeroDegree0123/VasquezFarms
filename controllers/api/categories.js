@@ -6,7 +6,6 @@ module.exports = {
 };
 
 async function index(req, res) {
-    console.log('ctrl happy')
     try {
         const cats = await Category.find({}).sort('catName')
         res.json(cats)

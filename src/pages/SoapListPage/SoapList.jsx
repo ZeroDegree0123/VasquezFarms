@@ -1,13 +1,16 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import * as categoryAPI from '../../utilities/categories-api';
 import CategoryList from '../../components/CategoryList/CategoryList';
 
 export default function SoapList() {
-    const [soap, setSoap] = useState(null)
-    const [loading, setLoading] = useState(true)
-    const [cat, setCat] = useState([])
+    const [soap, setSoap] = useState([]);
+    const [toggleCat, setToggleCat] = useState('');
+    const [cat, setCat] = useState([]);
+    const categoryRef = useRef([]);
+    // const [loading, setLoading] = useState(true);
 
     useEffect(function() {
+        // async function 
         async function getCat() {
             const data = await categoryAPI.showCategory();
             // const catName = 

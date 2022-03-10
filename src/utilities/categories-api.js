@@ -7,6 +7,5 @@ export function makeCategory(categories) {
 }
 
 export function showCategory(categoriesData) {
-    console.log('api happy')
     return sendRequest(BASE_URL);
 }

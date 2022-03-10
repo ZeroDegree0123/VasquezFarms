@@ -32,24 +32,18 @@ export default function SoapForm() {
         <>
             <form autoComplete="off" onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor=""> Soap Name 
-                        <input type="text" name="name" value={soaps.soapName} onChange={handleChange}/>
-                    </label>
-                    <label htmlFor=""> Img Url
+                    <label htmlFor=""> Soap Name:</label>
+                        <input type="text" name="soapName" value={soaps.soapName} onChange={handleChange}/>
+                    <label htmlFor=""> Img Url:</label>
                         <input type="string" name="image" value={soaps.image} onChange={handleChange}/>
-                    </label>
-                    <label htmlFor=""> Description
+                    <label htmlFor=""> Description:</label>
                         <input type="text" name="description" value={soaps.description} onChange={handleChange}/>
-                    </label>
-                    <label htmlFor=""> Ingredients
+                    <label htmlFor=""> Ingredients:</label>
                         <input type="text" name="ingredients" value={soaps.ingredients} onChange={handleChange}/>
-                    </label>
-                    <label htmlFor=""> Price
+                    <label htmlFor=""> Price:</label>
                         <input type="text" name="price" value={soaps.price} onChange={handleChange}/>
-                    </label>
-                    <label htmlFor=""> Category
+                    <label htmlFor=""> Category:</label>
                         <input type="text" name="category" value={soaps.category} onChange={handleChange}/>
-                    </label>
                     <button>Add Soap</button>
                 </div>
             </form>
