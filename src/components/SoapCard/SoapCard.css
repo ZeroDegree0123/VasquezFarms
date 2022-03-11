@@ -1,0 +1,7 @@
+.soap-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: solid 3px black;
+}

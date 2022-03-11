@@ -7,6 +7,10 @@ export function makeSoap(soaps) {
 }
 
 export function showSoap() {
-    console.log('api happy')
     return sendRequest(BASE_URL);
 }
+
+export function displaySoapDetail(soapId) {
+    console.log('api happy')
+    return sendRequest(`${BASE_URL}/:id`, 'GET', {soapId})
+} 
