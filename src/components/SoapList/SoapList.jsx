@@ -1,15 +1,15 @@
 import SoapCard from '../../components/SoapCard/SoapCard';
 
-export default function SoapList({allSoaps}) {
-    const soaps = allSoaps.map(soap => 
+export default function SoapList({soaps}) {
+    const allSoaps = soaps.map(soap => 
         <SoapCard
             key={soap.id}
-            soapProp={soap}
+            soap={soap}
         />
     );
     return (
         <main>
-            {soaps}
+            {allSoaps}
         </main>
     )
 }

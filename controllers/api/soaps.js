@@ -5,23 +5,23 @@ module.exports = {
    index, 
    show
   };
-
+ 
   async function show(req, res) {
     console.log('ctrl happy')
     try {
-      const soap = await Soap.find(sop => sop.id)
+      const soap = await Soap.findById(req.params.id)
       res.json(soap);
-    } catch {
+    } catch (err) {
       res.send(err)
     }
   }
-
+  
   async function index(req, res) {
     try {
       const soaps = await Soap.find({}).sort('name').populate('category').exec()
       soaps.sort((a, b) => a.category.sortOrder - b.category.sortOrder);
       res.json(soaps);
-    } catch {
+    } catch (err) {
       res.send(err)
     }
   }

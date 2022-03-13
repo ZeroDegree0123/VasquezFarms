@@ -24,13 +24,13 @@ export default function App() {
     // const [loading, setLoading] = useState(true);
     useEffect(function() {
         async function getSoaps() {
-            const soapData = await soapsAPI.showSoap();
+            const soapData = await soapsAPI.allSoaps();
             categoryRef.current = soapData.reduce((cats, soap) => {
-                const cat = soap.category.name;
+                const cat = soap.category.catName;
                 return cats.includes(cat) ? cats : [...cats, cat]; 
             }, []);
             setSoaps(soapData)
-            setToggleCat(categoryRef.current.name)
+            setToggleCat(categoryRef.current[0])// COME BACKTO
         }
         getSoaps();
         async function getCat() {
@@ -53,8 +53,8 @@ export default function App() {
             {/* route components in here */}
             <Route path="/admin" element={<AdminPage soaps={soaps}/>}/>
             <Route path="/home" element={<HomePage/>}/>
-            <Route path="/soaps" element={<ProductsPage soaps={soaps} cats={cats} toggleCat={toggleCat} setToggleCat={setToggleCat} />} />
-            <Route path="/soaps/:soapName" element={<SoapDetailPage soaps={soaps}/>}/>
+            <Route path="/soaps" element={<ProductsPage categories={categoryRef.current} soaps={soaps} cats={cats} toggleCat={toggleCat} setToggleCat={setToggleCat} />} />
+            <Route path="/soaps/:soapId" element={<SoapDetailPage soap={soaps}/>}/>
             <Route path="/orders" element={<OrderHistory/>}/>
             <Route path="/login" element={<Auth setUser={setUser} redirect={redirect}/>} />
           </Routes>

@@ -6,11 +6,11 @@ export function makeSoap(soaps) {
     return sendRequest(`${BASE_URL}/new`, "POST", soaps);
 }
 
-export function showSoap() {
+export function allSoaps() {
     return sendRequest(BASE_URL);
 }
 
-export function displaySoapDetail(soapId) {
+export function showSoap(soapId) {
     console.log('api happy')
-    return sendRequest(`${BASE_URL}/:id`, 'GET', {soapId})
+    return sendRequest(`${BASE_URL}/${soapId}`)
 } 
