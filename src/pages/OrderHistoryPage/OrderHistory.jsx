@@ -1,15 +1,16 @@
-import * as usersService from '../../utilities/users-service'
+import { Link } from 'react-router-dom';
 
-export default function OrderHistory() {
-    async function handleCheckToken() {
-      const expDate = await usersService.checkToken();
-      console.log(expDate)
+export default function OrderHistory({ user, setUser }) {
+  return (
+    <main className="OrderHistoryPage">
+      <aside>
 
-    }
-    return (
-    <>
-        <h1>OrderHistoryPage</h1>
-        <button onClick={() => handleCheckToken()}>Check When My</button>
-    </>
-    )
+        <Link to="/orders/new" className="button btn-sm">NEW ORDER</Link>
+      </aside>
+      {/* Render an OrderList component (needs to be coded) */}
+
+      {/* Render the existing OrderDetail component */}
+
+    </main>
+  );
 }

@@ -4,7 +4,10 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import * as categorysAPI from '../../utilities/categories-api';
 import * as soapsAPI from '../../utilities/soaps-api';
+import * as ordersAPI from '../../utilities/orders-api';
 import Auth from '../AuthPage/Auth';
+import AboutPage from '../AboutPage/AboutPage';
+import OrderPage from '../OrderPage/OrderPage';
 import AdminPage from '../AdminPage/AdminPage';
 import HomePage from '../HomePage/HomePage';
 import ProductsPage from '../ProductsPage/ProductsPage';
@@ -18,7 +21,7 @@ export default function App() {
   const navigate = useNavigate()
 /////////////////////////////////
   const [soaps, setSoaps] = useState([]);
-  const [toggleCat, setToggleCat] = useState('');
+  const [activeCat, setActiveCat] = useState('');
   const [cats, setCats] = useState([]);
   const categoryRef = useRef([]);
     // const [loading, setLoading] = useState(true);
@@ -30,15 +33,37 @@ export default function App() {
                 return cats.includes(cat) ? cats : [...cats, cat]; 
             }, []);
             setSoaps(soapData)
-            setToggleCat(categoryRef.current[0])// COME BACKTO
+            setActiveCat(categoryRef.current[0])// COME BACKTO
         }
         getSoaps();
+        //////////
+        async function getCart() {
+          const cart = await ordersAPI.getCart();
+          setCart(cart);
+        }
+        getCart();
+        //////////
         async function getCat() {
             const data = await categorysAPI.showCategory();
             setCats(data);
         }
         getCat();
     }, []);
+
+    async function handleAddToOrder(soapId) {
+        const updatedCart = await ordersAPI.addSoapToCart(soapId);
+        setCart(updatedCart);
+      }
+    
+      async function handleChangeQty(soapId, newQty) {
+        const updatedCart = await ordersAPI.setSoapQtyInCart(soapId, newQty);
+        setCart(updatedCart);
+      }
+    
+      async function handleCheckout() {
+        await ordersAPI.checkout();
+        navigate('/orders');
+      }
 /////////////////////////////////
   function redirect() {
     let path = `/soaps`;
@@ -53,9 +78,27 @@ export default function App() {
             {/* route components in here */}
             <Route path="/admin" element={<AdminPage soaps={soaps}/>}/>
             <Route path="/home" element={<HomePage/>}/>
-            <Route path="/soaps" element={<ProductsPage categories={categoryRef.current} soaps={soaps} cats={cats} toggleCat={toggleCat} setToggleCat={setToggleCat} />} />
+            <Route path="/soaps" 
+              element={<ProductsPage
+                user={user} 
+                setUser={setUser}
+                cart={setCart} 
+                categories={categoryRef.current} 
+                soaps={soaps} 
+                cats={cats} 
+                activeCat={activeCat} 
+                setActiveCat={setActiveCat}
+                handleAddToOrder={handleAddToOrder}/>}/>
             <Route path="/soaps/:soapId" element={<SoapDetailPage soap={soaps}/>}/>
-            <Route path="/orders" element={<OrderHistory/>}/>
+            <Route path="/orders/new" 
+              element={<OrderPage
+                cart={cart} 
+                user={user} 
+                setUser={setUser} 
+                handleChangeQty={handleChangeQty} 
+                handleCheckout={handleCheckout}/>}/>
+            <Route path="/about" element={<AboutPage/>}/>
+            <Route path="/orders" element={<OrderHistory user={user} setUser={setUser}/>}/>
             <Route path="/login" element={<Auth setUser={setUser} redirect={redirect}/>} />
           </Routes>
         </>

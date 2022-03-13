@@ -1,11 +1,11 @@
 import './CategoryList.css';
 
-export default function CategoryList({categories, toggleCat, setToggleCat}) {
+export default function CategoryList({categories, activeCat, setActiveCat}) {
     const categoryList = categories.map(cat => 
         <div 
             key={cat}
-            className={cat === toggleCat ? 'active' : ''} 
-            onClick={() => setToggleCat(cat)}
+            className={cat === activeCat ? 'active' : ''} 
+            onClick={() => setActiveCat(cat)}
         >
              <div>{cat}</div>
         </div>

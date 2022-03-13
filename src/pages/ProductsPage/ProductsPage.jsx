@@ -1,15 +1,23 @@
-import {useParams} from 'react';
 import CategoryList from '../../components/CategoryList/CategoryList';
 import SoapList from '../../components/SoapList/SoapList'
-export default function ProductsPage({soaps, cats, toggleCat, setToggleCat, categories}) {
-    // const {soaps} = useParams()
+export default function ProductsPage({soaps, cats, activeCat, setActiveCat, categories, cart, handleAddToOrder}) {
+
     return (
         <main>
             <div>
-                <CategoryList categories={categories} toggleCat={toggleCat} setToggleCat={setToggleCat} cats={cats}/>
+                <CategoryList
+                    categories={categories} 
+                    activeCat={activeCat} 
+                    setActiveCat={setActiveCat} 
+                    cats={cats}
+                />
             </div>
             <div>
-                <SoapList soaps={soaps.filter(soap => soap.category.name === toggleCat.name)}/>
+                <SoapList
+                    soaps={soaps.filter(soap => soap.category.name === activeCat.name)}
+                    handleAddToOrder={handleAddToOrder}
+                    cart={cart}
+                />
             </div>
         </main>
         
