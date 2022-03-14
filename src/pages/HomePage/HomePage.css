@@ -1,0 +1,14 @@
+.eye-grabber {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+
+}
+
+.images {
+    height: 300px;
+    width: 300px;
+    box-shadow: 8px 8px 8px 8px lightblue inset;
+}

@@ -2,14 +2,12 @@ import { Link } from "react-router-dom"
 import './SoapCard.css'
 
 export default function SoapCard({soap, lineSoap, isPaid, handleChangeQty, handleAddToOrder}) {
-    const { soapName, image, description, ingredients, price } = soap
+    const { soapName, image, description, ingredients, price } = soap;
     const card = (
         <>
             <div className="">
                 <div>{soapName}</div>
                 <div>{image}</div>
-                <div>{description}</div>
-                <div>{ingredients}</div>
                 <div>${price.toFixed(2)}</div>
                 <div className="qty" style={{ justifyContent: isPaid && 'center' }}>
                     {!isPaid &&
@@ -18,7 +16,7 @@ export default function SoapCard({soap, lineSoap, isPaid, handleChangeQty, handl
                         onClick={() => handleChangeQty(lineSoap.soap._id, lineSoap.qty - 1)}
                         >-</button>
                     }
-                    <span>{lineSoap.qty}</span> //NOT HAPPY 
+                    {/* <span>{lineSoap.qty}</span> //NOT HAPPY  */}
                     {!isPaid &&
                         <button
                         className="btn-xs"

@@ -23,8 +23,16 @@ export default function AdminPage() {
 
     return (
         <>
-            <h2><CategoryForm categories={categories} setCategories={setCategories}/></h2>
-            <h2><SoapForm cats={cats}/></h2>
+            <section className="admin">
+                <div className="category">
+                    <h2>Create A Category</h2>
+                    <h2><CategoryForm categories={categories} setCategories={setCategories}/></h2>
+                </div>
+                <div className="soap">
+                    <h2>Create A Soap</h2>
+                    <h2><SoapForm cats={cats}/></h2>
+                </div>
+            </section>
         </>
     )
 }

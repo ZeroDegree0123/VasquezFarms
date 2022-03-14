@@ -1,0 +1,10 @@
+.OrderHistoryPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aside {
+    padding: 10px;
+}
