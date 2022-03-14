@@ -29,7 +29,7 @@ export default function App() {
         async function getSoaps() {
             const soapData = await soapsAPI.allSoaps();
             categoryRef.current = soapData.reduce((cats, soap) => {
-                const cat = soap.category.catName;
+                const cat = soap.category.catName;// turns into string
                 return cats.includes(cat) ? cats : [...cats, cat]; 
             }, []);
             setSoaps(soapData)
@@ -38,8 +38,8 @@ export default function App() {
         getSoaps();
         //////////
         async function getCart() {
-          const cart = await ordersAPI.getCart();
-          setCart(cart);
+          const cartData = await ordersAPI.getCart();
+          setCart(cartData);
         }
         getCart();
         //////////

@@ -9,29 +9,31 @@ export default function SoapCard({soap, lineSoap, isPaid, handleChangeQty, handl
                 <div>{soapName}</div>
                 <div>{image}</div>
                 <div>${price.toFixed(2)}</div>
-                <div className="qty" style={{ justifyContent: isPaid && 'center' }}>
-                    {!isPaid &&
-                        <button
-                        className="btn-xs"
-                        onClick={() => handleChangeQty(lineSoap.soap._id, lineSoap.qty - 1)}
-                        >-</button>
-                    }
-                    {/* <span>{lineSoap.qty}</span> //NOT HAPPY  */}
-                    {!isPaid &&
-                        <button
-                        className="btn-xs"
-                        onClick={() => handleChangeQty(lineSoap.soap._id, lineSoap.qty + 1)}
-                        >+</button>
-                    }  
-                </div>
-                <div className="ext-price">${lineSoap.extPrice.toFixed(2)}</div>
             </div>
         </>
     )
     return (
-        <Link to={`/soaps/${soap._id}`}>    
-            {card}
-       </Link>
+        <>
+            <Link to={`/soaps/${soap._id}`}>    
+                {card}
+            </Link>
+            <div className="qty" style={{ justifyContent: isPaid && 'center' }}>
+                {!isPaid &&
+                    <button
+                    className="btn-xs"
+                    onClick={() => handleChangeQty(lineSoap.soap._id, lineSoap.qty - 1)}
+                    >-</button>
+                }
+                {/* <span>{lineSoap.qty}</span> //NOT HAPPY  */}
+                {!isPaid &&
+                    <button
+                    className="btn-xs"
+                    onClick={() => handleChangeQty(lineSoap.soap._id, lineSoap.qty + 1)}
+                    >+</button>
+                }  
+            </div>
+            {/* <div className="ext-price">${lineSoap.extPrice.toFixed(2)}</div> */}
+            </>
     )
 }
 

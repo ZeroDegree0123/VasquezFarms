@@ -10,22 +10,22 @@ module.exports = {
 
 // A cart is the unpaid order for a user
 async function cart(req, res) {
-  console.log(req.user)
+  console.log('ctrl happy')
   const cart = await Order.getCart(req.user._id);
   res.json(cart);
 }
 
 // Add an soap to the cart
 async function addToCart(req, res) {
-  const cart = await Order.getCart(req.user._id);//doesn't like user._id
-  await cart.addSoapToCart(req.params.id);   //for some reason...?
+  const cart = await Order.getCart(req.user._id);
+  await cart.addSoapToCart(req.params.id);   
   res.json(cart);
 }
 
 // Updates an soap's qty in the cart
 async function setSoapQtyInCart(req, res) {
   const cart = await Order.getCart(req.user._id);
-  await cart.setSoapQty(req.body.SoapId, req.body.newQty);
+  await cart.setSoapQty(req.body.soapId, req.body.newQty);
   res.json(cart);
 }
 

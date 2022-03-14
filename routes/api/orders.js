@@ -5,6 +5,7 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
 // GET /api/orders/cart
 router.get('/cart', ensureLoggedIn, ordersCtrl.cart);
+console.log('routes happy')
 // POST /api/orders/cart/items/:id
 router.post('/cart/soaps/:id', ensureLoggedIn, ordersCtrl.addToCart);
 // POST /api/orders/cart/checkout

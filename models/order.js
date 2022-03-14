@@ -4,7 +4,6 @@ const soapSchema = require('./soapSchema');
 
 // Add schema below
 const lineSoapSchema = new Schema({
-  // Set qty to 1 when new item pushed into lineItems
   qty: { type: Number, default: 1 },
   soap: soapSchema
 }, {

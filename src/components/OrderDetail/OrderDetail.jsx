@@ -4,11 +4,13 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
     if (!order) return null;
 
     const lineSoaps = order.lineSoaps.map(soapItem => 
+        //DOESN'T KNOW WHAT lineSoaps is
         <SoapCard
-            lineSoap={soapItem}
+            lineSoap={lineSoaps}
             isPaid={order.isPaid}
             handleChangeQty={handleChangeQty}
             handleCheckout={handleCheckout}
+            key={soapItem._id}
         />
         )
 

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import * as soapsAPI from '../../utilities/soaps-api';
 import SoapCard from "../../components/SoapCard/SoapCard";
-// import SoapForm from "../../components/SoapForm/SoapForm";
 
 export default function SoapDetailPage() {
     const [soap, setSoap] = useState([]);
@@ -14,7 +13,7 @@ export default function SoapDetailPage() {
         };
         getSoap();
     }, [])
-    // )
+    
     return (
        <div>
           {soap.image}
