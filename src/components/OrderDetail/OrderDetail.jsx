@@ -1,19 +1,23 @@
-import SoapCard from "../SoapCard/SoapCard";
+import SoapOrderCard from "../SoapCard/SoapCard";
 
 export default function OrderDetail({ order, handleChangeQty, handleCheckout }) {
     if (!order) return null;
-
-    const lineSoaps = order.lineSoaps.map(soapItem => 
+    console.log('hey')
+    console.log(order)
+    // if (order) {
+     const lineSoaps = order.lineSoaps.map((soapItem, idx) => (
         //DOESN'T KNOW WHAT lineSoaps is
-        <SoapCard
-            lineSoap={lineSoaps}
+        <SoapOrderCard
+            soapName={soapItem.name}
+            soapPrice={soapItem.price}
+            lineSoap={soapItem}
             isPaid={order.isPaid}
             handleChangeQty={handleChangeQty}
             handleCheckout={handleCheckout}
-            key={soapItem._id}
+            key={soapItem}
         />
-        )
-
+        ))
+// }
     return (
         <div>
             <div>
@@ -25,24 +29,27 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
                 <span>{new Date(order.updatedAt).toLocaleDateString()}</span>
             </div>
             <div>
-                {lineSoaps.length ?
-                    <>
-                        {lineSoaps}
-                        <section>
-                            {order.isPaid ?
-                                <span>TOTAL&nbsp;&nbsp;</span>
-                                :
-                                <button
-                                    onClick={handleCheckout}
-                                    disabled={!lineSoaps.length}
-                                >Checkout</button>
-                            }
-                        </section>
-                    </>
-                    :
-                    <div>Buy More?</div>
-                }
-            </div>
-        </div>
-    )
+            {lineSoaps.length ?
+          <>
+            {lineSoaps}
+            <section className="total">
+              {order.isPaid ?
+                <span className="right">TOTAL&nbsp;&nbsp;</span>
+                :
+                <button
+                  className="btn-sm"
+                  onClick={handleCheckout}
+                  disabled={!lineSoaps.length}
+                >CHECKOUT</button>
+              }
+              <span>{order.totalQty}</span>
+              <span className="right">${order.orderTotal.toFixed(2)}</span>
+            </section>
+          </>
+          :
+          <div className="hungry">Hungry?</div>
+        }
+      </div>
+    </div>
+  );
 }

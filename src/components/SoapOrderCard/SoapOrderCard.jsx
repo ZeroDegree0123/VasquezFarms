@@ -1,14 +1,10 @@
 import { Link } from "react-router-dom"
-import './SoapCard.css'
 
-export default function SoapCard({soap, soapName, soapPrice, lineSoap, isPaid, handleChangeQty, handleAddToOrder, key}) {
+export default function SoapOrderCard({soap, soapName, soapPrice, lineSoap, isPaid, handleChangeQty, handleAddToOrder, key}) {
     return (
         <>
-            <Link to={`/soaps/${key}`}>    
-                {soapName}
-                {soapPrice}
-            </Link>
-           
+            <p>{lineSoap.name}</p>
+            <p>h</p>
             <div className="qty" style={{ justifyContent: isPaid && 'center' }}>
                 {!isPaid &&
                     <button

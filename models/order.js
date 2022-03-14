@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const soapSchema = require('./soapSchema');
 
-// Add schema below
 const lineSoapSchema = new Schema({
   qty: { type: Number, default: 1 },
   soap: soapSchema
@@ -12,32 +11,30 @@ const lineSoapSchema = new Schema({
 });
 
 lineSoapSchema.virtual('extPrice').get(function () {
-return this.qty * this.soap.price;
+  return this.qty * this.soap.price;
 });
 
+////
 const orderSchema = new Schema({
-    // An order belongs to a user
-    user: { type: Schema.Types.ObjectId, ref: 'User' },
-    // Embed an order's line items is logical
-    lineSoaps: [lineSoapSchema],
-    // A user's unpaid order is their "cart"
-    isPaid: { type: Boolean, default: false },
-  }, {
-    timestamps: true, 
-    toJSON: { virtuals: true }
-  });
+  user: { type: Schema.Types.ObjectId, ref: 'User' },
+  lineSoaps: [lineSoapSchema],
+  isPaid: { type: Boolean, default: false },
+}, {
+  timestamps: true,
+  toJSON: { virtuals: true }
+});
 
-  orderSchema.virtual('orderTotal').get(function () {
-    return this.lineSoaps.reduce((total, soap) => total + soap.extPrice, 0);
-  });
-  
-  orderSchema.virtual('totalQty').get(function () {
-    return this.lineSoaps.reduce((total, soap) => total + soap.qty, 0);
-  });
-  
-  orderSchema.virtual('orderId').get(function () {
-    return this.id.slice(-6).toUpperCase();
-  });
+orderSchema.virtual('orderTotal').get(function () {
+  return this.lineSoaps.reduce((total, soap) => total + soap.extPrice, 0);
+});
+
+orderSchema.virtual('totalQty').get(function () {
+  return this.lineSoaps.reduce((total, soap) => total + soap.qty, 0);
+});
+
+orderSchema.virtual('orderId').get(function () {
+  return this.id.slice(-6).toUpperCase();
+});
 
   orderSchema.statics.getCart = function(userId) {
     return this.findOneAndUpdate(
@@ -50,7 +47,6 @@ const orderSchema = new Schema({
 
   orderSchema.methods.addSoapToCart = async function(soapId) {
     const cart = this;
-    // Check if item already in cart
     const lineSoap = cart.lineSoaps.find(lineSoap => lineSoap.soap._id.equals(soapId));
     if (lineSoap) {
       lineSoap.qty += 1;

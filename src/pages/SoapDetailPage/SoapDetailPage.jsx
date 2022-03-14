@@ -1,3 +1,4 @@
+import './SoapDetailPage.css'
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import * as soapsAPI from '../../utilities/soaps-api';
@@ -15,12 +16,22 @@ export default function SoapDetailPage() {
     }, [])
     
     return (
-       <div>
-          {soap.image}
-          {soap.name}
-          {soap.description}
-          {soap.ingredients}
-          {soap.price}
-       </div>
+        <section className="detail-container">
+            <div className="image">
+                {soap.image}
+            </div>
+            <div className="name">
+                {soap.name}
+            </div>
+            <div className="description">
+                {soap.description}
+            </div>
+            <div className="ingredients">
+                {soap.ingredients}
+            </div>
+            <div className="price">
+                ${soap.price}
+            </div>
+       </section>
     )
 }

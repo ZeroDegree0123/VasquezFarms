@@ -41,7 +41,7 @@ export default function SoapForm({cats}) {
                     <label htmlFor=""> Soap Name:</label>
                         <input type="text" name="name" value={soap.name} onChange={handleChange}/>
                     <label htmlFor=""> Img Url:</label>
-                        <input type="string" name="image" value={soap.image} onChange={handleChange}/>
+                        <input type="text" name="image" value={soap.image} onChange={handleChange}/>
                     <label htmlFor=""> Description:</label>
                         <input type="text" name="description" value={soap.description} onChange={handleChange}/>
                     <label htmlFor=""> Ingredients:</label>
