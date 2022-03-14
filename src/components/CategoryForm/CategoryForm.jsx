@@ -12,7 +12,7 @@ export default function CategoryForm({categories, setCategories}) {
         evt.preventDefault();
         categoryApi.makeCategory(categories);
         setCategories({
-            catName:'',
+            name:'',
             sortOrder:'',
         })
         
@@ -22,7 +22,7 @@ export default function CategoryForm({categories, setCategories}) {
         <>
             <form autoComplete="off" onSubmit={handleSubmit}>
                 <label>Category Name</label>
-                <input type="text" name="catName" value={categories.catName} onChange={handleChange}/>
+                <input type="text" name="name" value={categories.name} onChange={handleChange}/>
                 <label>Category Number</label>
                 <input type="number" name="sortOrder" value={categories.sortOrder} onChange={handleChange}/>
                 <button  type="submit">Add Category</button>

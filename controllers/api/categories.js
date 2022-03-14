@@ -7,7 +7,7 @@ module.exports = {
 
 async function index(req, res) {
     try {
-        const cats = await Category.find({}).sort('catName')
+        const cats = await Category.find({}).sort('name')
         res.json(cats)
     } catch{
         res.send(err);
@@ -17,7 +17,7 @@ async function index(req, res) {
 async function create(req, res) {
     try {
         const newCat = new Category({
-            catName: req.body.catName,
+            name: req.body.name,
             sortOrder: req.body.sortOrder
         });
        await newCat.save();

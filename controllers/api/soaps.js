@@ -29,7 +29,7 @@ module.exports = {
   async function create(req, res) {
     try {
         const newSoap = new Soap({
-          soapName:req.body.soapName,
+          name:req.body.name,
           image:req.body.image,
           description:req.body.description,
           ingredients:req.body.ingredients,

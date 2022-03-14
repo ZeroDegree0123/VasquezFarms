@@ -29,11 +29,11 @@ export default function App() {
         async function getSoaps() {
             const soapData = await soapsAPI.allSoaps();
             categoryRef.current = soapData.reduce((cats, soap) => {
-                const cat = soap.category.catName;// turns into string
+                const cat = soap.category.name;// turns into string
                 return cats.includes(cat) ? cats : [...cats, cat]; 
             }, []);
             setSoaps(soapData)
-            setActiveCat(categoryRef.current[0])// COME BACKTO
+            setActiveCat(categoryRef.current[0]);// COME BACKTO
         }
         getSoaps();
         //////////

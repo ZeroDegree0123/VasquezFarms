@@ -1,7 +1,7 @@
 const Schema = require('mongoose').Schema;
 
 const soapSchema = new Schema({
-    soapName:{
+    name:{
         type: String,
         required: true
     },

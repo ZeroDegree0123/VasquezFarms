@@ -2,11 +2,11 @@ import { Link } from "react-router-dom"
 import './SoapCard.css'
 
 export default function SoapCard({soap, lineSoap, isPaid, handleChangeQty, handleAddToOrder}) {
-    const { soapName, image, description, ingredients, price } = soap;
+    const { name, image, description, ingredients, price } = soap;
     const card = (
         <>
             <div className="">
-                <div>{soapName}</div>
+                <div>{name}</div>
                 <div>{image}</div>
                 <div>${price.toFixed(2)}</div>
             </div>

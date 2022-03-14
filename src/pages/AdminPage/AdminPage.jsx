@@ -5,7 +5,7 @@ import CategoryForm from "../../components/CategoryForm/CategoryForm"
 import SoapForm from "../../components/SoapForm/SoapForm";
 export default function AdminPage() {
     const [categories, setCategories] = useState({
-        catName: '',
+        name: '',
         sortOrder: '',
     })
     const [cats, setCat] = useState([])
@@ -14,7 +14,7 @@ export default function AdminPage() {
         // async function 
         async function getCat() {
             const data = await categoryAPI.showCategory();
-            // const catName = 
+            // const name = 
             // const cats = await data.json();
             setCat(data);
         }

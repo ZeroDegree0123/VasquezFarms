@@ -3,7 +3,7 @@ import * as soapsAPI from '../../utilities/soaps-api'
 
 export default function SoapForm({cats}) {
     const [soap, setSoap] = useState({
-        soapName: '',
+        name: '',
         image: '',
         description: '',
         ingredients: '',
@@ -13,7 +13,7 @@ export default function SoapForm({cats}) {
     })
     const categoryOptions = cats.map((cat) => 
         <option key={cat.id} value={cat._id}>
-            {cat.catName}
+            {cat.name}
         </option>
     );
 
@@ -25,7 +25,7 @@ export default function SoapForm({cats}) {
         evt.preventDefault();
         soapsAPI.makeSoap(soap);
         setSoap({
-            soapName: '',
+            name: '',
             image: '',
             description: '',
             ingredients: '',
@@ -39,7 +39,7 @@ export default function SoapForm({cats}) {
             <form autoComplete="off" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor=""> Soap Name:</label>
-                        <input type="text" name="soapName" value={soap.soapName} onChange={handleChange}/>
+                        <input type="text" name="name" value={soap.name} onChange={handleChange}/>
                     <label htmlFor=""> Img Url:</label>
                         <input type="string" name="image" value={soap.image} onChange={handleChange}/>
                     <label htmlFor=""> Description:</label>

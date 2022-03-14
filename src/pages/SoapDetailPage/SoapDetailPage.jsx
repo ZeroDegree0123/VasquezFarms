@@ -17,7 +17,7 @@ export default function SoapDetailPage() {
     return (
        <div>
           {soap.image}
-          {soap.soapName}
+          {soap.name}
           {soap.description}
           {soap.ingredients}
           {soap.price}
