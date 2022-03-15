@@ -102,9 +102,6 @@ export default function App() {
             <Route path="/orders" element={<OrderHistory order={cart} user={user} setUser={setUser}/>}/>
             <Route path="/login" element={<Auth setUser={setUser} redirect={redirect}/>} />
           </Routes>
-          <footer>
-            VasquezFarms
-          </footer>
         </>
     </main>
   );

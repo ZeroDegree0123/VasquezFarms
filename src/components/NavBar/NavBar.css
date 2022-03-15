@@ -6,6 +6,10 @@ nav {
     align-items: center;
 }
 
+#app-logo {
+    width: 50px;
+}
+
 .link {
     color: white;
     text-decoration: none;

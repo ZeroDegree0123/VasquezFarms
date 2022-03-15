@@ -4,7 +4,7 @@ import SoapList from '../../components/SoapList/SoapList'
 export default function ProductsPage({user, setUser, soaps, cats, activeCat, setActiveCat, categories, cart, handleAddToOrder}) {
 
     return (
-        <main>
+        <section>
             <div>
                 <CategoryList
                     categories={categories} 
@@ -21,7 +21,6 @@ export default function ProductsPage({user, setUser, soaps, cats, activeCat, set
                     cart={cart}
                 />
             </div>
-        </main>
-        
+        </section>
     )
 }

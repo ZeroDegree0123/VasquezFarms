@@ -29,7 +29,9 @@ export default function AdminPage({user}) {
                     <h2>
                         {user.role === "admin" ?
                         <>
+                            <h1>ADD A CATEGORY</h1>
                             <CategoryForm categories={categories} setCategories={setCategories}/>
+                            <h1>ADD A SOAP</h1>
                             <SoapForm cats={cats}/>
                         </>
                         :

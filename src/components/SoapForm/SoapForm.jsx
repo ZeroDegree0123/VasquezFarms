@@ -36,24 +36,39 @@ export default function SoapForm({cats}) {
     }
     return (
         <>
-            <form autoComplete="off" onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor=""> Soap Name:</label>
-                        <input type="text" name="name" value={soap.name} onChange={handleChange}/>
-                    <label htmlFor=""> Img Url:</label>
-                        <input type="text" name="image" value={soap.image} onChange={handleChange}/>
-                    <label htmlFor=""> Description:</label>
-                        <input type="text" name="description" value={soap.description} onChange={handleChange}/>
-                    <label htmlFor=""> Ingredients:</label>
-                        <input type="text" name="ingredients" value={soap.ingredients} onChange={handleChange}/>
-                    <label htmlFor=""> Price:</label>
-                        <input type="text" name="price" value={soap.price} onChange={handleChange}/>
-                    <label htmlFor=""> Category:</label>
-                        <select name="category" value={soap.category} onChange={handleChange}>
-                            {categoryOptions}
-                        </select>
-                    <button>Add Soap</button>
+            <form id="cat-form" autoComplete="off" onSubmit={handleSubmit}>
+                <div className="input-group input-group-sm mb-3 rounded">
+                    <span className="input-group-text" id="inputGroup-sizing-sm">Soap Name</span>
+                    <input className="rounded" type="text" name="name" value={soap.name} onChange={handleChange}/>
+                    
                 </div>
+                <div className="input-group input-group-sm mb-3 rounded">
+                    <span className="input-group-text" id="inputGroup-sizing-sm">Img Url</span>
+                    <input className="rounded" type="text" name="image" value={soap.image} onChange={handleChange}/>
+                    
+                </div>
+                <div className="input-group input-group-sm mb-3 rounded">
+                    <span className="input-group-text" id="inputGroup-sizing-sm">Description</span>
+                    <input className="rounded" type="text" name="description" value={soap.description} onChange={handleChange}/>
+                    
+                </div>
+                <div className="input-group input-group-sm mb-3 rounded">
+                    <span className="input-group-text" id="inputGroup-sizing-sm">Ingredients</span>
+                    <input className="rounded" type="text" name="ingredients" value={soap.ingredients} onChange={handleChange}/>
+                    
+                </div>
+                <div className="input-group input-group-sm mb-3 rounded">
+                    <span className="input-group-text" id="inputGroup-sizing-sm">Price</span>
+                    <input className="rounded" type="text" name="price" value={soap.price} onChange={handleChange}/>
+                    
+                </div>
+                <label htmlFor=""> Category:</label>
+                <div>
+                    <select className="rounded" name="category" value={soap.category} onChange={handleChange}>
+                        {categoryOptions}
+                    </select>
+                </div>
+                <button className="btn btn-light">Add Soap</button>
             </form>
         </>
     )

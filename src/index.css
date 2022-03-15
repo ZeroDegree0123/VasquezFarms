@@ -25,3 +25,18 @@ body {
   background-color: var(--tan-1);
   height: 100vh;
 }
+
+footer { 
+  height: 10px;
+  margin-top: 1px;
+  padding: rem; 
+  background-color: #23252b; 
+  position: relative; 
+  bottom: 0; 
+  left: 0; 
+  width: 100%; 
+}
+
+footer > div {
+  text-align: right;
+}

@@ -17,7 +17,6 @@ export default function HomePage() {
                             <h3 className="feel">Feel Clean, Smell Clean</h3>
                             <p id="paragraph">Natural Ingredients, Wide variety, Straight From The Farm</p> 
                         </div>
-                        
                     </div>
                 </div>
             </section>

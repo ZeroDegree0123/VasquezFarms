@@ -1,4 +1,4 @@
-
+import './CategoryForm.css'
 import * as categoryApi from '../../utilities/categories-api'
 
 
@@ -20,12 +20,21 @@ export default function CategoryForm({categories, setCategories}) {
 
     return (
         <>
-            <form autoComplete="off" onSubmit={handleSubmit}>
-                <label>Category Name</label>
-                <input type="text" name="name" value={categories.name} onChange={handleChange}/>
-                <label>Category Number</label>
-                <input type="number" name="sortOrder" value={categories.sortOrder} onChange={handleChange}/>
-                <button  type="submit">Add Category</button>
+
+            {/* <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div> */}
+            <form className="d-flex justify-content-center" id="cat-form" autoComplete="off" onSubmit={handleSubmit}>
+                <div className="input-group input-group-sm mb-3 ">
+                    <span class="input-group-text rounded" id="inputGroup-sizing-sm">Category Name</span>
+                    <input className="rounded" type="text" name="name" value={categories.name} onChange={handleChange}/>
+                </div>
+                <div className="input-group input-group-sm mb-3 ">
+                    <span class="input-group-text rounded" id="inputGroup-sizing-sm">Category Number</span>
+                    <input className="rounded" type="number" name="sortOrder" value={categories.sortOrder} onChange={handleChange}/>
+                </div>
+                <button className="btn btn-light" type="submit">Add Category</button>
             </form>
         </>
     )

@@ -1,0 +1,32 @@
+
+
+#about-img {
+    width: 100%;
+    height: 500px;
+}
+
+#about-containers {
+    background-image: linear-gradient(to left, rgb(175, 99, 51) , lightblue);
+}
+
+#about-containers-r {
+    background-image: linear-gradient(to right, rgb(175, 99, 51) , lightblue);
+}
+
+#about-h4 {
+    text-decoration: underline;
+}
+
+#about-main {
+    background-color: rgb(175, 99, 51);
+}
+
+.about-p {
+    font-size: 26px;
+    text-align: left;
+}
+
+.about-p-r {
+    font-size: 23px;
+    text-align: right;
+}
