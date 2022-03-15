@@ -1,3 +1,15 @@
+#soap-button {
+    background-color: lightblue;
+}
+
+#soap-button:hover {
+    background-color: lightcyan;
+}
+
+#soap-button:active {
+    background-color: white;
+}
+
 #soap-card {
     width: 18rem;
 }
@@ -18,7 +30,7 @@
     color: lightblue;
 }
 
-.btn-sm:active {
-    background-color: lightblue;
+.btn:active {
+    background-color: white;
     
 }

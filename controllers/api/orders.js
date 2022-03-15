@@ -10,7 +10,7 @@ module.exports = {
 
 async function orderHistory(req, res) {
   try {
-    const orders = await Order.find(req.user._id)
+    const orders = await Order.find({ user: req.user._id, isPaid: true }).sort('-updatedAt').exec();
     res.json(orders)
   } catch (err) {
     res.send(err)

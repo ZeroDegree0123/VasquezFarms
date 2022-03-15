@@ -18,7 +18,7 @@ export default function SoapCard({soap, handleAddToOrder}) {
                             ${soap.price}.00
                         </h4>
                     </Link>
-                    <button className="btn-sm" onClick={() => handleAddToOrder(soap._id)}>ADD TO CART</button> 
+                    <button id="soap-button" className="btn btn-lg" onClick={() => handleAddToOrder(soap._id)}>ADD TO CART</button> 
                 </div>         
             </section> 
         </>

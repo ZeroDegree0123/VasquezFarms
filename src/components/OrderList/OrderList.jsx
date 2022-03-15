@@ -4,12 +4,17 @@ export default function OrderList({orders}) {
     console.log(orders)
     const allOrders = orders.map(order => 
         <OrderCard
-            key={order.id}
+            key={order._id}
             order={order}
 
         />
         )
     return (
-        <h1>happy</h1>
+        <div>
+            {allOrders.length ? 
+                allOrders 
+                : 
+                <span>You havn't made any orders yet</span>}
+        </div>
     )
 }
