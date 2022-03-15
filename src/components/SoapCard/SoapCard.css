@@ -12,6 +12,8 @@
 
 #soap-card {
     width: 18rem;
+    margin: 30px;
+    background-color: rgb(206, 149, 114);
 }
 
 #soap-description {

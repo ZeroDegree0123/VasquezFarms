@@ -14,3 +14,7 @@ nav {
 .link:hover {
     color: lightblue;
 }
+
+.cart {
+    max-width: 40px;
+}

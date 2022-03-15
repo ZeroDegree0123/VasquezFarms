@@ -7,12 +7,17 @@ export default function CategoryList({categories, activeCat, setActiveCat}) {
             className={cat === activeCat ? 'active' : ''} 
             onClick={() => setActiveCat(cat)}
         >
-             <div>{cat}</div>
+             <div className="btn btn-light">{cat}</div>
         </div>
     );
     return (
-        <div className='category'>
-            {categoryList}
-        </div>
+        <>
+            <div className="Cat">
+                <h3>Categories</h3>
+                <div className='category'>
+                    {categoryList}
+                </div>
+            </div>
+        </>
     )
 }

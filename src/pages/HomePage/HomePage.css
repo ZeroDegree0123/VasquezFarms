@@ -1,5 +1,48 @@
-#home-container {
+body {
     background-color: lightblue;
+}
+
+section {
+    background-color: lightblue;
+}
+
+hr {
+  color: rgb(175, 99, 51)
+}
+
+#second-container {
+    background-image: linear-gradient(to left, rgb(175, 99, 51) , lightblue);
+}
+
+#statement {
+    flex-direction: column;
+}
+
+#main-image {
+    width: 100%;
+}
+
+#home-container-top {
+    background-color: lightblue;
+} 
+
+#home-container-middle {
+    background-color: lightblue;
+}
+
+#paragraph {
+    text-align: left;
+    width: 50%
+}
+
+.feel {
+    flex-direction: row;
+    text-align: left;
+}
+
+.brand-statement {
+    text-align: center;
+    background-color: rgb(173, 109, 69);
 }
 
 .images {
@@ -7,3 +50,4 @@
     width: 100%;
     background-color: lightblue;
 }
+

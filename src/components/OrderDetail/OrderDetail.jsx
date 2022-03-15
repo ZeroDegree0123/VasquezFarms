@@ -25,6 +25,7 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
                     :
                     <span>NEW ORDER</span>
                 }
+                &nbsp;
                 <span>{new Date(order.updatedAt).toLocaleDateString()}</span>
             </div>
             <div>
@@ -47,7 +48,7 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
             </section>
           </>
           :
-          <div className="hungry">Hungry?</div>
+          <div className="hungry">Add Soaps To Start Order</div>
         }
       </div>
     </div>

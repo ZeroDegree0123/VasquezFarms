@@ -1,7 +1,16 @@
+#soap-image {
+    background-color: rgb(206, 149, 114);
+}
+
+#description {
+    border:rgb(206, 149, 114);
+    text-align: left;
+}
+
 .detail-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(lightblue, rgb(206, 149, 114));
 }
-

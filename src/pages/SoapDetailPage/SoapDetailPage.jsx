@@ -17,19 +17,52 @@ export default function SoapDetailPage() {
     
     return (
         <section className="detail-container">
-            <img src={soap.image} alt="image"/>
-            <div className="name">
-                {soap.name}
-            </div>
-            <div className="description">
-                {soap.description}
-            </div>
-            <div className="ingredients">
-                {soap.ingredients}
-            </div>
-            <div className="price">
-                ${soap.price}
-            </div>
+            <img className="img-thumbnail rounded" id="soap-image" src={soap.image} alt="image"/>
+            <table class="table-light">
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            <td className="d-flex justify-content-center">
+                                <div className="name">
+                                    <h1>{soap.name}</h1>
+                                </div>
+                            </td>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <td>
+                                <div className="" id="description">
+                                    {soap.description}
+                                </div>
+                            </td>
+                        </th>
+                    </tr>
+                    <hr />
+                    <tr>
+                        <th scope="row">
+                            <td className="d-flex justify-content-center">
+                                <div className="ingredients ">
+                                    <h4>Ingredients:</h4>
+                                    {soap.ingredients}
+                                </div>
+                            </td>
+                        </th>
+                    </tr>
+                    &nbsp;
+                    <tr>
+                        <th scope="row">
+                            <td className="d-flex justify-content-center">
+                                <div className="price ">
+                                    <h4>Price:</h4>
+                                    ${soap.price}.00
+                                </div>                               
+                            </td>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+            <hr />
        </section>
     )
 }

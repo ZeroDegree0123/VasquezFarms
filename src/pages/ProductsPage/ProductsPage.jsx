@@ -13,6 +13,7 @@ export default function ProductsPage({user, setUser, soaps, cats, activeCat, set
                     cats={cats}
                 />
             </div>
+            <hr />
             <div>
                 <SoapList
                     soaps={soaps.filter(soap => soap.category.name === activeCat)}
