@@ -10,3 +10,7 @@ nav {
     color: white;
     text-decoration: none;
 }
+
+.link:hover {
+    color: lightblue;
+}

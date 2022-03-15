@@ -25,45 +25,45 @@ export default function App() {
   const [cats, setCats] = useState([]);
   const categoryRef = useRef([]);
     // const [loading, setLoading] = useState(true);
-    useEffect(function() {
-        async function getSoaps() {
-            const soapData = await soapsAPI.allSoaps();
-            categoryRef.current = soapData.reduce((cats, soap) => {
-                const cat = soap.category.name;// turns into string
-                return cats.includes(cat) ? cats : [...cats, cat]; 
-            }, []);
-            setSoaps(soapData)
-            setActiveCat(categoryRef.current[0]);// COME BACKTO
-        }
-        getSoaps();
-        //////////
-        async function getCart() {
-          const cartData = await ordersAPI.getCart();
-          setCart(cartData);
-        }
-        getCart();
-        //////////
-        async function getCat() {
-            const data = await categorysAPI.showCategory();
-            setCats(data);
-        }
-        getCat();
-    }, []);
+  useEffect(function() {
+      async function getSoaps() {
+          const soapData = await soapsAPI.allSoaps();
+          categoryRef.current = soapData.reduce((cats, soap) => {
+              const cat = soap.category.name;// turns into string
+              return cats.includes(cat) ? cats : [...cats, cat]; 
+          }, []);
+          setSoaps(soapData)
+          setActiveCat(categoryRef.current[0]);// COME BACKTO
+      }
+      getSoaps();
+      //////////
+      async function getCart() {
+        const cartData = await ordersAPI.getCart();
+        setCart(cartData);
+      }
+      getCart();
+      //////////
+      async function getCat() {
+          const data = await categorysAPI.showCategory();
+          setCats(data);
+      }
+      getCat();
+  }, []);
 
-    async function handleAddToOrder(soapId) {
-        const updatedCart = await ordersAPI.addSoapToCart(soapId);
-        setCart(updatedCart);
-      }
-    
-      async function handleChangeQty(soapId, newQty) {
-        const updatedCart = await ordersAPI.setSoapQtyInCart(soapId, newQty);
-        setCart(updatedCart);
-      }
-    
-      async function handleCheckout() {
-        await ordersAPI.checkout();
-        navigate('/orders');
-      }
+  async function handleAddToOrder(soapId) {
+      const updatedCart = await ordersAPI.addSoapToCart(soapId);
+      setCart(updatedCart);
+    }
+  
+    async function handleChangeQty(soapId, newQty) {
+      const updatedCart = await ordersAPI.setSoapQtyInCart(soapId, newQty);
+      setCart(updatedCart);
+    }
+  
+    async function handleCheckout() {
+      await ordersAPI.checkout();
+      navigate('/orders');
+    }
 /////////////////////////////////
   function redirect() {
     let path = `/soaps`;
@@ -102,6 +102,9 @@ export default function App() {
             <Route path="/orders" element={<OrderHistory order={cart} user={user} setUser={setUser}/>}/>
             <Route path="/login" element={<Auth setUser={setUser} redirect={redirect}/>} />
           </Routes>
+          <footer>
+            VasquezFarms
+          </footer>
         </>
     </main>
   );

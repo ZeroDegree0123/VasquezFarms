@@ -5,7 +5,17 @@ module.exports = {
   addToCart,
   setSoapQtyInCart,
   checkout,
+  orderHistory
 };
+
+async function orderHistory(req, res) {
+  try {
+    const orders = await Order.find(req.user._id)
+    res.json(orders)
+  } catch (err) {
+    res.send(err)
+  } 
+}
 
 // A cart is the unpaid order for a user
 async function cart(req, res) {

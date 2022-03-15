@@ -12,7 +12,8 @@ export default function NavBar( {user, setUser} ) {
         setUser(null);
     }
     return(
-        <nav>
+        <nav className="navbar  navbar-dark bg-dark">
+            &nbsp; | &nbsp; 
             <Link className="link" to="/home">Home</Link>
             &nbsp; | &nbsp; 
             <Link className="link" to="/soaps">Soaps</Link>
@@ -31,6 +32,7 @@ export default function NavBar( {user, setUser} ) {
                 </>:
                     <Link className="link" to="/login">Login</Link>
                 }
+                &nbsp; | &nbsp; 
         </nav>
     ) 
 }
