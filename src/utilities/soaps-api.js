@@ -11,5 +11,6 @@ export function allSoaps() {
 }
 
 export function showSoap(soapId) {
+    console.log('api happy')
     return sendRequest(`${BASE_URL}/${soapId}`)
 } 

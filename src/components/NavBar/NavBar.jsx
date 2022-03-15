@@ -16,18 +16,19 @@ export default function NavBar( {user, setUser} ) {
             <Link className="link" to="/home">Home</Link>
             &nbsp; | &nbsp; 
             <Link className="link" to="/soaps">Soaps</Link>
-            &nbsp; | &nbsp; 
+            &nbsp; | &nbsp;
             <Link className="link" to="/admin">Admin</Link>
             &nbsp; | &nbsp; 
             <Link className="link" to="/about">About Us</Link>
             &nbsp; | &nbsp; 
-            <Link className="link" to="/orders">OrderHistory</Link>
-            &nbsp; | &nbsp; 
-            <Link className="link" to="/orders/new">Cart</Link>
-            &nbsp; | &nbsp; 
                 { user ?
+                <>
+                    <Link className="link" to="/orders">OrderHistory</Link>
+                    &nbsp; | &nbsp; 
+                    <Link className="link" to="/orders/new">Cart</Link> 
+                    &nbsp; | &nbsp; 
                     <Link className="link" to="/" onClick={handleLogOut}>Log Out</Link>
-                    :
+                </>:
                     <Link className="link" to="/login">Login</Link>
                 }
         </nav>

@@ -1,12 +1,10 @@
-import SoapOrderCard from "../SoapCard/SoapCard";
+import SoapOrderCard from "../SoapOrderCard/SoapOrderCard";
 
 export default function OrderDetail({ order, handleChangeQty, handleCheckout }) {
     if (!order) return null;
-    console.log('hey')
-    console.log(order)
     // if (order) {
      const lineSoaps = order.lineSoaps.map((soapItem, idx) => (
-        //DOESN'T KNOW WHAT lineSoaps is
+        
         <SoapOrderCard
             soapName={soapItem.name}
             soapPrice={soapItem.price}
@@ -14,12 +12,13 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
             isPaid={order.isPaid}
             handleChangeQty={handleChangeQty}
             handleCheckout={handleCheckout}
-            key={soapItem}
+            key={idx}
         />
         ))
 // }
     return (
         <div>
+            
             <div>
                 {order.isPaid ?
                     <span>ORDER<span>{order.orderId}</span></span>
@@ -31,6 +30,7 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
             <div>
             {lineSoaps.length ?
           <>
+            {/* {allSoaps} */}
             {lineSoaps}
             <section className="total">
               {order.isPaid ?

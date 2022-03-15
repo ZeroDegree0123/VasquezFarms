@@ -76,7 +76,7 @@ export default function App() {
           <NavBar setUser={setUser} user={ user }/>
           <Routes>
             {/* route components in here */}
-            <Route path="/admin" element={<AdminPage soaps={soaps}/>}/>
+            <Route path="/admin" element={<AdminPage user={user} soaps={soaps}/>}/>
             <Route path="/home" element={<HomePage/>}/>
             <Route path="/soaps" 
               element={<ProductsPage
@@ -92,13 +92,14 @@ export default function App() {
             <Route path="/soaps/:soapId" element={<SoapDetailPage soap={soaps}/>}/>
             <Route path="/orders/new" 
               element={<OrderPage
+                soaps={soaps}
                 cart={cart} 
                 user={user} 
                 setUser={setUser} 
                 handleChangeQty={handleChangeQty} 
                 handleCheckout={handleCheckout}/>}/>
             <Route path="/about" element={<AboutPage/>}/>
-            <Route path="/orders" element={<OrderHistory user={user} setUser={setUser}/>}/>
+            <Route path="/orders" element={<OrderHistory order={cart} user={user} setUser={setUser}/>}/>
             <Route path="/login" element={<Auth setUser={setUser} redirect={redirect}/>} />
           </Routes>
         </>

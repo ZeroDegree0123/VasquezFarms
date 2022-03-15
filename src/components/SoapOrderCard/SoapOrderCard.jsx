@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
 
-export default function SoapOrderCard({soap, soapName, soapPrice, lineSoap, isPaid, handleChangeQty, handleAddToOrder, key}) {
+export default function SoapOrderCard({lineSoap, isPaid, handleChangeQty}) {
     return (
         <>
-            <p>{lineSoap.name}</p>
-            <p>h</p>
+            {lineSoap.soap.name}
+            {lineSoap.soap.price}
             <div className="qty" style={{ justifyContent: isPaid && 'center' }}>
                 {!isPaid &&
                     <button
@@ -21,10 +21,6 @@ export default function SoapOrderCard({soap, soapName, soapPrice, lineSoap, isPa
                 }  
             </div> 
              <div className="ext-price">${lineSoap.extPrice.toFixed(2)}</div>
-         
-            <button className="btn-sm" onClick={() => handleAddToOrder(soap._id)}>
-                ADD
-            </button> 
             </>
     )
 }

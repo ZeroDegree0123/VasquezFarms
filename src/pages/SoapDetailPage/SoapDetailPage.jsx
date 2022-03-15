@@ -2,7 +2,7 @@ import './SoapDetailPage.css'
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import * as soapsAPI from '../../utilities/soaps-api';
-import SoapCard from "../../components/SoapCard/SoapCard";
+
 
 export default function SoapDetailPage() {
     const [soap, setSoap] = useState([]);
@@ -17,9 +17,7 @@ export default function SoapDetailPage() {
     
     return (
         <section className="detail-container">
-            <div className="image">
-                {soap.image}
-            </div>
+            <img src={soap.image} alt="image"/>
             <div className="name">
                 {soap.name}
             </div>

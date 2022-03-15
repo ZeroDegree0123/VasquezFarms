@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import * as categoryAPI from "../../utilities/categories-api"
 import CategoryForm from "../../components/CategoryForm/CategoryForm"
 import SoapForm from "../../components/SoapForm/SoapForm";
-export default function AdminPage() {
+export default function AdminPage({user}) {
     const [categories, setCategories] = useState({
         name: '',
         sortOrder: '',
@@ -22,15 +22,23 @@ export default function AdminPage() {
     }, []);
 
     return (
+
         <>
             <section className="admin">
                 <div className="category">
-                    <h2>Create A Category</h2>
-                    <h2><CategoryForm categories={categories} setCategories={setCategories}/></h2>
-                </div>
-                <div className="soap">
-                    <h2>Create A Soap</h2>
-                    <h2><SoapForm cats={cats}/></h2>
+                    <h2>
+                        {user.role === "admin" ?
+                        <>
+                            <CategoryForm categories={categories} setCategories={setCategories}/>
+                            <SoapForm cats={cats}/>
+                        </>
+                        :
+                        <>
+                            <p>not Authorized</p>
+                            <h1>hahaha</h1>
+                        </>
+    }
+                    </h2>
                 </div>
             </section>
         </>
