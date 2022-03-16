@@ -20,6 +20,7 @@ This is an ecommerce app where you can buy soaps. Users can add soaps to a cart 
 
 ### App Link
 [Click To Go To App](https://vasquez-farms.herokuapp.com/home)
+[Click To Go To Trello Board](https://trello.com/b/KEZki6yD/soapcompany)
 
 
 ## Next Steps
