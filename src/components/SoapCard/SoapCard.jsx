@@ -8,9 +8,9 @@ export default function SoapCard({soap, handleAddToOrder}) {
                 <div className="card mb-3" id="soap-card" >
                     <Link className="soap-link" to={`/soaps/${soap._id}`}>
                         <img src={soap.image} alt="img" className="card-img-top"/>   
-                        <h3 className="card-title">
+                        <h4 className="card-title">
                             {soap.name}
-                        </h3>
+                        </h4>
                         <hr />
                         <h4 className="card-text d-flex justify-content-end" id="soap-price">
                             ${soap.price}.00
