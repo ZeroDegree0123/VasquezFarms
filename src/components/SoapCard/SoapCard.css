@@ -21,8 +21,10 @@
 }
 
 #soap-price {
+    margin: 5px;
     color: green;
 }
+
 
 .soap-link {
     text-decoration: none;

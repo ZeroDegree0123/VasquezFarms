@@ -32,7 +32,7 @@ export default function SoapDetailPage() {
                     <tr>
                         <th scope="row">
                             <td>
-                                <div className="" id="description">
+                                <div id="description">
                                     {soap.description}
                                 </div>
                             </td>

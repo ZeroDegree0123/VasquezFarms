@@ -1,9 +1,12 @@
 import './AdminPage.css'
 import { useState, useEffect } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import * as categoryAPI from "../../utilities/categories-api"
 import CategoryForm from "../../components/CategoryForm/CategoryForm"
 import SoapForm from "../../components/SoapForm/SoapForm";
+import NotAuth from "../../components/NotAuth/NotAuth"
 export default function AdminPage({user}) {
+    const navigate = useNavigate()
     const [categories, setCategories] = useState({
         name: '',
         sortOrder: '',
@@ -29,15 +32,17 @@ export default function AdminPage({user}) {
                     <div>
                         {user.role === "admin" ?
                         <>
+                            <br />
                             <h2>ADD A CATEGORY</h2>
                             <CategoryForm categories={categories} setCategories={setCategories}/>
+                            <br />
+                            <br />
                             <h2>ADD A SOAP</h2>
                             <SoapForm cats={cats}/>
                         </>
                         :
                         <>
-                            <p>not Authorized</p>
-                            <h2>hahaha</h2>
+                           <NotAuth/>
                         </>
     }
                     </div>

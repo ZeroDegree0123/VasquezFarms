@@ -6,6 +6,7 @@ export default function HomePage() {
         <>
             <section>
                 <div className="container-fluid" id="home-container-top">
+                    <br />
                         <h1>
                             Welcome To VasquezFarms LLC
                         </h1>
@@ -25,14 +26,14 @@ export default function HomePage() {
                 <div className="container-fluid" id="home-container-middle">
                     <div className="row align-items-center ">
                         <div class="col" >
-                            <h3 className="brand-statement rounded">Our Soaps Are Made With Goats Milk and All Natural Ingredients</h3> 
+                            <h4 className="brand-statement rounded">Our Soaps Are Made With Goats Milk and All Natural Ingredients</h4> 
                         </div>
                     </div>
                 </div>
             </section>
             <hr />
             <section>
-                <h3 id="best">Best Sellers</h3>
+                <h2 id="best">Best Sellers</h2>
             </section>
             <section>
                 <div className="container-fluid" id="home-container-middle">

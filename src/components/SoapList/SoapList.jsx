@@ -1,3 +1,4 @@
+import './SoapList.css'
 import SoapCard from '../../components/SoapCard/SoapCard';
 
 export default function SoapList({soaps, handleAddToOrder, cart}) {
@@ -13,7 +14,9 @@ export default function SoapList({soaps, handleAddToOrder, cart}) {
     );
     return (
         <main>
-            {allSoaps}
+            <div id="soap-list">
+                {allSoaps}
+            </div>
         </main>
     )
 }

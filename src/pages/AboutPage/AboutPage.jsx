@@ -10,7 +10,7 @@ export default function AboutPage() {
                         <img className="rounded img-fluid img-thumbnail" id="about-img" src="https://imgur.com/JOr47gh.png" alt="" />
                     </div>
                     <div className="col">
-                        <h4 className="about-p" id="about-h4">Who We Are</h4>
+                        <h2 className="about-p-h2" id="about-h4"><strong>Who We Are</strong></h2>
                         <p className="about-p">Vasquez Farms LLC is a small family farm located in Washougal,
                             WA.  We currently raise goats, (meat and dairy), sheep, chickens, 
                             ducks and turkeys.  We hope to have vegetable and flower starts available soon!
@@ -21,7 +21,7 @@ export default function AboutPage() {
             <div className="container-fluid" id="about-containers-r">
                 <div className="row align-items-center">
                     <div className="col">
-                        <h4 className="about-p-r" id="about-h4">My Soap Story</h4>
+                        <h2 className="about-p-r-h2" id="about-h4"><strong>My Soap Story</strong></h2>
                         <p className="about-p-r">I started making small batch goats milk soap in January 2021 after
                             more than a year of research. I fell in love with the process and began selling to
                             friends and family in May 2020.  I love knowing where the products I use on my body
@@ -42,7 +42,7 @@ export default function AboutPage() {
                         <img className="rounded img-fluid img-thumbnail" id="about-img" src="https://imgur.com/xvoBri7.png" alt="" />
                     </div>
                     <div className="col">
-                    <h4 className="about-p" id="about-h4">About The farmers</h4>
+                    <h2 className="about-p-h2" id="about-h4"><strong>About The farmers</strong></h2>
                         <p className="about-p">
                         Although we both have full time jobs off the farm, my husband and I 
                         are homesteaders at heart!  We enjoy caring for our many animals, building structures for 
