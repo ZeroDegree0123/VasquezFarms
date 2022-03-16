@@ -3,8 +3,20 @@
 }
 
 #description {
+    width: 350px;
     border:rgb(206, 149, 114);
-    text-align: left;
+    text-align: center;
+    margin: 0 20px 0 20px;
+}
+
+.td-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ingredients {
+    margin: 0 20px 0 20px;
 }
 
 .detail-container {
