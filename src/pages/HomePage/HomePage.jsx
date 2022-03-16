@@ -7,15 +7,15 @@ export default function HomePage() {
             <section>
                 <div className="container-fluid" id="home-container-top">
                         <h1>
-                            Welcome To VasquezFarms
+                            Welcome To VasquezFarms LLC
                         </h1>
                     <div className="row align-items-center" id="second-container">
                         <div className="col"> 
                             <img className="rounded img-fluid" id="main-image" src="https://imgur.com/Llsrq0i.png" alt="" />
                         </div>
                         <div className="col" id="statement">
-                            <h3 className="feel">Feel Clean, Smell Clean</h3>
-                            <p id="paragraph">Natural Ingredients, Wide variety, Straight From The Farm</p> 
+                            <h3 className="feel"><strong>Feel Clean, Smell Clean</strong></h3>
+                            <p id="paragraph">Natural Ingredients, Wide variety, Straight From The Farm.</p> 
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@ export default function HomePage() {
             </section>
             <hr />
             <section>
-                <h3>Some Of Our Best Sellers</h3>
+                <h3 id="best">Best Sellers</h3>
             </section>
             <section>
                 <div className="container-fluid" id="home-container-middle">

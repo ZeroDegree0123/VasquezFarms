@@ -1,3 +1,4 @@
+import './OrderList.css'
 import OrderCard from "../OrderCard/OrderCard";
 
 export default function OrderList({orders}) {
@@ -10,7 +11,7 @@ export default function OrderList({orders}) {
         />
         )
     return (
-        <div>
+        <div className="order-list">
             {allOrders.length ? 
                 allOrders 
                 : 

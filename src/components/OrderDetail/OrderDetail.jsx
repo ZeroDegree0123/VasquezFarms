@@ -1,3 +1,4 @@
+import './OrderDetail.css'
 import SoapOrderCard from "../SoapOrderCard/SoapOrderCard";
 
 export default function OrderDetail({ order, handleChangeQty, handleCheckout }) {
@@ -18,7 +19,6 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
 // }
     return (
         <div>
-            
             <div>
                 {order.isPaid ?
                     <span>ORDER<span>{order.orderId}</span></span>
@@ -26,25 +26,32 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
                     <span>NEW ORDER</span>
                 }
                 &nbsp;
+                &nbsp;
                 <span>{new Date(order.updatedAt).toLocaleDateString()}</span>
             </div>
+            <br />
             <div>
             {lineSoaps.length ?
           <>
-            {/* {allSoaps} */}
             {lineSoaps}
-            <section className="total">
+            <br />
+            <section className="total" id="checkout">
               {order.isPaid ?
                 <span className="right">TOTAL&nbsp;&nbsp;</span>
                 :
                 <button
-                  className="btn-sm"
+                  id="checkout-button"
+                  className="btn btn-sm btn-warning"
                   onClick={handleCheckout}
                   disabled={!lineSoaps.length}
                 >CHECKOUT</button>
               }
-              <span>{order.totalQty}</span>
-              <span className="right">${order.orderTotal.toFixed(2)}</span>
+              <div>
+                <h4>Total Items: {order.totalQty}</h4>
+              </div>
+              <div>
+                <h4 className="right">Total Cost ${order.orderTotal.toFixed(2)}</h4>
+              </div> 
             </section>
           </>
           :

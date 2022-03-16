@@ -10,6 +10,10 @@ hr {
   color: rgb(175, 99, 51)
 }
 
+#best {
+    text-decoration: underline;
+}
+
 #second-container {
     background-image: linear-gradient(to left, rgb(175, 99, 51) , lightblue);
 }
@@ -42,7 +46,7 @@ hr {
 
 .brand-statement {
     text-align: center;
-    background-color: rgb(173, 109, 69);
+    border:rgb(175, 99, 51);
 }
 
 .images {

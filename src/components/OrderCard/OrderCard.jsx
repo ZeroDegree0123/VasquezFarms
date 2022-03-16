@@ -1,10 +1,27 @@
+import "./OrderCard.css"
+
 export default function OrderCard({order}) {
     return (
-        <section>
-            <div>Order ID: {order.orderId}</div>
-            <div>{new Date(order.updatedAt).toLocaleDateString()}</div>
-            <div>${order.orderTotal.toFixed(2)}</div>
-            <div>{order.totalQty} Item{order.totalQty > 1 ? 's' : ''}</div>
-        </section>
+        <>
+        &nbsp;
+            <section className="card" id="order-detail-card">
+                <div className="card-body">
+                    <h5 className="card-title">
+                        Order ID: {order.orderId}
+                    </h5>
+                    <h6 className="card-subtitle mb-2 text-muted">
+                        {new Date(order.updatedAt).toLocaleDateString()}
+                    </h6>
+                    <div >
+                        Paid:
+                        ${order.orderTotal.toFixed(2)}
+                    </div>
+                    <div >
+                        For: {order.totalQty} Item{order.totalQty > 1 ? 's' : ''}
+                    </div>
+                </div>
+            </section>
+        &nbsp;
+        </>
     )
 }

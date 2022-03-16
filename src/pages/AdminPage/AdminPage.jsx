@@ -26,21 +26,21 @@ export default function AdminPage({user}) {
         <>
             <section className="admin">
                 <div className="category">
-                    <h2>
+                    <div>
                         {user.role === "admin" ?
                         <>
-                            <h1>ADD A CATEGORY</h1>
+                            <h2>ADD A CATEGORY</h2>
                             <CategoryForm categories={categories} setCategories={setCategories}/>
-                            <h1>ADD A SOAP</h1>
+                            <h2>ADD A SOAP</h2>
                             <SoapForm cats={cats}/>
                         </>
                         :
                         <>
                             <p>not Authorized</p>
-                            <h1>hahaha</h1>
+                            <h2>hahaha</h2>
                         </>
     }
-                    </h2>
+                    </div>
                 </div>
             </section>
         </>
