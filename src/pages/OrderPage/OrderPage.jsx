@@ -15,9 +15,10 @@ export default function OrderPage({soaps, cart, handleChangeQty, handleCheckout}
                 />
             </div>
             <br />
-            <div>
-                <Link to="/orders" className="btn btn-sm btn-outline-dark"> <strong>PREVIOUS ORDERS</strong></Link>
+            <div id="orders-btn">
+                <Link to="/orders" className="btn btn-sm btn-outline-dark" id="orders-btn"> <strong>PREVIOUS ORDERS</strong></Link>
             </div>
+        
         </>
     )
 }

@@ -15,12 +15,6 @@ export default function SoapOrderCard({lineSoap, isPaid, handleChangeQty}) {
                                 <div>
                                 Costs  ${lineSoap.soap.price}.00
                                 </div>
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
                                 <div className="qty" id="cost-card" style={{ justifyContent: isPaid && 'center' }}>
                                     {!isPaid &&
                                         <button

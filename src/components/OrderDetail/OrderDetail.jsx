@@ -21,9 +21,9 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
         <div>
             <div>
                 {order.isPaid ?
-                    <span>ORDER<span>{order.orderId}</span></span>
+                    <span><h1 id="order-title">ORDER</h1><span>{order.orderId}</span></span>
                     :
-                    <span>NEW ORDER</span>
+                    <span><h1 id="order-title">NEW ORDER</h1></span>
                 }
                 &nbsp;
                 &nbsp;
