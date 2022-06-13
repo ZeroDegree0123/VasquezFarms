@@ -1,21 +1,23 @@
-const express = require('express');
-const path = require('path');
-const favicon = require('serve-favicon');
-const logger = require('morgan');
+const express = require("express");
+const path = require("path");
+const favicon = require("serve-favicon");
+const logger = require("morgan");
 
-// Always require and configure near the top 
-require('dotenv').config();
-// Connect to the database
-require('./config/database');
+//Always require and config near the top
+require("dotenv").config();
+// Connect to DB AFTER dotenv is configured
+require("./config/database");
 
 const app = express();
 
-app.use(logger('dev'));
+//Have to invoke to configure
+app.use(logger("dev"));
 app.use(express.json());
-app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(favicon(path.join(__dirname, "build", "favicon.ico")));
+app.use(express.static(path.join(__dirname, "build")));
 
-app.use(require('./config/checkToken'));
+//Middleware to verify token and assign user object to req object
+app.use(require("./config/checkToken"));
 
 // API routes here
 const ensureLoggedIn = require('./config/ensureLoggedIn');
@@ -25,12 +27,11 @@ app.use('/api/soaps', require('./routes/api/soaps'));
 app.use('/api/orders', ensureLoggedIn, require('./routes/api/orders'));
 
 // "Catch All" route
-app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+app.get("/*", (req, res) =>
+  res.sendFile(path.join(__dirname, "build", "index.html"))
+);
 
+//Listening for HTTP requests on a certain port
 const port = process.env.PORT || 3001;
 
-app.listen(port, function() {
-  console.log(`Express app running on port ${port}`);
-});
+app.listen(port, () => console.log(`Express App running on port ${port}`));
