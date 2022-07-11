@@ -12,8 +12,9 @@ import AdminPage from '../AdminPage/AdminPage';
 import HomePage from '../HomePage/HomePage';
 import ProductsPage from '../ProductsPage/ProductsPage';
 import OrderHistory from '../OrderHistoryPage/OrderHistory';
-import NavBar from '../../components/NavBar/NavBar';
 import SoapDetailPage from '../SoapDetailPage/SoapDetailPage';
+import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -102,6 +103,7 @@ export default function App() {
             <Route path="/orders" element={<OrderHistory order={cart} user={user} setUser={setUser}/>}/>
             <Route path="/login" element={<Auth setUser={setUser} redirect={redirect}/>} />
           </Routes>
+          <Footer/>
         </>
     </main>
   );
