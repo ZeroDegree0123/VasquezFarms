@@ -13,10 +13,10 @@ export default function SoapList({soaps, handleAddToOrder, cart}) {
         />
     );
     return (
-        <main>
+        <section>
             <div id="soap-list">
                 {allSoaps}
             </div>
-        </main>
+        </section>
     )
 }

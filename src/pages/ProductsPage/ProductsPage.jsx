@@ -4,17 +4,17 @@ import SoapList from '../../components/SoapList/SoapList'
 export default function ProductsPage({user, setUser, soaps, cats, activeCat, setActiveCat, categories, cart, handleAddToOrder}) {
 
     return (
-        <section className="products-page-container">
-            <div className="products-category-container">
+        <main className="products-page-container">
+            <section className="products-category-container">
                 <CategoryList
                     categories={categories} 
                     activeCat={activeCat} 
                     setActiveCat={setActiveCat} 
                     cats={cats}
                 />
-            </div>
+            </section>
             <hr />
-            <div className="products-soaps-container">
+            <section className="products-soaps-container">
                 {/* <div className="soap-of-the-month">
                     <h1 className="soap-of-the-month-body">SOAP OF THE MONTH</h1>
                     <div className="monthly-soap-image-container">
@@ -27,7 +27,7 @@ export default function ProductsPage({user, setUser, soaps, cats, activeCat, set
                     handleAddToOrder={handleAddToOrder}
                     cart={cart}
                 />
-            </div>
-        </section>
+            </section>
+        </main>
     )
 }

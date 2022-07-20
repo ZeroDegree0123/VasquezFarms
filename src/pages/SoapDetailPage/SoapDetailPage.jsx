@@ -16,11 +16,11 @@ export default function SoapDetailPage() {
     }, [])
     
     return (
-        <section className="details-page-container">
+        <main className="details-page-container">
             <div className="back-to-soaps">
                 <Link className="back-to-soaps-link" to="/soaps">-Back to soaps</Link>
             </div>
-            <div className="details-header-container">
+            <section className="details-header-container">
                 <div className="details-header-top-container">
                     <img className="details-header-soap-image" src={soap.image} alt="image"/>
                     <div className="details-header-body-container">
@@ -40,12 +40,12 @@ export default function SoapDetailPage() {
                         <button className="details-order-button">Add To Cart</button>
                     </div>
                 </div>
-            </div> 
-            <div className="details-ingredients-container">
+            </section> 
+            <section className="details-ingredients-container">
                 <h2 className="details-ingredients-title">INGREDIENTS</h2>
                 <h4 className="details-ingredients-body">{soap.ingredients}</h4> 
-            </div>
-            <div className="reviews-container">
+            </section>
+            <section className="reviews-container">
                 <div className="reviews-header-container">
                     <h1 className="reviews-header-title">REVIEWS</h1>
                     <p className="reviews-header-rating">overall rating</p>
@@ -60,7 +60,7 @@ export default function SoapDetailPage() {
                     </div>
                    <p className="reviews-body">review</p>
                 </div>
-            </div>
-       </section>
+            </section>
+       </main>
     )
 }

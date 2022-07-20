@@ -12,12 +12,12 @@ export default function CategoryList({categories, activeCat, setActiveCat}) {
     );
     return (
         <>
-            <div className="category-container">
+            <section className="category-container">
                 <h2 className="category-header">Categories</h2>
                 <div className="category">
                     {categoryList}
                 </div>
-            </div>
+            </section>
         </>
     )
 }
