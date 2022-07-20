@@ -1,40 +1,44 @@
-#soap-button {
-    background-color: lightblue;
+.soap-card-container {
+    margin: 20px;
 }
 
-#soap-button:hover {
-    background-color: lightcyan;
+.soap-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 1px 2px rgb(0, 0, 0, 20%);
 }
-
-#soap-button:active {
-    background-color: white;
-}
-
-#soap-card {
-    width: 18rem;
-    margin: 30px;
-    background-color: rgb(209, 142, 100);
-}
-
-#soap-description {
-    text-align: left;
-}
-
-#soap-price {
-    margin: 5px;
-    color: green;
-}
-
 
 .soap-link {
     text-decoration: none;
-    color: black;
-}
-.soap-link:hover {
-    color: lightblue;
 }
 
-.btn:active {
-    background-color: white;
-    
+.soap-card-image {
+    width: 250px;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.soap-card-title {
+    padding: 10px;
+    height: 100px;
+    color: black;
+}
+
+.soap-card-price {
+    color: green;
+    height: 40px;
+}
+
+.soap-card-button {
+    width: 100%;
+    border: none;
+    background-color: orange;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }

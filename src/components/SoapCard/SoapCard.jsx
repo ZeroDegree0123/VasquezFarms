@@ -4,19 +4,15 @@ import './SoapCard.css'
 export default function SoapCard({soap, handleAddToOrder}) {
     return (
         <>
-            <section className="card-container">
-                <div className="card mb-3" id="soap-card" >
+            <section className="soap-card-container">
+                <div className="soap-card">
                     <Link className="soap-link" to={`/soaps/${soap._id}`}>
-                        <img src={soap.image} alt="img" className="card-img-top"/>   
-                        <h4 className="card-title">
-                            {soap.name}
-                        </h4>
+                        <img src={soap.image} alt="img" className="soap-card-image"/>   
+                        <h4 className="soap-card-title">{soap.name}</h4>
                         <hr />
-                        <h4 className="card-text d-flex justify-content-end" id="soap-price">
-                            ${soap.price}.00
-                        </h4>
+                        <h4 className="soap-card-price">${soap.price}.00</h4>
                     </Link>
-                    <button id="soap-button" className="btn btn-lg" onClick={() => handleAddToOrder(soap._id)}>ADD TO CART</button> 
+                    <button className="soap-card-button" onClick={() => handleAddToOrder(soap._id)}>ADD TO CART</button> 
                 </div>         
             </section> 
         </>

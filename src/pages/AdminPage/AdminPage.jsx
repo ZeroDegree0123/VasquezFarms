@@ -30,7 +30,6 @@ export default function AdminPage({user}) {
             <section className="admin">
                 <div className="category">
                     <div>
-                        {user.role === "admin" ?
                         <>
                             <br />
                             <h2>ADD A CATEGORY</h2>
@@ -44,7 +43,6 @@ export default function AdminPage({user}) {
                         <>
                            <NotAuth/>
                         </>
-    }
                     </div>
                 </div>
             </section>
