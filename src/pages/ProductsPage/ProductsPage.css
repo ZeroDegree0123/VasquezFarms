@@ -1,0 +1,52 @@
+.products-page-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.products-category-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.products-soaps-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.soap-of-the-month {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.soap-of-the-month-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background: linear-gradient(270deg, lightblue, white );
+}
+
+.monthly-soap-image-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.monthly-soap-image {
+    width: 500px;
+}
+
+.monthly-soap-title {
+    position: absolute;
+    padding: 10px;
+    color: lightblue;
+    text-shadow: 1px 2px black;
+}

@@ -9,7 +9,6 @@ export default function SoapCard({soap, handleAddToOrder}) {
                     <Link className="soap-link" to={`/soaps/${soap._id}`}>
                         <img src={soap.image} alt="img" className="soap-card-image"/>   
                         <h4 className="soap-card-title">{soap.name}</h4>
-                        <hr />
                         <h4 className="soap-card-price">${soap.price}.00</h4>
                     </Link>
                     <button className="soap-card-button" onClick={() => handleAddToOrder(soap._id)}>ADD TO CART</button> 

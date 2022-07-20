@@ -1,28 +1,199 @@
-#soap-image {
-    background-color: rgb(206, 149, 114);
-}
-
-#description {
-    width: 350px;
-    border:rgb(206, 149, 114);
-    text-align: center;
-    margin: 0 20px 0 20px;
-}
-
-.td-desc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.ingredients {
-    margin: 0 20px 0 20px;
-}
-
-.detail-container {
+.details-page-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(lightblue, rgb(206, 149, 114));
+    background-color: white;
+    margin: 40px;
+}
+
+.back-to-soaps {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.back-to-soaps-link {
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.back-to-soaps-link:hover {
+    text-decoration: none;
+    color: white;
+}
+
+/* header */
+
+.details-header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.details-header-top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.details-header-soap-image {
+    margin: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    height: 400px;
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.details-header-body-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    height: 400px;
+    background: linear-gradient(90deg, lightblue, white);
+}
+
+.details-header-body-title {
+    font-size: 35px;
+}
+
+.details-header-body-description {
+ text-align: left;
+}
+
+.details-header-bottom-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.details-header-quantity-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.details-header-quantity-title {
+    margin: 0;
+    padding-right: 5px;
+}
+
+.details-header-quantity-button {
+    margin: 0;
+    border-radius: 5px;
+}
+
+.details-header-order-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-order-price {
+    color: green;
+    margin: 0;
+    padding-right: 10px;
+}
+
+.details-order-button {
+    background-color: lightblue;
+    border-radius: 5px;
+}
+
+.details-ingredients-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.details-ingredients-title {
+    font-size: 35px;
+}
+
+.details-ingredients-body {
+    text-align: left;
+    margin: 0;
+    margin-top: 10px;
+
+}
+
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.reviews-header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.reviews-header-title {
+    font-size: 35px;
+}
+
+.reviews-header-rating {
+    font-size: 18px;
+}
+
+.reviews-body-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.reviews-top-body-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%
+}
+
+.reviews-top-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.reviews-top-body-name {
+    margin: 0;
+}
+
+.reviews-top-body-rating {
+    font-size: 15px;
+}
+
+.reviews-date {
+    font-size: 15px;
+}
+
+.reviews-body {
+    text-align: left;
+    padding: 20px;
+    width: 100%;
 }
