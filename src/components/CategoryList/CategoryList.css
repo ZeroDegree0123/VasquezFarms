@@ -25,7 +25,7 @@
       
   .category div:hover:not(.active) {
     cursor: pointer;
-    background-color: black;
+    background-color: lightblue;
     color: var(--white);
   }
   
@@ -36,9 +36,30 @@
   }
 
   .category-button {
-
+    display: flex;
+    justify-content: flex-start;
+    font-size: 25px;
+    width: 200px;
   }
 
   .category-header {
     font-size: 35px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+
+  }
+  
+  @media only screen and (max-width: 1200px) { 
+      
+  }
+
+  @media only screen and (max-width: 800px) { 
+      .category-header {
+        font-size: 25px;
+      }
+
+      .category-button {
+        font-size: 18px;
+      }
   }

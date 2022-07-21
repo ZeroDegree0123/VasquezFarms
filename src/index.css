@@ -4,3 +4,11 @@
   /* --secondary: rgba(194, 194, 194, 0.947); */
   --secondary: rgba(255, 136, 0, 0.815);
 }
+
+@media only screen and (min-width: 1600px) {
+
+}
+
+@media only screen and (max-width: 1200px) { 
+    
+}
