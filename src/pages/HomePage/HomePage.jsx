@@ -7,12 +7,12 @@ export default function HomePage() {
             <main>
                 <section className="home-header-container">
                     <div className="home-header-image-container"> 
-                        <img className="home-header-image" src="https://imgur.com/Llsrq0i.png" alt="" />
+                        <img className="home-header-image" src="https://imgur.com/aKLqJ5Q.png" alt="" />
                     </div>
                     <div className="home-header-body-container">
-                        <h1 className="home-header-body">WELCOME TO VASQUEZ FARMS LLC</h1>
-                        <h3 className="home-header-body"><strong>Feel Clean, Smell Clean</strong></h3>
-                        <p className="home-header-body">Natural Ingredients, Wide variety, Straight From The Farm.</p> 
+                        <h1 id="home-header-body-title" className="home-header-body">WELCOME TO VASQUEZ FARMS LLC</h1>
+                        <h3 id="home-header-body-subtitle" className="home-header-body"><strong>Feel Clean, Smell Clean</strong></h3>
+                        <p id="home-header-body-body" className="home-header-body">Natural Ingredients, Wide variety, Straight From The Farm.</p> 
                     </div>
                 </section>
                 <section className="home-order-container">
