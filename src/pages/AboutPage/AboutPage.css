@@ -1,41 +1,129 @@
+.about-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-
-#about-img {
+.about-header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    margin-bottom: 100px;
     width: 100%;
-    height: 500px;
-    background-color: lightblue;
 }
 
-#about-containers {
-    background-image: linear-gradient(to left, rgb(175, 99, 51) , lightblue);
+.about-header-image-container {
+    width: 40%;
 }
 
-#about-containers-r {
-    background-image: linear-gradient(to right, rgb(175, 99, 51) , lightblue);
+.about-header-image {
+    width: 100%;
+    border-radius: 10px;
 }
 
-#about-h4 {
-    text-decoration: underline;
+.about-header-left-body-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 20px;
+    width: 30%;
 }
 
-#about-main {
-    background-color: rgb(175, 99, 51);
+.about-header-right-body-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 20px;
+    width: 30%;
 }
 
-.about-p {
-    font-size: 26px;
+.about-header-titles {
+    font-size: 30px;
+}
+
+.about-header-bodies {
+    font-size: 14px;
+}
+
+.about-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: url("https://imgur.com/Kfwp1WE.png");
+}
+
+.about-main-top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.about-main-bottom-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.about-main-images {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.about-main-top-body {
+    text-align: left;
+    margin: 10px;
+    margin-left: 0;
+    padding: 10px;
+    background: linear-gradient(90deg, lightblue, rgb(255, 255, 255, 0%));
+}
+
+.about-main-bottom-body {
+    text-align: left;
+    margin: 10px;
+    margin-right: 0;
+    padding: 10px;
+    background: linear-gradient(270deg, lightblue, rgb(255, 255, 255, 0%));
+}
+
+.about-main-body-titles{
+    font-size: 30px;
     text-align: left;
 }
 
-.about-p-h2 {
+.about-main-body-bodies{
     text-align: left;
 }
 
-.about-p-r {
-    font-size: 23px;
-    text-align: right;
+
+.about-contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.about-p-r-h2 {
-    text-align: right;
+.about-contact-body-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+}
+
+#image-left {
+    margin-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#image-right {
+    margin-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }

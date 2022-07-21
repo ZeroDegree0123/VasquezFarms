@@ -39,10 +39,6 @@ export default function AdminPage({user}) {
                             <h2>ADD A SOAP</h2>
                             <SoapForm cats={cats}/>
                         </>
-                        :
-                        <>
-                           <NotAuth/>
-                        </>
                     </div>
                 </div>
             </section>

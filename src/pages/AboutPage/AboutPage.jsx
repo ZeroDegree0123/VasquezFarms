@@ -4,25 +4,25 @@ export default function AboutPage() {
     return (
         <main className="about-page-container">
             <section className="about-header-container">
-                <div className="about-header-left-body">
-                    <h1 className="about-header-body-titles">WHAT MAKES IT ALL POSSIBLE</h1>
-                    <p className="about-header-body-bodies">
+                <div className="about-header-left-body-container">
+                    <h1 className="about-header-titles">WHO WE ARE</h1>
+                    <p className="about-header-bodies">
                         Vasquez Farms LLC is a small family farm located in Washougal,
                         WA. We currently raise goats, (meat and dairy), sheep, chickens, 
                         ducks and turkeys. We hope to have vegetable and flower starts available soon!
                     </p>
                 </div>
-                <div className="about-header-image">
-                    <img src="" alt="" />
+                <div className="about-header-image-container">
+                    <img className="about-header-image" src="https://imgur.com/ZIK3ZQx.png" alt="" />
                 </div>
-                <div className="about-header-right-body">
-                    <h1 className="about-header-body-titles">WHAT WE STAND FOR</h1>
-                    <p className="about-header-body-bodies">gibberish</p>
+                <div className="about-header-right-body-container">
+                    <h1 className="about-header-titles">OUR MISSION</h1>
+                    <p className="about-header-bodies">gibberish</p>
                 </div>
             </section>
             <section className="about-main-container">
                 <div className="about-main-top-container">
-                    <img className="about-main-images" src="" alt="" />
+                    <img id="image-left" className="about-main-images" src="https://imgur.com/aRsYE9f.png" alt="" />
                     <div className="about-main-top-body">
                         <h1 className="about-main-body-titles">MyStory</h1>
                         <p className="about-main-body-bodies">
@@ -36,25 +36,32 @@ export default function AboutPage() {
                     </div>
                 </div>
                 <div className="about-main-bottom-container">
-                    <img className="about-main-images" src="" alt="" />
                     <div className="about-main-bottom-body">
                         <h1 className="about-main-body-titles">OUR SECRET</h1>
-                        <p className="about-main-body-bodies">gibberish</p>
+                        <p className="about-main-body-bodies">
+                            gibberishjdfakjdhfakshfkjfakjshfadhfkljaasdfjhasjdfhakjdhfasjkhdfashf
+                            slkjflajflkajdflkajdflkjasdlkfjaslkjflkasjflkasjlkajlkjdkflkfs
+                            lsdflskjdflksjdflksjdflksjdflkjflksjdflksjflkjsdf
+                        </p>
                     </div>
+                    <img id="image-right" className="about-main-images" src="https://imgur.com/8MmSoXg.png" alt="" />
                 </div>
             </section>
             <section className="about-contact-container">
-                <div>
-                    <h1>email</h1>
-                    <a href="">link</a>
-                </div>
-                <div>
-                    <h1>email</h1>
-                    <a href="">link</a>
-                </div>
-                <div>
-                    <h1>email</h1>
-                    <a href="">link</a>
+                <h1>FEEL FREE TO CONTACT US</h1>
+                <div className="about-contact-body-container">
+                    <div>
+                        <h1>email</h1>
+                        <a href="">link</a>
+                    </div>
+                    <div>
+                        <h1>email</h1>
+                        <a href="">link</a>
+                    </div>
+                    <div>
+                        <h1>email</h1>
+                        <a href="">link</a>
+                    </div>
                 </div>
             </section>
         </main>

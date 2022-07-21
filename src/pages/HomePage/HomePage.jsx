@@ -59,7 +59,7 @@ export default function HomePage() {
                             <img className="home-feature-images" src="https://imgur.com/4jCRkug.png" alt="" />
                         </Link>
                         <Link id="link-4" className="home-feature-links" to="/soaps">
-                            <h1 className="home-feature-image-titles">Black Rasberry Vanilla</h1>
+                            <h1 className="home-feature-image-titles">Black Rasberry</h1>
                             <img className="home-feature-images" src="https://imgur.com/PtNeTrK.png" alt="" />
                         </Link>
                         <Link id="link-5" className="home-feature-links" to="/soaps">
