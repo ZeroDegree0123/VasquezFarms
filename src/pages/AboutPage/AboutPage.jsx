@@ -50,17 +50,13 @@ export default function AboutPage() {
             <section className="about-contact-container">
                 <h1>FEEL FREE TO CONTACT US</h1>
                 <div className="about-contact-body-container">
-                    <div>
-                        <h1>email</h1>
-                        <a href="">link</a>
+                    <div className="contact-cards">
+                        <h1 className="contact-card-titles">PHONE</h1>
+                        <a className="contact-card-links" href="">link</a>
                     </div>
-                    <div>
-                        <h1>email</h1>
-                        <a href="">link</a>
-                    </div>
-                    <div>
-                        <h1>email</h1>
-                        <a href="">link</a>
+                    <div className="contact-cards">
+                        <h1 className="contact-card-titles">EMAIL</h1>
+                        <a className="contact-card-links" href="">link</a>
                     </div>
                 </div>
             </section>

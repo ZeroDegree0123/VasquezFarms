@@ -31,7 +31,7 @@ export default function HomePage() {
                         <p className="home-order-body">We have a wide variety of different scents, and check out our seasonals
                             before they go
                         </p>
-                        <a className="home-order-body" id="home-order-button">ORDER NOW</a>
+                        <a className="home-order-body" id="home-order-button" href="/soaps">ORDER NOW</a>
                     </div>
                     <div id="right-order-container" className="home-order-image-container">
                         <div className="home-order-image-subcontainer">

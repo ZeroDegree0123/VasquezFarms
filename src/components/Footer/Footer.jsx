@@ -5,13 +5,13 @@ export default function Footer() {
         <>
             <section className="footer-container">
                 <div className="footer-help-container">
-                    <h1 className="footer-titles">HELP</h1>
+                    <a className="footer-titles" href="/help">HELP</a>
                 </div>
                 <div className="footer-about-container">
-                    <h1 className="footer-titles">ABOUT</h1>
+                    <a className="footer-titles" href="/about">ABOUT</a>
                 </div>
                 <div className="footer-ingredients-container">
-                    <h1 className="footer-titles">OUR INGREDIENTS</h1>
+                    <a className="footer-titles" href="/ingredients">OUR INGREDIENTS</a>
                 </div>
             </section>
         </>

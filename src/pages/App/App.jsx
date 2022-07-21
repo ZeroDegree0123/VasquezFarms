@@ -7,14 +7,16 @@ import * as soapsAPI from '../../utilities/soaps-api';
 import * as ordersAPI from '../../utilities/orders-api';
 import Auth from '../AuthPage/Auth';
 import AboutPage from '../AboutPage/AboutPage';
-import OrderPage from '../OrderPage/OrderPage';
 import AdminPage from '../AdminPage/AdminPage';
-import HomePage from '../HomePage/HomePage';
-import ProductsPage from '../ProductsPage/ProductsPage';
-import OrderHistory from '../OrderHistoryPage/OrderHistory';
-import SoapDetailPage from '../SoapDetailPage/SoapDetailPage';
-import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
+import HelpPage from '../HelpPage/HelpPage';
+import HomePage from '../HomePage/HomePage';
+import IngredientsPage from '../IngredientsPage/IngredientsPage';
+import NavBar from '../../components/NavBar/NavBar';
+import OrderPage from '../OrderPage/OrderPage';
+import OrderHistory from '../OrderHistoryPage/OrderHistory';
+import ProductsPage from '../ProductsPage/ProductsPage';
+import SoapDetailPage from '../SoapDetailPage/SoapDetailPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -77,7 +79,7 @@ export default function App() {
           <NavBar setUser={setUser} user={ user }/>
           <Routes>
             {/* route components in here */}
-            {/* <Route path="/admin" element={<AdminPage user={user} soaps={soaps}/>}/> */}
+            <Route path="/admin" element={<AdminPage user={user} soaps={soaps}/>}/>
             <Route path="/home" element={<HomePage/>}/>
             <Route path="/soaps" 
               element={<ProductsPage
@@ -100,6 +102,8 @@ export default function App() {
                 handleChangeQty={handleChangeQty} 
                 handleCheckout={handleCheckout}/>}/>
             <Route path="/about" element={<AboutPage/>}/>
+            <Route path="/help" element={<HelpPage/>}/>
+            <Route path="/ingredients" element={<IngredientsPage/>}/>
             <Route path="/orders" element={<OrderHistory order={cart} user={user} setUser={setUser}/>}/>
             <Route path="/login" element={<Auth setUser={setUser} redirect={redirect}/>} />
           </Routes>
