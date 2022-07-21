@@ -25,14 +25,12 @@
       
   .category div:hover:not(.active) {
     cursor: pointer;
-    background-color: lightblue;
-    color: var(--white);
+    color: lightblue;
+    text-decoration: underline;
   }
   
   .category div.active {
-    color: var(--text-dark);
-    background-color: var(--tan-1);
-    border: .1vmin solid var(--tan-3);
+    color: lightblue;
   }
 
   .category-button {

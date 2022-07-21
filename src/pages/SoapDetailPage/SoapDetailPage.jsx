@@ -30,7 +30,7 @@ export default function SoapDetailPage() {
                 </div>
                 <div className="details-header-bottom-container">
                     <div className="details-header-quantity-container">
-                        <h5 className="details-header-quantity-title">select quantity</h5>
+                        <h5 className="details-header-quantity-title">Select Quantity</h5>
                         <button className="details-header-quantity-button">.number</button>
                     </div>
                     <div className="details-header-order-container">

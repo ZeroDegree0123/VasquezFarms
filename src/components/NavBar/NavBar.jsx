@@ -18,7 +18,7 @@ export default function NavBar( {user, setUser} ) {
             &nbsp; | &nbsp; 
             <Link className="link" to="/soaps">Soaps</Link>
             &nbsp; | &nbsp;
-            <Link className="link" to="/admin">Admin</Link>
+            {/* <Link className="link" to="/admin">Admin</Link> */}
             &nbsp; | &nbsp; 
             <Link className="link" to="/about">About Us</Link>
             &nbsp; | &nbsp; 

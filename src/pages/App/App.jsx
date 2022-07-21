@@ -77,7 +77,7 @@ export default function App() {
           <NavBar setUser={setUser} user={ user }/>
           <Routes>
             {/* route components in here */}
-            <Route path="/admin" element={<AdminPage user={user} soaps={soaps}/>}/>
+            {/* <Route path="/admin" element={<AdminPage user={user} soaps={soaps}/>}/> */}
             <Route path="/home" element={<HomePage/>}/>
             <Route path="/soaps" 
               element={<ProductsPage
