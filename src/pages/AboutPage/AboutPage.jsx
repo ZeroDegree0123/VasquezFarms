@@ -16,8 +16,14 @@ export default function AboutPage() {
                     <img className="about-header-image" src="https://imgur.com/ZIK3ZQx.png" alt="" />
                 </div>
                 <div className="about-header-right-body-container">
-                    <h1 className="about-header-titles">OUR MISSION</h1>
-                    <p className="about-header-bodies">gibberish</p>
+                    <h1 className="about-header-titles">A LITTLE ABOUT US</h1>
+                    <p className="about-header-bodies">
+                        Although we both have full time jobs off the farm, my husband and I 
+                        are homesteaders at heart!  We enjoy caring for our many animals, building structures for 
+                        them and expanding our farm. I love to garden, and hope to one day produce most of our own 
+                        food. My husband has recently started wood working, I hope to be able to begin selling some 
+                        of his creations in the near future.
+                    </p>
                 </div>
             </section>
             <section className="about-main-container">
@@ -39,9 +45,7 @@ export default function AboutPage() {
                     <div className="about-main-bottom-body">
                         <h1 className="about-main-body-titles">OUR SECRET</h1>
                         <p className="about-main-body-bodies">
-                            gibberishjdfakjdhfakshfkjfakjshfadhfkljaasdfjhasjdfhakjdhfasjkhdfashf
-                            slkjflajflkajdflkajdflkjasdlkfjaslkjflkasjflkasjlkajlkjdkflkfs
-                            lsdflskjdflksjdflksjdflksjdflkjflksjdflksjflkjsdf
+                            content.content.content.content.content.content.content.content.content.content.content.
                         </p>
                     </div>
                     <img id="image-right" className="about-main-images" src="https://imgur.com/8MmSoXg.png" alt="" />
@@ -52,11 +56,11 @@ export default function AboutPage() {
                 <div className="about-contact-body-container">
                     <div className="contact-cards">
                         <h1 className="contact-card-titles">PHONE</h1>
-                        <a className="contact-card-links" href="">link</a>
+                        <a className="contact-card-links" href="">link(not available)</a>
                     </div>
                     <div className="contact-cards">
                         <h1 className="contact-card-titles">EMAIL</h1>
-                        <a className="contact-card-links" href="">link</a>
+                        <a className="contact-card-links" href="">link(not available)</a>
                     </div>
                 </div>
             </section>
