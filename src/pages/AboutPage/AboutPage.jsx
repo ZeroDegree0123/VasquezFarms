@@ -45,7 +45,11 @@ export default function AboutPage() {
                     <div className="about-main-bottom-body">
                         <h1 className="about-main-body-titles">OUR SECRET</h1>
                         <p className="about-main-body-bodies">
-                            content.content.content.content.content.content.content.content.content.content.content.
+                            Our customers wonder why our soap leaves their skin feeling so soft... Well its all thanks
+                            to our secret ingredient Goats Milk. All of our soaps contain Goats Milk and for good reason.
+                            Goats Milk is super good for our skin, not only does it provide anti-inflammatory properties, and 
+                            is toxin free, but it also leaves your skin feeling soft and moisturized. Do you have sensitive skin? 
+                            Well it's no problem, Goats Milk soap is the perfect soap for you.
                         </p>
                     </div>
                     <img id="image-right" className="about-main-images" src="https://imgur.com/8MmSoXg.png" alt="" />

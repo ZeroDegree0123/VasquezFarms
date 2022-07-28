@@ -13,17 +13,17 @@ export default function NavBar( {user, setUser} ) {
     }
     return(
         <nav className="navbar  navbar-dark bg-dark">
-            &nbsp; | &nbsp; 
+            &nbsp;&nbsp; 
             <Link className="link" to="/home"><img className="" id="app-logo" src="https://imgur.com/SKZLmSw.png" alt="" /></Link>
-            &nbsp; | &nbsp; 
+            &nbsp;&nbsp; 
             <Link className="link" to="/soaps">Soaps</Link>
-            &nbsp; | &nbsp;
+            &nbsp;&nbsp;
             {/* <Link className="link" to="/admin">Admin</Link> */}
-            &nbsp; | &nbsp; 
+            &nbsp;&nbsp; 
             <Link className="link" to="/about">About Us</Link>
-            &nbsp; | &nbsp; 
-            &nbsp; | &nbsp; 
-            &nbsp; | &nbsp; 
+            &nbsp;&nbsp; 
+            &nbsp;&nbsp; 
+            &nbsp;&nbsp; 
                 { user ?
                 <>
                     <Link className="link" to="/orders/new">
@@ -35,7 +35,7 @@ export default function NavBar( {user, setUser} ) {
                 </>:
                     <Link className="link" to="/login">Login</Link>
                 }
-                &nbsp; | &nbsp; 
+                &nbsp;&nbsp; 
         </nav>
     ) 
 }

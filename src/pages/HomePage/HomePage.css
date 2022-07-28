@@ -68,14 +68,14 @@ hr {
 
 .home-order-image-titles {
     position: absolute;
-    color: var(--secondary);
+    color: lightblue;
     margin-bottom: 30px;
     padding: 5px;
     width: 350px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     text-shadow: 1px 1px black;
-    background: linear-gradient(0deg, lightblue, rgb(255, 255, 255, 0%));
+    background: linear-gradient(0deg, black, rgb(255, 255, 255, 0%));
 }
 
 .home-order-images {
@@ -141,7 +141,7 @@ hr {
 .home-feature-image-titles {
     position: absolute;
     text-align: left;
-    color: var(--secondary);
+    color: lightblue;
     font-size: 35px;
     padding: 10px;
     padding-left: 15px;
@@ -193,7 +193,7 @@ hr {
     text-decoration: none;
     color: black;
     width: 200px;
-    border: 2px solid black;
+    border: 2px solid lightblue;
     border-radius: 10px;
     background-color: rgb(207, 243, 255);
 }
