@@ -73,12 +73,5 @@ export default function AboutPage() {
     
 }
 
-{/* Although we both have full time jobs off the farm, my husband and I 
-are homesteaders at heart!  We enjoy caring for our many animals, building structures for 
-them and expanding our farm. I love to garden, and hope to one day produce most of our own 
-food. My husband has recently started wood working, I hope to be able to begin selling some 
-of his creations in the near future. */}
-
-
 
 
