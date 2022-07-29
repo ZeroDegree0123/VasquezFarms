@@ -33,6 +33,7 @@ export default function LoginForm({ setUser, redirect }) {
 
   return (
     <div>
+      <h2 className="form-title">LOGIN</h2>
       <div className="form-container">
         <form autoComplete="off" onSubmit={handleSubmit} id="login-form">
           <label>Email</label>
@@ -40,7 +41,7 @@ export default function LoginForm({ setUser, redirect }) {
           <label>Password</label>
           <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
           <br />
-          <button className="btn btn-primary" type="submit">LOG IN</button>
+          <button className="login-button" type="submit">LOG IN</button>
         </form>
       </div>
       <p className="error-message">&nbsp;{error}</p>

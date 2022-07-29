@@ -2,6 +2,18 @@
     background-color: rgb(175, 99, 51);
 } */
 
+.auth-page {
+    margin-top: 100px;
+    margin-bottom: 400px;
+}
+
+.auth-toggle-button {
+    color: white;
+    background-color: var(--secondary);
+    border: 1px solid rgb(125, 147, 155);
+    border-radius: 5px;
+}
+
 .auth-p {
     margin: 10px;
 }

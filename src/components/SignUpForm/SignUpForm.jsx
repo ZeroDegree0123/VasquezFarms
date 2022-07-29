@@ -43,6 +43,7 @@ export default class SignUpForm extends Component {
         const disable = this.state.password !== this.state.confirm;
         return (
           <div>
+            <h2 className="form-title">SIGN UP</h2>
             <div className="form-container">
               <form autoComplete="off" onSubmit={this.handleSubmit} id="sign-up">
                 <label>Name</label>
@@ -54,7 +55,7 @@ export default class SignUpForm extends Component {
                 <label>Confirm</label>
                 <input type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
                 <br />
-                <button className="btn btn-primary" type="submit" disabled={disable}>SIGN UP</button>
+                <button className="signup-button" type="submit" disabled={disable}>SIGN UP</button>
               </form>
             </div>
             <p className="error-message">&nbsp;{this.state.error}</p>

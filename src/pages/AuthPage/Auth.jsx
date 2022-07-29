@@ -9,10 +9,11 @@ export default function AuthPage({ setUser, redirect }) {
   
 
   return (
-    <main>
+    <main className="auth-page">
       <h1>Getting Started</h1>
       <br />
-      <button className="btn btn-light" onClick={() => setShowLogin(!showLogin)}>{showLogin ? 'Sign Up' : 'Log In'}</button>
+      
+      <button className="auth-toggle-button" onClick={() => setShowLogin(!showLogin)}>{showLogin ? 'Sign Up' : 'Log In'}</button>
       <p className="auth-p" >Create an account or Login to make purchases and view your order history</p>
       { showLogin ?
         <LoginForm setUser={setUser} redirect={redirect}/>

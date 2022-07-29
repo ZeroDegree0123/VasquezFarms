@@ -1,3 +1,17 @@
+.login-button {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    background-color: lightblue;
+    border-radius: 5px;
+    border: none;
+}
+
+.login-button:hover {
+    background-color: rgb(96, 211, 250);
+}
+
 #login-form{
     display: flex;
     flex-direction: column;

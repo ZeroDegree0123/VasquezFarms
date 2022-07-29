@@ -95,8 +95,14 @@
 }
 
 .details-header-quantity-button {
-    margin: 0;
+    background-color: white;
     border-radius: 5px;
+    border: 1px solid black;
+}
+
+.details-header-quantity-button:hover {
+    background-color: lightblue;
+    border: 1px solid lightblue;
 }
 
 .details-header-order-container {
@@ -213,4 +219,36 @@
     text-align: left;
     padding: 20px;
     width: 100%;
+}
+
+@media only screen and (max-width: 950px) { 
+    .details-header-top-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .details-header-body-container {
+        align-items: center;
+        background: none;
+        background-color: lightblue;
+        border-radius: 10px;
+    }
+
+    .details-header-body-description {
+        text-align: center;
+        margin: 5px;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    .details-header-bottom-container {
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .details-header-quantity-title {
+        text-align: center;
+        font-size: 15px;
+    }
 }
