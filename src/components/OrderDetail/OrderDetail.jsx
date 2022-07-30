@@ -5,7 +5,6 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
     if (!order) return null;
     // if (order) {
      const lineSoaps = order.lineSoaps.map((soapItem, idx) => (
-        
         <SoapOrderCard
             soapName={soapItem.name}
             soapPrice={soapItem.price}
@@ -25,9 +24,7 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
                     :
                     <span><h1 id="order-title">NEW ORDER</h1></span>
                 }
-                &nbsp;
-                &nbsp;
-                <span>{new Date(order.updatedAt).toLocaleDateString()}</span>
+                {/* <span>{new Date(order.updatedAt).toLocaleDateString()}</span> */}
             </div>
             <br />
             <div>

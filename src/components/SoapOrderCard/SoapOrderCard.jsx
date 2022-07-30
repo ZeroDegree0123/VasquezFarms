@@ -1,5 +1,5 @@
 import './SoapOrderCard.css'
-import { Link } from "react-router-dom"
+
 
 
 export default function SoapOrderCard({lineSoap, isPaid, handleChangeQty}) {
@@ -27,6 +27,7 @@ export default function SoapOrderCard({lineSoap, isPaid, handleChangeQty}) {
                         </div>
                     </div>                        
                 </div>
+                <hr />
                 <div className="order-total-container">
                     <h5>Total:</h5>
                     <h5 className="order-total-price">${lineSoap.extPrice.toFixed(2)}</h5>

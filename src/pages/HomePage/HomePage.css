@@ -97,14 +97,16 @@ hr {
 }
 
 .home-order-body-title {
+    color: lightblue;
     font-size: 50px;
-    text-shadow: 1px 1px lightblue;
+    text-shadow: 1px 1px black;
 }
 
 .home-order-body {
+    color: lightblue;
     font-size: 25px;
     padding: 10px;
-    text-shadow: 1px 1px lightblue;
+    text-shadow: 1px 1px black;
 }
 
 
@@ -267,8 +269,9 @@ hr {
     }
 
     .home-header-body {
+        color: white;
+        text-shadow: 1px 2px black;
         text-align: center;
-        text-shadow: 1px 2px lightblue;
         width: 100%;
     }
 
