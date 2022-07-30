@@ -7,7 +7,7 @@ export default function SoapCard({soap, handleAddToOrder}) {
             <section className="soap-card-container">
                 <div className="soap-card">
                     <Link className="soap-link" to={`/soaps/${soap._id}`}>
-                        <img src={soap.image} alt="img" className="soap-card-image"/>   
+                        <img className="soap-card-image" src={soap.image} alt="img"/>   
                         <h4 className="soap-card-title">{soap.name}</h4>
                         <h4 className="soap-card-price">${soap.price}.00</h4>
                     </Link>

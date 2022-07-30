@@ -14,6 +14,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin: 0;
+    margin-top: 50px;
 }
 
 .soap-of-the-month {
@@ -65,5 +67,9 @@
 @media only screen and (max-width: 800px) { 
     .products-category-container {
         width: 150px;
+    }
+
+    .products-soaps-container {
+        margin-top: 30px;
     }
 }

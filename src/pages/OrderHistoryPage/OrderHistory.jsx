@@ -18,14 +18,16 @@ export default function OrderHistory({user, setUser}) {
 
 
   return (
-    <main className="OrderHistoryPage">
-      <OrderList orders={orders}/>
-      <OrderDetail/>
-      <aside className='aside'>
-        <Link to="/orders/new" className="btn btn-sm btn-outline-dark"> <strong>NEW ORDER</strong></Link>
-      </aside>
-      {/* Render an OrderList component (needs to be coded) */}
-      {/* Render the existing OrderDetail component */}
-    </main>
+    <>
+      <main className="order-history-page-container">
+        <OrderList orders={orders}/>
+        <OrderDetail/>
+        <aside className='aside'>
+          <Link to="/orders/new" className="btn btn-sm btn-outline-dark"> <strong>NEW ORDER</strong></Link>
+        </aside>
+        {/* Render an OrderList component (needs to be coded) */}
+        {/* Render the existing OrderDetail component */}
+      </main>
+    </>
   );
 }

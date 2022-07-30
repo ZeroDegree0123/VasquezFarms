@@ -12,7 +12,7 @@
     border-radius: 10px;
 }
 .soap-card:hover {
-    box-shadow: 1px 2px 10px 2px lightblue;
+    box-shadow: 1px 3px 10px 5px lightblue;
 }
 
 .soap-link {
@@ -24,6 +24,7 @@
     height: 210px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    margin-bottom: 13px;
 }
 
 .soap-card-title {
