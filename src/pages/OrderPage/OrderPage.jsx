@@ -9,7 +9,6 @@ export default function OrderPage({soaps, cart, handleChangeQty, handleCheckout}
             <main className="order-page-container">
                 <div className="order-page">
                     <OrderDetail 
-                        // className="test-list"
                         soaps={soaps}
                         order={cart}
                         handleChangeQty={handleChangeQty}

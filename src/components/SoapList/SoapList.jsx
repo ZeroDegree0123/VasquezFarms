@@ -1,7 +1,7 @@
 import './SoapList.css'
 import SoapCard from '../../components/SoapCard/SoapCard';
 
-export default function SoapList({soaps, handleAddToOrder, cart}) {
+export default function SoapList({soaps, handleAddToOrder, user}) {
     
     const allSoaps = soaps.map(soap => 
         <SoapCard
@@ -10,6 +10,7 @@ export default function SoapList({soaps, handleAddToOrder, cart}) {
             soapName={soap.name}
             soapPrice={soap.price}
             handleAddToOrder={handleAddToOrder}
+            user={user}
         />
     );
     return (

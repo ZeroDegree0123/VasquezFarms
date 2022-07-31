@@ -46,23 +46,23 @@ export default function HomePage() {
                 </section>
                 <h1 className="home-feature-title">FEATURED</h1>
                 <section className="home-feature-container">
-                        <Link id="link-1" className="home-feature-links" to="/soaps">
+                        <Link id="link-1" className="home-feature-links" to="/soaps/62d9bf111145ef5d44129a50">
                             <h1 id="home-feature-image-titles-lrg" className="home-feature-image-titles">Black Jasmine</h1>
                             <img className="home-feature-images" src="https://imgur.com/GmIZZey.png" alt="" />
                         </Link>
-                        <Link id="link-2" className="home-feature-links" to="/soaps">
+                        <Link id="link-2" className="home-feature-links" to="/soaps/62313d4be51f3213c011d4a2">
                             <h1 className="home-feature-image-titles">Sea Salt Agave</h1>
                             <img className="home-feature-images" src="https://imgur.com/Rcmqln0.png" alt="" />
                         </Link>
-                        <Link id="link-3" className="home-feature-links" to="/soaps">
+                        <Link id="link-3" className="home-feature-links" to="/soaps/62d9be8c1145ef5d44129a4d">
                             <h1 className="home-feature-image-titles">Rejuvination</h1>
                             <img className="home-feature-images" src="https://imgur.com/4jCRkug.png" alt="" />
                         </Link>
-                        <Link id="link-4" className="home-feature-links" to="/soaps">
+                        <Link id="link-4" className="home-feature-links" to="/soaps/62d9bd731145ef5d44129a47">
                             <h1 className="home-feature-image-titles">Black Rasberry</h1>
                             <img className="home-feature-images" src="https://imgur.com/PtNeTrK.png" alt="" />
                         </Link>
-                        <Link id="link-5" className="home-feature-links" to="/soaps">
+                        <Link id="link-5" className="home-feature-links" to="/soaps/62d9bdc91145ef5d44129a49">
                             <h1 className="home-feature-image-titles">Lemon Loaf</h1>
                             <img className="home-feature-images" src="https://imgur.com/hFmEvN3.png" alt="" />   
                         </Link>

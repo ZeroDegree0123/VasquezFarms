@@ -2,12 +2,10 @@ import './OrderList.css'
 import OrderCard from "../OrderCard/OrderCard";
 
 export default function OrderList({orders}) {
-    console.log(orders)
     const allOrders = orders.map(order => 
         <OrderCard
             key={order._id}
             order={order}
-
         />
         )
     return (

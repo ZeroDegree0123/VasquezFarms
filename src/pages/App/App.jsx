@@ -17,6 +17,7 @@ import OrderPage from '../OrderPage/OrderPage';
 import OrderHistory from '../OrderHistoryPage/OrderHistory';
 import ProductsPage from '../ProductsPage/ProductsPage';
 import SoapDetailPage from '../SoapDetailPage/SoapDetailPage';
+import ProfilePage from '../ProfilePage/ProfilePage'
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -105,6 +106,7 @@ export default function App() {
             <Route path="/help" element={<HelpPage/>}/>
             <Route path="/ingredients" element={<IngredientsPage/>}/>
             <Route path="/orders" element={<OrderHistory order={cart} user={user} setUser={setUser}/>}/>
+            <Route path="/profile" element={<ProfilePage />}/>
             <Route path="/login" element={<Auth setUser={setUser} redirect={redirect}/>} />
           </Routes>
           <Footer/>

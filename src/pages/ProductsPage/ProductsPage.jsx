@@ -26,6 +26,7 @@ export default function ProductsPage({user, setUser, soaps, cats, activeCat, set
                     soaps={soaps.filter(soap => soap.category.name === activeCat)}
                     handleAddToOrder={handleAddToOrder}
                     cart={cart}
+                    user={user}
                 />
             </section>
         </main>
