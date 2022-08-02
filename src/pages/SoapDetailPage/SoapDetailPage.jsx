@@ -2,23 +2,36 @@ import './SoapDetailPage.css'
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import * as soapsAPI from '../../utilities/soaps-api';
-
+import * as reviewAPI from '../../utilities/reviews-api'
+import ReviewForm from '../../components/ReviewForm/ReviewForm';
+import ReviewList from '../../components/ReviewList/ReviewList';
 
 export default function SoapDetailPage() {
     const [soap, setSoap] = useState([]);
+    const [reviews, setReviews] = useState([])
     const { soapId } = useParams();
+
     useEffect(function () {
         async function getSoap() {
             const soap = await soapsAPI.showSoap(soapId);
             setSoap(soap)
         };
-        getSoap();
+        async function getReviews() {
+            const reviewData = await reviewAPI.allReviews();
+            setReviews(reviewData)
+        }
+        //// USEEFFECT CLEANUP
+        return () => {
+            getSoap();
+            getReviews();
+        };
     }, [])
     
     return (
         <main className="details-page-container">
             <div className="back-to-soaps">
                 <Link className="back-to-soaps-link" to="/soaps">Back to soaps</Link>
+                
             </div>
             <section className="details-header-container">
                 <div className="details-header-top-container">
@@ -45,6 +58,12 @@ export default function SoapDetailPage() {
                 <h2 className="details-ingredients-title">INGREDIENTS</h2>
                 <h4 className="details-ingredients-body">{soap.ingredients}</h4> 
             </section>
+            <ReviewForm/>
+            <ReviewList
+                reviews={reviews}
+                soap={soap}
+                soapId={soapId}
+            />
             <section className="reviews-container">
                 <div className="reviews-header-container">
                     <h1 className="reviews-header-title">REVIEWS</h1>
@@ -54,13 +73,17 @@ export default function SoapDetailPage() {
                     <div className="reviews-top-body-container">
                         <div className="reviews-top-body">
                             <h1 className="reviews-top-body-name">name</h1>
-                            <p className="reviews-top-body-rating">rated</p>
+                            {/* <p className="reviews-top-body-rating">{soap.reviews.rated}</p> */}
                         </div>
                         <div className="reviews-date">date</div>
                     </div>
-                   <p className="reviews-body">review</p>
+                   {/* <p className="reviews-body">{soap.reviews.message}</p> */}
                 </div>
             </section>
+
+
+
+
        </main>
     )
 }

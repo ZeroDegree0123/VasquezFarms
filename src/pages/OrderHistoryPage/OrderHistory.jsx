@@ -2,7 +2,7 @@ import './OrderHistory.css'
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import * as ordersAPI from '../../utilities/orders-api';
-import OrderList from '../../components/OrderList/OrderList';
+import OrderHistoryList from '../../components/OrderHistoryList/OrderHistoryList';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
 
 export default function OrderHistory({user, setUser}) {
@@ -20,7 +20,7 @@ export default function OrderHistory({user, setUser}) {
   return (
     <>
       <main className="order-history-page-container">
-        <OrderList orders={orders}/>
+        <OrderHistoryList orders={orders}/>
         <OrderDetail/>
         <aside className='aside'>
           <Link to="/orders/new" className="btn btn-sm btn-outline-dark"> <strong>NEW ORDER</strong></Link>

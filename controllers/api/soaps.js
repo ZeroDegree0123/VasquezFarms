@@ -35,6 +35,7 @@ module.exports = {
           ingredients:req.body.ingredients,
           price:req.body.price,
           category:req.body.category,
+          reviews:req.body.reviews,
           timestamps: req.body.timestamps
         });
        await newSoap.save();

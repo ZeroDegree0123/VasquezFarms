@@ -29,6 +29,8 @@ export default function App() {
   const [cats, setCats] = useState([]);
   const categoryRef = useRef([]);
     // const [loading, setLoading] = useState(true);
+
+  /////////////////// USE EFFECT FUNCTION // DATA REQUESTS
   useEffect(function() {
       async function getSoaps() {
           const soapData = await soapsAPI.allSoaps();
@@ -54,6 +56,7 @@ export default function App() {
       getCat();
   }, []);
 
+  /////////////// HANDLE FUNCTIONS
   async function handleAddToOrder(soapId) {
       const updatedCart = await ordersAPI.addSoapToCart(soapId);
       setCart(updatedCart);
@@ -68,7 +71,7 @@ export default function App() {
       await ordersAPI.checkout();
       navigate('/orders');
     }
-/////////////////////////////////
+///////////////// NAVIGATE FUNCTIONS
   function redirect() {
     let path = `/soaps`;
     navigate(path);
@@ -80,7 +83,7 @@ export default function App() {
           <NavBar setUser={setUser} user={ user }/>
           <Routes>
             {/* route components in here */}
-            {/* <Route path="/admin" element={<AdminPage user={user} soaps={soaps}/>}/> */}
+            <Route path="/admin" element={<AdminPage user={user} soaps={soaps}/>}/>
             <Route path="/home" element={<HomePage/>}/>
             <Route path="/soaps" 
               element={<ProductsPage

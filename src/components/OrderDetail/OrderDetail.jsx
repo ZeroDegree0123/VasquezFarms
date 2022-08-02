@@ -1,11 +1,11 @@
 import './OrderDetail.css'
-import SoapOrderCard from "../SoapOrderCard/SoapOrderCard";
+import OrderCard from "../OrderCard/OrderCard";
 
 export default function OrderDetail({ order, handleChangeQty, handleCheckout }) {
     if (!order) return null;
     // if (order) {
      const lineSoaps = order.lineSoaps.map((soapItem, idx) => (
-        <SoapOrderCard
+        <OrderCard
             soapName={soapItem.name}
             soapPrice={soapItem.price}
             lineSoap={soapItem}

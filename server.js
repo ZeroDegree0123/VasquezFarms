@@ -25,6 +25,7 @@ app.use('/api/users', require('./routes/api/users'));
 app.use('/api/categories', require('./routes/api/categories'));
 app.use('/api/soaps', require('./routes/api/soaps'));
 app.use('/api/orders', ensureLoggedIn, require('./routes/api/orders'));
+app.use('/api/reviews', ensureLoggedIn, require('./routes/api/reviews'));
 
 // "Catch All" route
 app.get("/*", (req, res) =>

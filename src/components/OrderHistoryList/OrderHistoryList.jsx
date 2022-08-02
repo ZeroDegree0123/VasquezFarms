@@ -1,9 +1,9 @@
-import './OrderList.css'
-import OrderCard from "../OrderCard/OrderCard";
+import './OrderHistoryList.css'
+import OrderHistoryCard from "../OrderHistoryCard/OrderHistoryCard";
 
 export default function OrderList({orders}) {
     const allOrders = orders.map(order => 
-        <OrderCard
+        <OrderHistoryCard
             key={order._id}
             order={order}
         />
