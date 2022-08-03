@@ -63,7 +63,7 @@ export default function SoapDetailPage({user}) {
                 soapId={soapId}
              />
             ///// MAKES PAGE NOT RENDER IN SOAP DATA
-           {/* <ReviewList reviews={reviesws}/> */}
+           {/* <ReviewList reviews={reviews}/> */}
             /////
             <section className="reviews-container">
                 <div className="reviews-header-container">

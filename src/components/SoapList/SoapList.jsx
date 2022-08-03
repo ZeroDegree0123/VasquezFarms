@@ -3,12 +3,10 @@ import SoapCard from '../../components/SoapCard/SoapCard';
 
 export default function SoapList({soaps, handleAddToOrder, user}) {
     
-    const allSoaps = soaps.map(soap => 
+    const allSoaps = soaps.map((soap, id) => 
         <SoapCard
-            key={soap.id}
+            key={id}
             soap={soap}
-            soapName={soap.name}
-            soapPrice={soap.price}
             handleAddToOrder={handleAddToOrder}
             user={user}
         />

@@ -1,9 +1,32 @@
 import './OrderPage.css'
-import OrderDetail from "../../components/OrderDetail/OrderDetail"
 import { Link } from "react-router-dom" 
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import * as ordersAPI from '../../utilities/orders-api';
+import OrderDetail from "../../components/OrderDetail/OrderDetail"
 
-export default function OrderPage({soaps, cart, handleChangeQty, handleCheckout}) {
+export default function OrderPage({soaps}) {
+    const [cart, setCart] = useState(null)
+    const navigate = useNavigate()
+
+    useEffect(function() {
+        async function getCart() {
+            const cartData = await ordersAPI.getCart();
+            setCart(cartData);
+            }
+            getCart();
+    }, []);
+
+    async function handleChangeQty(soapId, newQty) {
+        const updatedCart = await ordersAPI.setSoapQtyInCart(soapId, newQty);
+        setCart(updatedCart);
+      }
     
+    async function handleCheckout() {
+        await ordersAPI.checkout();
+        navigate('/orders');
+      }
+
     return (
         <> 
             <main className="order-page-container">

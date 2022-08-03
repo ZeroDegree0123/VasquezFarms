@@ -6,6 +6,7 @@ export default function ReviewForm() {
     const [newReview, setNewReview] = useState({
         message: '',
         rating: '',
+        user: ''
     })
 
     function handleChange(evt) {

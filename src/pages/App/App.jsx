@@ -21,16 +21,16 @@ import ProfilePage from '../ProfilePage/ProfilePage'
 
 export default function App() {
   const [user, setUser] = useState(getUser());
-  const [soaps, setSoaps] = useState([]);
   const [cart, setCart] = useState(null)
+  const [soaps, setSoaps] = useState([]);
   const [activeCat, setActiveCat] = useState('');
   const [cats, setCats] = useState([]);
   const categoryRef = useRef([]);
   const navigate = useNavigate()
-    // const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  /////////////////// USE EFFECT FUNCTION // DATA REQUESTS
   useEffect(function() {
+      // GETS SOAP DATA
       async function getSoaps() {
           const soapData = await soapsAPI.allSoaps();
           categoryRef.current = soapData.reduce((cats, soap) => {
@@ -38,16 +38,10 @@ export default function App() {
               return cats.includes(cat) ? cats : [...cats, cat]; 
           }, []);
           setSoaps(soapData)
-          setActiveCat(categoryRef.current[0]);// COME BACKTO
+          setActiveCat(categoryRef.current[0]);
       }
       getSoaps();
-      //////////
-      async function getCart() {
-        const cartData = await ordersAPI.getCart();
-        setCart(cartData);
-      }
-      getCart();
-      //////////
+      // GETS CATEGORY DATA
       async function getCat() {
           const catData = await categorysAPI.showCategory();
           setCats(catData);
@@ -55,22 +49,13 @@ export default function App() {
       getCat();
   }, []);
 
-  /////////////// HANDLE FUNCTIONS
+  // HANDLE FUNCTIONS
   async function handleAddToOrder(soapId) {
       const updatedCart = await ordersAPI.addSoapToCart(soapId);
       setCart(updatedCart);
     }
-  
-    async function handleChangeQty(soapId, newQty) {
-      const updatedCart = await ordersAPI.setSoapQtyInCart(soapId, newQty);
-      setCart(updatedCart);
-    }
-  
-    async function handleCheckout() {
-      await ordersAPI.checkout();
-      navigate('/orders');
-    }
-///////////////// NAVIGATE FUNCTIONS
+
+  // NAVIGATE FUNCTIONS
   function redirect() {
     let path = `/soaps`;
     navigate(path);
@@ -81,35 +66,47 @@ export default function App() {
         <>
           <NavBar setUser={setUser} user={ user }/>
           <Routes>
-            {/* route components in here */}
-            <Route path="/admin" element={<AdminPage user={user} soaps={soaps}/>}/>
-            <Route path="/home" element={<HomePage/>}/>
+            //ADMIN
+            <Route path="/admin" 
+              element={<AdminPage 
+              user={user} 
+              soaps={soaps} 
+              cats={cats}/>}/>
+            //PRODUCTS
             <Route path="/soaps" 
               element={<ProductsPage
                 user={user} 
                 setUser={setUser}
-                cart={setCart} 
                 categories={categoryRef.current} 
                 soaps={soaps} 
                 cats={cats} 
                 activeCat={activeCat} 
                 setActiveCat={setActiveCat}
                 handleAddToOrder={handleAddToOrder}/>}/>
-            <Route path="/soaps/:soapId" element={<SoapDetailPage user={user} soap={soaps}/>}/>
+            //SOAPDETAIL
+            <Route path="/soaps/:soapId" 
+              element={<SoapDetailPage 
+                user={user} 
+                soap={soaps}/>}/>
+            //NEWORDER
             <Route path="/orders/new" 
               element={<OrderPage
                 soaps={soaps}
                 cart={cart} 
                 user={user} 
+                setUser={setUser}/>}/>
+            //LOGIN/SIGNUP
+            <Route path="/login"
+              element={<Auth 
                 setUser={setUser} 
-                handleChangeQty={handleChangeQty} 
-                handleCheckout={handleCheckout}/>}/>
+                redirect={redirect}/>}/>
+            //
+            <Route path="/home" element={<HomePage/>}/>
             <Route path="/about" element={<AboutPage/>}/>
             <Route path="/help" element={<HelpPage/>}/>
             <Route path="/ingredients" element={<IngredientsPage/>}/>
-            <Route path="/orders" element={<OrderHistory order={cart} user={user} setUser={setUser}/>}/>
+            <Route path="/orders" element={<OrderHistory/>}/>
             <Route path="/profile" element={<ProfilePage />}/>
-            <Route path="/login" element={<Auth setUser={setUser} redirect={redirect}/>} />
           </Routes>
           <Footer/>
         </>

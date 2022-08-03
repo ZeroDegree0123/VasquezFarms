@@ -1,4 +1,4 @@
-import { Link, Navigate, useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import './SoapCard.css'
 
 export default function SoapCard({soap, handleAddToOrder, user}) {

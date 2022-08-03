@@ -1,7 +1,7 @@
 import './ReviewList.css'
 import ReviewCard from '../../components/ReviewCard/ReviewCard';
 
-export default function ReviewList({reviews, user}) {
+export default function ReviewList({reviews}) {
     const allReviews = reviews.map((review, idx) => 
         <ReviewCard
             key={idx}
