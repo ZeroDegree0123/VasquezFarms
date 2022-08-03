@@ -7,7 +7,6 @@ module.exports = {
   };
  
   async function show(req, res) {
-    console.log('ctrl happy')
     try {
       const soap = await Soap.findById(req.params.id)
       res.json(soap);

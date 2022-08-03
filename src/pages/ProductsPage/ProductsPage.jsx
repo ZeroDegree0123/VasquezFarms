@@ -1,9 +1,9 @@
 import './ProductsPage.css'
+import { useState } from 'react';
 import CategoryList from '../../components/CategoryList/CategoryList';
 import SoapList from '../../components/SoapList/SoapList'
 
 export default function ProductsPage({user, setUser, soaps, cats, activeCat, setActiveCat, categories, cart, handleAddToOrder}) {
-
     return (
         <main className="products-page-container">
             <section className="products-category-container">

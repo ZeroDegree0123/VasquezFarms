@@ -21,13 +21,12 @@ import ProfilePage from '../ProfilePage/ProfilePage'
 
 export default function App() {
   const [user, setUser] = useState(getUser());
-  const [cart, setCart] = useState(null)
-  const navigate = useNavigate()
-/////////////////////////////////
   const [soaps, setSoaps] = useState([]);
+  const [cart, setCart] = useState(null)
   const [activeCat, setActiveCat] = useState('');
   const [cats, setCats] = useState([]);
   const categoryRef = useRef([]);
+  const navigate = useNavigate()
     // const [loading, setLoading] = useState(true);
 
   /////////////////// USE EFFECT FUNCTION // DATA REQUESTS
@@ -50,8 +49,8 @@ export default function App() {
       getCart();
       //////////
       async function getCat() {
-          const data = await categorysAPI.showCategory();
-          setCats(data);
+          const catData = await categorysAPI.showCategory();
+          setCats(catData);
       }
       getCat();
   }, []);
@@ -96,7 +95,7 @@ export default function App() {
                 activeCat={activeCat} 
                 setActiveCat={setActiveCat}
                 handleAddToOrder={handleAddToOrder}/>}/>
-            <Route path="/soaps/:soapId" element={<SoapDetailPage soap={soaps}/>}/>
+            <Route path="/soaps/:soapId" element={<SoapDetailPage user={user} soap={soaps}/>}/>
             <Route path="/orders/new" 
               element={<OrderPage
                 soaps={soaps}

@@ -2,14 +2,14 @@ import sendRequest from './send-request';
 const BASE_URL = '/api/reviews';
 
 
-export function allReviews(reviews) {
-     return sendRequest(BASE_URL);
+export function makeReview(reviews) {
+    return sendRequest(`${BASE_URL}/new`, "POST", reviews);
 }
 
-export function makeReview(reviews) {
-    console.log('api happy')
-    return sendRequest(`${BASE_URL}/new`, 'POST', reviews);
+export function allReviews() {
+     return sendRequest(BASE_URL);
 }
+console.log('api happy')
 
 export function destroyReview(reviews) {
     return sendRequest(`${BASE_URL}/:id`, 'DELETE', reviews);

@@ -1,32 +1,33 @@
 import './SoapDetailPage.css'
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import * as soapsAPI from '../../utilities/soaps-api';
-import * as reviewAPI from '../../utilities/reviews-api'
+import * as reviewsAPI from '../../utilities/reviews-api'
 import ReviewForm from '../../components/ReviewForm/ReviewForm';
 import ReviewList from '../../components/ReviewList/ReviewList';
 
-export default function SoapDetailPage() {
+export default function SoapDetailPage({user}) {
+    const { soapId } = useParams();
     const [soap, setSoap] = useState([]);
     const [reviews, setReviews] = useState([])
-    const { soapId } = useParams();
 
     useEffect(function () {
         async function getSoap() {
-            const soap = await soapsAPI.showSoap(soapId);
-            setSoap(soap)
+            const soapData = await soapsAPI.showSoap(soapId);
+            setSoap(soapData)
         };
+        getSoap();
+        /////////
         async function getReviews() {
-            const reviewData = await reviewAPI.allReviews();
+            const reviewData = await reviewsAPI.allReviews();
             setReviews(reviewData)
         }
+        getReviews();
         //// USEEFFECT CLEANUP
-        return () => {
-            getSoap();
-            getReviews();
-        };
     }, [])
-    
+
+
+
     return (
         <main className="details-page-container">
             <div className="back-to-soaps">
@@ -58,12 +59,12 @@ export default function SoapDetailPage() {
                 <h2 className="details-ingredients-title">INGREDIENTS</h2>
                 <h4 className="details-ingredients-body">{soap.ingredients}</h4> 
             </section>
-            <ReviewForm/>
-            <ReviewList
-                reviews={reviews}
-                soap={soap}
+             <ReviewForm
                 soapId={soapId}
-            />
+             />
+            ///// MAKES PAGE NOT RENDER IN SOAP DATA
+           {/* <ReviewList reviews={reviesws}/> */}
+            /////
             <section className="reviews-container">
                 <div className="reviews-header-container">
                     <h1 className="reviews-header-title">REVIEWS</h1>
@@ -73,11 +74,11 @@ export default function SoapDetailPage() {
                     <div className="reviews-top-body-container">
                         <div className="reviews-top-body">
                             <h1 className="reviews-top-body-name">name</h1>
-                            {/* <p className="reviews-top-body-rating">{soap.reviews.rated}</p> */}
+                            <p className="reviews-top-body-rating">{reviews.rated}</p>
                         </div>
                         <div className="reviews-date">date</div>
                     </div>
-                   {/* <p className="reviews-body">{soap.reviews.message}</p> */}
+                   <p className="reviews-body">{reviews.message}</p>
                 </div>
             </section>
 

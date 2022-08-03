@@ -1,17 +1,15 @@
 import './ReviewList.css'
 import ReviewCard from '../../components/ReviewCard/ReviewCard';
 
-export default function ReviewList({reviews, user, soap, soapId}) {
-    const allReviews = reviews.map(review => 
-        <div
-            key={review.id}
-            review={soapId.review}
-            reviewMessage={soapId.review.message}
-            reviewRating={soapId.review.rating}
-            user={user}
-        >
-        </div>    
+export default function ReviewList({reviews, user}) {
+    const allReviews = reviews.map((review, idx) => 
+        <ReviewCard
+            key={idx}
+            message={review.message}
+            rating={review.rating}
+        />   
         );
+    
     return (
         <>
             <section className="reviews-container">

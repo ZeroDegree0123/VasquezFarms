@@ -1,26 +1,21 @@
 import './ReviewForm.css'
 import { useState } from 'react';
-import * as reviewsAPI from '../../utilities/reviews-api'
+import * as reviewAPI from '../../utilities/reviews-api'
 
 export default function ReviewForm() {
-    const [review, setReview] = useState({
+    const [newReview, setNewReview] = useState({
         message: '',
         rating: '',
-        user: '',
-        userName: '', 
     })
 
     function handleChange(evt) {
-        setReview({...review, [evt.target.name]: evt.target.value})
+        setNewReview({...newReview, [evt.target.name]: evt.target.value});
     }
 
     async function handleSubmit(evt) {
         evt.preventDefault();
-        reviewsAPI.makeReview(review);
-        setReview({
-            message:'',
-            rating: '',
-        })
+        reviewAPI.makeReview(newReview);
+        setNewReview({message: '', rating: ''});
     }
 
     return (
@@ -29,11 +24,11 @@ export default function ReviewForm() {
                 <form autoComplete="off" onSubmit={handleSubmit}>
                     <div>
                         <span>Review text</span>
-                        <input type="text" name="message" value={review.message} onChange={handleChange}/>
+                        <input type="text" name="message" value={newReview.message} onChange={handleChange}/>
                     </div>
                     <div>
                         <span>Rating</span>
-                        <input type="text" name="rating" value={review.rating} onChange={handleChange}/>
+                        <input type="text" name="rating" value={newReview.rating} onChange={handleChange}/>
                     </div>
                     <button className="review-submit-button">Submit Review</button>
                 </form>

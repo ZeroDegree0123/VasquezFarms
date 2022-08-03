@@ -12,12 +12,10 @@ async function create(req, res) {
             message:req.body.message,
             rating:req.body.rating,
             user:req.body.user._id,
-            userName:req.body.user.name,
             timestamps:req.body.timestamps
         });
         await newReview.save();
         res.json(newReview)
-        
     } catch(err) {
         res.send(err)
     }
