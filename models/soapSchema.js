@@ -26,7 +26,7 @@ const soapSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Category'
     },
-    reviews: {
+    reviews:{
         type: Schema.Types.ObjectId,
         ref: 'Review'
     }

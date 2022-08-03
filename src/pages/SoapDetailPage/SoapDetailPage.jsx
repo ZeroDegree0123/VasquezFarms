@@ -6,18 +6,19 @@ import * as reviewsAPI from '../../utilities/reviews-api'
 import ReviewForm from '../../components/ReviewForm/ReviewForm';
 import ReviewList from '../../components/ReviewList/ReviewList';
 
-export default function SoapDetailPage({user}) {
+export default function SoapDetailPage() {
     const { soapId } = useParams();
     const [soap, setSoap] = useState([]);
     const [reviews, setReviews] = useState([])
 
     useEffect(function () {
+        //GETS INDIVIDUAL SOAP DATA
         async function getSoap() {
             const soapData = await soapsAPI.showSoap(soapId);
             setSoap(soapData)
         };
         getSoap();
-        /////////
+        //GETS REVIEW DATA
         async function getReviews() {
             const reviewData = await reviewsAPI.allReviews();
             setReviews(reviewData)
@@ -27,7 +28,7 @@ export default function SoapDetailPage({user}) {
     }, [])
 
 
-
+    console.log(soap)
     return (
         <main className="details-page-container">
             <div className="back-to-soaps">

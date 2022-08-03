@@ -11,6 +11,6 @@ export function allReviews() {
 }
 console.log('api happy')
 
-export function destroyReview(reviews) {
-    return sendRequest(`${BASE_URL}/:id`, 'DELETE', reviews);
-}
+// export function destroyReview(reviews) {
+//     return sendRequest(`${BASE_URL}/:id`, 'DELETE', reviews);
+// }

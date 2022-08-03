@@ -30,23 +30,23 @@ export default function App() {
   // const [loading, setLoading] = useState(true);
 
   useEffect(function() {
-      // GETS SOAP DATA
-      async function getSoaps() {
-          const soapData = await soapsAPI.allSoaps();
-          categoryRef.current = soapData.reduce((cats, soap) => {
-              const cat = soap.category.name;// turns into string
-              return cats.includes(cat) ? cats : [...cats, cat]; 
-          }, []);
-          setSoaps(soapData)
-          setActiveCat(categoryRef.current[0]);
-      }
-      getSoaps();
-      // GETS CATEGORY DATA
-      async function getCat() {
-          const catData = await categorysAPI.showCategory();
-          setCats(catData);
-      }
-      getCat();
+    // GETS SOAP DATA
+    async function getSoaps() {
+        const soapData = await soapsAPI.allSoaps();
+        categoryRef.current = soapData.reduce((cats, soap) => {
+            const cat = soap.category.name;// turns into string
+            return cats.includes(cat) ? cats : [...cats, cat]; 
+        }, []);
+        setSoaps(soapData)
+        setActiveCat(categoryRef.current[0]);
+    }
+    getSoaps();
+    // GETS CATEGORY DATA
+    async function getCat() {
+        const catData = await categorysAPI.showCategory();
+        setCats(catData);
+    }
+    getCat();
   }, []);
 
   // HANDLE FUNCTIONS
@@ -60,7 +60,7 @@ export default function App() {
     let path = `/soaps`;
     navigate(path);
   };
-
+  console.log(user)
   return (
     <main className="App">
         <>
@@ -76,7 +76,6 @@ export default function App() {
             <Route path="/soaps" 
               element={<ProductsPage
                 user={user} 
-                setUser={setUser}
                 categories={categoryRef.current} 
                 soaps={soaps} 
                 cats={cats} 
@@ -85,16 +84,11 @@ export default function App() {
                 handleAddToOrder={handleAddToOrder}/>}/>
             //SOAPDETAIL
             <Route path="/soaps/:soapId" 
-              element={<SoapDetailPage 
-                user={user} 
-                soap={soaps}/>}/>
+              element={<SoapDetailPage/>}/>
             //NEWORDER
             <Route path="/orders/new" 
               element={<OrderPage
-                soaps={soaps}
-                cart={cart} 
-                user={user} 
-                setUser={setUser}/>}/>
+                soaps={soaps}/>}/>
             //LOGIN/SIGNUP
             <Route path="/login"
               element={<Auth 

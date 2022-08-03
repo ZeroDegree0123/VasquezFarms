@@ -10,6 +10,7 @@ export default function OrderPage({soaps}) {
     const navigate = useNavigate()
 
     useEffect(function() {
+        //GETS ORDER DATA
         async function getCart() {
             const cartData = await ordersAPI.getCart();
             setCart(cartData);
