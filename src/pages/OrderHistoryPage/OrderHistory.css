@@ -3,9 +3,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1000px;
+    margin: 40px;
+    margin-bottom: 700px;
 }
 
-.aside {
-    padding: 10px;
+.new-orders-link-container {
+    width: 100%;
+}
+
+.new-orders-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    padding: 5px;
+    width: 95px;
+}
+
+.new-orders-link:hover {
+    color: lightblue;
+    border: 1px solid lightblue;
 }

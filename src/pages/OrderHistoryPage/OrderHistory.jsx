@@ -20,11 +20,11 @@ export default function OrderHistory() {
   return (
     <>
       <main className="order-history-page-container">
+        <div className="new-orders-link-container">
+          <Link to="/orders/new" className="new-orders-link"> <strong>NEW ORDER</strong></Link>
+        </div>
         <OrderHistoryList orders={orders}/>
         <OrderDetail/>
-        <aside className='aside'>
-          <Link to="/orders/new" className="btn btn-sm btn-outline-dark"> <strong>NEW ORDER</strong></Link>
-        </aside>
       </main>
     </>
   );

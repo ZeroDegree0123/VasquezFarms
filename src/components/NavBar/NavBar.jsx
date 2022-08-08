@@ -12,13 +12,13 @@ export default function NavBar( {user, setUser} ) {
         setUser(null);
     }
     return(
-        <nav className="navbar  navbar-dark bg-dark">
+        <nav>
             &nbsp;&nbsp; 
             <Link className="link" to="/home"><img className="" id="app-logo" src="https://imgur.com/SKZLmSw.png" alt="" /></Link>
             &nbsp;&nbsp; 
             <Link className="link" to="/soaps">Soaps</Link>
             &nbsp;&nbsp;
-            <Link className="link" to="/admin">Admin</Link>
+            {/* <Link className="link" to="/admin">Admin</Link> */}
             &nbsp;&nbsp; 
             <Link className="link" to="/about">About Us</Link>
             &nbsp;&nbsp; 

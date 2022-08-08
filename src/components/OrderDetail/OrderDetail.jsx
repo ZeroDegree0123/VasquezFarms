@@ -33,6 +33,10 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
             {lineSoaps}
             <br />
             <section className="total" id="checkout">
+              <div className="checkout-totals-container">
+                <h4>Total Items: {order.totalQty}</h4>
+                <h4 className="right">Total Cost ${order.orderTotal.toFixed(2)}</h4>
+              </div> 
               {order.isPaid ?
                 <span className="right">TOTAL&nbsp;&nbsp;</span>
                 :
@@ -43,12 +47,6 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
                   disabled={!lineSoaps.length}
                 >CHECKOUT</button>
               }
-              <div>
-                <h4>Total Items: {order.totalQty}</h4>
-              </div>
-              <div>
-                <h4 className="right">Total Cost ${order.orderTotal.toFixed(2)}</h4>
-              </div> 
             </section>
           </>
           :

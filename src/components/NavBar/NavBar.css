@@ -2,7 +2,7 @@ nav {
     display: flex;
     background: url("https://imgur.com/Kfwp1WE.png") no-repeat center center;
     height: 65px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 

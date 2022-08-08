@@ -67,11 +67,11 @@ export default function App() {
           <NavBar setUser={setUser} user={ user }/>
           <Routes>
             //ADMIN
-            <Route path="/admin" 
+            {/* <Route path="/admin" 
               element={<AdminPage 
               user={user} 
               soaps={soaps} 
-              cats={cats}/>}/>
+              cats={cats}/>}/> */}
             //PRODUCTS
             <Route path="/soaps" 
               element={<ProductsPage

@@ -60,13 +60,9 @@ export default function SoapDetailPage() {
                 <h2 className="details-ingredients-title">INGREDIENTS</h2>
                 <h4 className="details-ingredients-body">{soap.ingredients}</h4> 
             </section>
-             <ReviewForm
-                soapId={soapId}
-             />
-            ///// MAKES PAGE NOT RENDER IN SOAP DATA
-           {/* <ReviewList reviews={reviews}/> */}
-            /////
-            <section className="reviews-container">
+            {/* <section className="reviews-container">
+            <ReviewForm soapId={soapId}/>
+            <ReviewList reviews={reviews}/>
                 <div className="reviews-header-container">
                     <h1 className="reviews-header-title">REVIEWS</h1>
                     <p className="reviews-header-rating">overall rating</p>
@@ -81,11 +77,7 @@ export default function SoapDetailPage() {
                     </div>
                    <p className="reviews-body">{reviews.message}</p>
                 </div>
-            </section>
-
-
-
-
+            </section> */}
        </main>
     )
 }

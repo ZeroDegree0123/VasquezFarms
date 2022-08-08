@@ -14,7 +14,6 @@ export default function ProductsPage({user, soaps, cats, activeCat, setActiveCat
                     cats={cats}
                 />
             </section>
-            <hr />
             <section className="products-soaps-container">
                 <SoapList
                     soaps={soaps.filter(soap => soap.category.name === activeCat)}

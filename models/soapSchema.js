@@ -1,5 +1,18 @@
 const Schema = require('mongoose').Schema;
 
+const reviewSchema = new Schema({
+    message: String,
+    rating: {
+        type: Number,
+        min: 1,
+        max: 5,
+        default: 3,
+    },
+    user: {type: Schema.Types.ObjectId, ref: 'User'},
+}, {
+    timestamps: true
+})
+
 const soapSchema = new Schema({
     name:{
         type: String,
@@ -26,10 +39,7 @@ const soapSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Category'
     },
-    reviews:{
-        type: Schema.Types.ObjectId,
-        ref: 'Review'
-    }
+    reviews: [reviewSchema],
 }, {
     timestamps: true
 });

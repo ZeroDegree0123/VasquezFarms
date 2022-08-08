@@ -59,6 +59,8 @@ hr {
 .order-card-quantity-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .order-card-quantity-button {
@@ -87,14 +89,14 @@ hr {
     background-color: rgb(255, 0, 0);
     border-radius: 5px;
     border: none;
-    height: 80%;
+    height: 40%;
 }
 
 #button-plus {
     background-color: rgb(12, 174, 0);
     border-radius: 5px;
     border: none;
-    height: 80%;
+    height: 40%;
 }
 
 @media only screen and (max-width: 700px) { 

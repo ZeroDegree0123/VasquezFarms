@@ -1,3 +1,30 @@
-#order-detail-card {
+.order-history-card-container {
     margin: 10px;
+}
+
+.order-history-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    padding: 10px;
+    width: 230px;
+}
+
+.order-history-card-id {
+    font-size: 14px;
+    margin: 0;
+}
+
+.order-history-card-body {
+    font-size: 14px;
+    font-weight: 1000;
+}
+
+.order-history-card-date {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
 }

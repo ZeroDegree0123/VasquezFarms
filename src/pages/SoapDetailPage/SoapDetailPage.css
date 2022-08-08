@@ -48,7 +48,7 @@
 }
 
 .details-header-soap-image {
-    margin: 10px;
+    margin: 0;
     margin-left: 0;
     margin-right: 0;
     height: 400px;
@@ -62,7 +62,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 10px;
+    padding: 0;
+    padding-left: 10px;
     height: 400px;
     background: linear-gradient(90deg, lightblue, white);
 }
@@ -250,5 +251,10 @@
     .details-header-quantity-title {
         text-align: center;
         font-size: 15px;
+    }
+
+    .details-header-soap-image {
+        border-radius: 10px;
+        margin-bottom: 20px;
     }
 }

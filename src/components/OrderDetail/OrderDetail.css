@@ -1,3 +1,19 @@
-/* #checkout-button {
-    background-color: grey;
-} */
+.checkout-totals-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#checkout-button {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 5px;
+}
+
+#checkout-button:hover {
+    color: lightblue;
+    border: 1px solid lightblue;
+}

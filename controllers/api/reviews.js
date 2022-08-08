@@ -1,4 +1,5 @@
-const Review = require('../../models/review')
+const Soap = require('../../models/soap');
+const Review = require('../../models/review');
 
 module.exports = {
     create, 
@@ -8,13 +9,16 @@ module.exports = {
 
 async function create(req, res) {
     try {
-        const newReview = new Review({
-            message:req.body.message,
-            rating:req.body.rating,
-            user:req.body.user._id,
-            timestamps:req.body.timestamps
-        });
+       const newReview = new Review({
+            message: req.body.message,
+            rating: req.body.rating,
+            user: req.body.user
+       })
         await newReview.save();
+        Soap.findById(req.params.id, function(err, soap) {
+            soap.reviews.push(newReview);
+            soap.save();
+        })
         res.json(newReview)
     } catch(err) {
         res.send(err)
