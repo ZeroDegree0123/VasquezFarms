@@ -38,7 +38,6 @@ export default function SoapDetailPage({handleAddToOrder}) {
         <main className="details-page-container">
             <div className="back-to-soaps">
                 <Link className="back-to-soaps-link" to="/soaps">Back to soaps</Link>
-                
             </div>
             <section className="details-header-container">
                 <div className="details-header-top-container">

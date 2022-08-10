@@ -16,7 +16,7 @@ export default function NavBar( {user, setUser} ) {
         }
         document.querySelectorAll("[data-dropdown].active").forEach(drop => {
             if (drop === currentDropDown) return;
-            drop.classList.remove('active')
+            drop.classList.remove('active');
         })
     }
 
@@ -33,7 +33,7 @@ export default function NavBar( {user, setUser} ) {
             <Link className="link" to="/soaps">Soaps</Link>
             &nbsp;&nbsp;
             {/* <Link className="link" to="/admin">Admin</Link> */}
-            &nbsp;&nbsp; 
+            {/* &nbsp;&nbsp;  */}
             <Link className="link" to="/about">About Us</Link>
             &nbsp;&nbsp; 
             &nbsp;&nbsp; 
