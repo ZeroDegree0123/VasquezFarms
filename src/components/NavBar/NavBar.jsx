@@ -5,16 +5,28 @@ import './NavBar.css'
 import * as userService from '../../utilities/users-service';
 
 export default function NavBar( {user, setUser} ) {
+    // document.addEventListener('click', evt => {
+    //     const isDropDown = evt.target.matches("[data-dropdown-button]");
+    //     if (!isDropDown && evt.target.closest("[data-dropdown]") != null) return;
+    //     let currentDropDown;
+    //     if (isDropDown) {
+    //         currentDropDown = evt.target.closest('[data-dropdown]')
+    //         currentDropDown.classLisr.toggle('active')
+    //     }
+    //     document.querySelectorAll("[data-dropdown].active").forEach(drop => {
+    //         if (drop === currentDropDown) return;
+    //         drop.classList.remove('active')
+    //     })
+    // });
+
     function handleLogOut() {
-         // Delegate to the users-service
         userService.logOut();
-        // Update state will also cause a re-render
         setUser(null);
     }
     return(
         <nav>
             &nbsp;&nbsp; 
-            <Link className="link" to="/home"><img className="" id="app-logo" src="https://imgur.com/SKZLmSw.png" alt="" /></Link>
+            <Link className="link" id="app-logo-container" to="/home"><img className="" id="app-logo" src="https://imgur.com/SKZLmSw.png" alt="" /></Link>
             &nbsp;&nbsp; 
             <Link className="link" to="/soaps">Soaps</Link>
             &nbsp;&nbsp;
@@ -26,12 +38,21 @@ export default function NavBar( {user, setUser} ) {
             &nbsp;&nbsp; 
                 { user ?
                 <>
-                    <Link className="link" to="/orders/new">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-cart" viewBox="0 0 16 16">
-                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                        </svg>
-                    </Link> 
-                    <Link className="link" to="/" onClick={handleLogOut}>Log Out</Link>
+                    <div className="dropdown" >
+                        <button className="dropdown-link" >
+                            <img className="profile-image" src="https://imgur.com/J5uAb6c.png" alt="" />
+                        </button>
+                        <div className="dropdown-menu">
+                            <Link className="dropdown-content" to="/orders/new">
+                                Cart &nbsp;&nbsp; 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" id="cart" className="bi bi-cart" viewBox="0 0 17 17">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                </svg>
+                            </Link>
+                            <Link className="dropdown-content" to="/profile">Account</Link>
+                            <Link className="dropdown-content" to="/" onClick={handleLogOut}>Log Out</Link>
+                        </div>
+                    </div>
                 </>:
                     <Link className="link" to="/login">Login</Link>
                 }
@@ -39,3 +60,13 @@ export default function NavBar( {user, setUser} ) {
         </nav>
     ) 
 }
+
+
+{/* <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div> */}
