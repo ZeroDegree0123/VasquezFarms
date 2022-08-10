@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function HomePage() {
     return (
         <>
-            <main>
+            <main className="home-page-container">
                 <section className="home-header-container">
                     <div className="home-header-image-container"> 
                         <img className="home-header-image" src="https://imgur.com/aKLqJ5Q.png" alt="" />

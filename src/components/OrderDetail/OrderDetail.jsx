@@ -1,5 +1,7 @@
 import './OrderDetail.css'
+import { Link } from 'react-router-dom';
 import OrderCard from "../OrderCard/OrderCard";
+
 
 export default function OrderDetail({ order, handleChangeQty, handleCheckout }) {
     if (!order) return null;
@@ -50,7 +52,12 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
             </section>
           </>
           :
-          <div className="hungry">Add Soaps To Start Order</div>
+          <>
+            <div className="soap-link-container">
+              <div>Add Soaps To Start Order</div>
+              <Link className="soap-page-link" to="/soaps">Soaps</Link>
+            </div>
+          </>
         }
       </div>
     </div>

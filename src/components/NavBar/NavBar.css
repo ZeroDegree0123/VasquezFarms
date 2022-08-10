@@ -1,9 +1,13 @@
 nav {
     display: flex;
-    background: url("https://imgur.com/Kfwp1WE.png") no-repeat center center;
-    height: 70px;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    background: url("https://imgur.com/Kfwp1WE.png") no-repeat center center;
 }
 
 .link {

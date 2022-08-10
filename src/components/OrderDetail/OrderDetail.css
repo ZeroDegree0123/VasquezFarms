@@ -5,6 +5,32 @@
     align-items: center;
 }
 
+.soap-link-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.soap-page-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    padding: 5px;
+    width: 145px;
+}
+
+.soap-page-link:hover {
+    color: lightblue;
+    border: 1px solid lightblue;
+}
+
 #checkout-button {
     background-color: white;
     border: 1px solid black;

@@ -5,11 +5,13 @@ import * as soapsAPI from '../../utilities/soaps-api';
 import * as reviewsAPI from '../../utilities/reviews-api'
 import ReviewForm from '../../components/ReviewForm/ReviewForm';
 import ReviewList from '../../components/ReviewList/ReviewList';
+import CartModal from '../../components/CartModal/CartModal';
 
-export default function SoapDetailPage() {
+export default function SoapDetailPage({handleAddToOrder}) {
     const { soapId } = useParams();
     const [soap, setSoap] = useState([]);
-    const [reviews, setReviews] = useState([])
+    const [reviews, setReviews] = useState([]);
+    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(function () {
         //GETS INDIVIDUAL SOAP DATA
@@ -26,7 +28,10 @@ export default function SoapDetailPage() {
         getReviews();
         //// USEEFFECT CLEANUP
     }, [])
-
+    
+    function modalTimeOut() {
+        setIsOpen(false)
+    }
 
     console.log(soap)
     return (
@@ -52,7 +57,15 @@ export default function SoapDetailPage() {
                         <p className="details-order-price">
                             ${soap.price}.00
                         </p>
-                        <button className="details-order-button">Add To Cart</button>
+                        <div>
+                            <button onClick={() => {
+                                handleAddToOrder(soap._id);
+                                setIsOpen(true);
+                                setTimeout(modalTimeOut, 2000);
+                                }
+                            } className="details-order-button">Add To Cart</button>
+                            <CartModal open={isOpen}/>
+                        </div>
                     </div>
                 </div>
             </section> 

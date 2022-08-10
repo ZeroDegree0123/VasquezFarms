@@ -43,6 +43,10 @@
     height: 30px;
 }
 
+.soap-card-button-container {
+    width: 90%;
+}
+
 .soap-card-button {
     padding: 5px;
     width: 90%;

@@ -5,7 +5,6 @@ import './NavBar.css'
 import * as userService from '../../utilities/users-service';
 
 export default function NavBar( {user, setUser} ) {
-   
     function handleClick(evt) {
         const isDropDown = evt.target.matches("[data-dropdown-button]")
         console.log(isDropDown)
@@ -20,20 +19,6 @@ export default function NavBar( {user, setUser} ) {
             drop.classList.remove('active')
         })
     }
-    // document.addEventListener('click', evt => {
-        // const isDropDown = evt.target.matches("[data-dropdown-button]");
-        // console.log(isDropDown)
-        // if (!isDropDown && evt.target.closest("[data-dropdown]") != null) return;
-        // let currentDropDown;
-        // if (isDropDown) {
-        //     currentDropDown = evt.target.closest('[data-dropdown]')
-        //     currentDropDown.classList.toggle('active')
-        // }
-        // document.querySelectorAll("[data-dropdown].active").forEach(drop => {
-        //     if (drop === currentDropDown) return;
-        //     drop.classList.remove('active')
-        // })
-    // });
 
     function handleLogOut() {
         userService.logOut();

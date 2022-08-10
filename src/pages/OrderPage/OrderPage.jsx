@@ -31,9 +31,6 @@ export default function OrderPage({soaps}) {
     return (
         <> 
             <main className="order-page-container">
-                <div className="previous-orders-link-container">
-                    <Link to="/orders" className="previous-orders-link"> <strong>PREVIOUS ORDERS</strong></Link>
-                </div>
                 <div className="order-page">
                     <OrderDetail 
                         soaps={soaps}

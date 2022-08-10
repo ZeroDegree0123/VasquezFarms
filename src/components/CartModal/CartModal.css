@@ -1,0 +1,20 @@
+.cart-modal-container {
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 200ms ease-in-out;
+    background-color: rgba(86, 86, 86, 0.8);
+    padding: 15px;
+    z-index: 1000;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.cart-modal-content {
+    font-size: 20px;
+    color: white;
+    font-weight: 1000;
+    text-shadow: 1px 1px black;
+    transition: 200ms ease-in-out;
+}

@@ -51,7 +51,6 @@ export default function App() {
 
   // HANDLE FUNCTIONS
   async function handleAddToOrder(soapId) {
-      
       const updatedCart = await ordersAPI.addSoapToCart(soapId);
       setCart(updatedCart);
     }
@@ -66,6 +65,8 @@ export default function App() {
     <main className="App">
         <>
           <NavBar setUser={setUser} user={ user }/>
+          <br />
+          <br />
           <Routes>
             //ADMIN
             {/* <Route path="/admin" 
@@ -85,7 +86,8 @@ export default function App() {
                 handleAddToOrder={handleAddToOrder}/>}/>
             //SOAPDETAIL
             <Route path="/soaps/:soapId" 
-              element={<SoapDetailPage/>}/>
+              element={<SoapDetailPage
+                handleAddToOrder={handleAddToOrder}/>}/>
             //NEWORDER
             <Route path="/orders/new" 
               element={<OrderPage
