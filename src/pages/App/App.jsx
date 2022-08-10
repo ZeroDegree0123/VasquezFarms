@@ -51,7 +51,7 @@ export default function App() {
 
   // HANDLE FUNCTIONS
   async function handleAddToOrder(soapId) {
-      alert('Added to cart')
+      
       const updatedCart = await ordersAPI.addSoapToCart(soapId);
       setCart(updatedCart);
     }
