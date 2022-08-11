@@ -28,7 +28,7 @@ export default function NavBar( {user, setUser} ) {
     return(
         <nav>
             &nbsp;&nbsp; 
-            <Link className="link" id="app-logo-container" to="/home"><img className="" id="app-logo" src="https://imgur.com/SKZLmSw.png" alt="" /></Link>
+            <Link className="link" id="app-logo-container" to="/"><img className="" id="app-logo" src="https://imgur.com/SKZLmSw.png" alt="" /></Link>
             &nbsp;&nbsp; 
             <Link className="link" to="/soaps">Soaps</Link>
             &nbsp;&nbsp;

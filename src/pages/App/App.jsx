@@ -60,57 +60,54 @@ export default function App() {
     let path = `/soaps`;
     navigate(path);
   };
-  
+
   return (
     <main className="App">
-        <>
-          <NavBar setUser={setUser} user={ user }/>
-          <br />
-          <br />
-          <Routes>
-            //ADMIN
-            {/* <Route path="/admin" 
-              element={<AdminPage 
-              user={user} 
-              soaps={soaps} 
-              cats={cats}/>}/> */}
-            //PRODUCTS
-            <Route path="/soaps" 
-              element={<ProductsPage
-                user={user} 
-                categories={categoryRef.current} 
-                soaps={soaps} 
-                cats={cats} 
-                activeCat={activeCat} 
-                setActiveCat={setActiveCat}
-                handleAddToOrder={handleAddToOrder}/>}/>
-            //SOAPDETAIL
-            <Route path="/soaps/:soapId" 
-              element={<SoapDetailPage
-                handleAddToOrder={handleAddToOrder}/>}/>
-            //NEWORDER
-            <Route path="/orders/new" 
-              element={<OrderPage
-                soaps={soaps}/>}/>
-            //LOGIN/SIGNUP
-            <Route path="/login"
-              element={<Auth 
-                setUser={setUser} 
-                redirect={redirect}/>}/>
-            //Profile
-            <Route path="/profile" 
-              element={<ProfilePage
-                user={user}/>}/>
+      <NavBar setUser={setUser} user={ user }/>
+      <br />
+      <br />
+      <Routes>
+        {/* //ADMIN */}
+        {/* <Route path="/admin" 
+          element={<AdminPage 
+          user={user} 
+          soaps={soaps} 
+          cats={cats}/>}/> */}
+        {/* //PRODUCTS */}
+        <Route path="/soaps" 
+          element={<ProductsPage
+            user={user} 
+            categories={categoryRef.current} 
+            soaps={soaps} 
+            cats={cats} 
+            activeCat={activeCat} 
+            setActiveCat={setActiveCat}
+            handleAddToOrder={handleAddToOrder}/>}/>
+        {/* //SOAPDETAIL */}
+        <Route path="/soaps/:soapId" 
+          element={<SoapDetailPage
+            handleAddToOrder={handleAddToOrder}/>}/>
+        {/* //NEWORDER */}
+        <Route path="/orders/new" 
+          element={<OrderPage
+            soaps={soaps}/>}/>
+        {/* //LOGIN/SIGNUP */}
+        <Route path="/login"
+          element={<Auth 
+            setUser={setUser} 
+            redirect={redirect}/>}/>
+        {/* //Profile */}
+        <Route path="/profile" 
+          element={<ProfilePage
+            user={user}/>}/>
 
-            //
-            <Route path="/home" element={<HomePage/>}/>
-            <Route path="/about" element={<AboutPage/>}/>
-            <Route path="/help" element={<HelpPage/>}/>
-            <Route path="/ingredients" element={<IngredientsPage/>}/>
-            <Route path="/orders" element={<OrderHistory/>}/>
-          </Routes>
-          <Footer/>
-        </>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/about" element={<AboutPage/>}/>
+        <Route path="/help" element={<HelpPage/>}/>
+        <Route path="/ingredients" element={<IngredientsPage/>}/>
+        <Route path="/orders" element={<OrderHistory/>}/>
+      </Routes>
+      <Footer/>
     </main>
   );
 }
