@@ -1,11 +1,26 @@
 .ingredients-page-container {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 300px;
 }
 
 .ingredients-header-container {
     margin: 50px;
     margin-bottom: 100px;
+    border-bottom: 2px solid lightblue;
+    width: 70%;
+}
+
+.ingredients-header-title {
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.ingredients-header-subtitle {
+    font-size: 18px;
+    margin-top: 0;
 }
 
 .ingredients-container {
@@ -21,7 +36,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 15px;
+    margin: 25px;
     padding: 10px;
     box-shadow: 1px 1px 15px 3px rgb(207, 207, 207);
     width: 300px;
@@ -50,6 +65,7 @@
 }
 
 #ingredient-uses {
-    font-size: 12px;
-    color: lightblue;
+    font-size: 14px;
+    margin-top: 0;
+    color: var(--third);
 }

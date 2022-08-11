@@ -33,7 +33,6 @@ export default function SoapDetailPage({handleAddToOrder}) {
         setIsOpen(false)
     }
 
-    console.log(soap)
     return (
         <main className="details-page-container">
             <div className="back-to-soaps">
