@@ -58,7 +58,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background: url("https://imgur.com/Kfwp1WE.png");
+    /* background: url("https://imgur.com/Kfwp1WE.png"); */
 }
 
 .about-main-top-container {
@@ -116,7 +116,7 @@
     text-align: left;
     padding-left: 10px;
     border-left: 2px solid rgb(52, 52, 52);
-    font-size: 18px;
+    font-size: 20px;
 }
 
 
@@ -210,6 +210,7 @@
 
     .about-main-container {
         padding: 30px;
+        background: url("https://imgur.com/Kfwp1WE.png");
     }
 
    .about-main-top-container {
@@ -243,16 +244,19 @@
    }
 
    .about-main-body-titles {
-        color: white;
+        color: lightblue;
+        border-bottom: 2px solid lightblue;
         text-shadow: 1px 1px black;
         margin: 0;
    }
 
    .about-main-body-bodies {
+        font-size: 20px;
         border: none;
         text-align: center;
-        color: white;
-        text-shadow: 1px 1px black;
+        color: lightblue;
+        text-shadow: 1px 1px rgb(0, 0, 0);
+        font-weight: 1000;
    }
 
    #image-left {
@@ -269,5 +273,11 @@
     margin-bottom: 50px;
    }
 
+}
+
+@media only screen and (max-width: 1200px) {
+    .about-main-body-bodies {
+        font-size: 18px;
+    }
 }
 

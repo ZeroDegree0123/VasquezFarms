@@ -1,11 +1,16 @@
 import "./Footer.css"
 
 export default function Footer() {
+
+    function handleHelp() {
+        alert(`Coming Soon!`)
+    }
+
     return (
         <>
             <section className="footer-container">
                 <div className="footer-help-container">
-                    <a className="footer-titles" href="/">HELP</a>
+                    <a className="footer-titles" href="/" onClick={handleHelp}>HELP</a>
                 </div>
                 <div className="footer-about-container">
                     <a className="footer-titles" href="/about">ABOUT</a>

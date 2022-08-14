@@ -61,6 +61,8 @@ export default function App() {
     navigate(path);
   };
 
+  window.scrollTo(0, 0);
+
   return (
     <main className="App">
       <NavBar setUser={setUser} user={ user }/>

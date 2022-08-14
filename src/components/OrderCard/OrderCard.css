@@ -30,10 +30,12 @@ hr {
     margin: 10px;
     margin-right: 0;
     width: 100%;
+    height: 100%;
 }
 
 .order-card-title {
-    font-size: 35px;
+    font-size: 27px;
+    margin: 20px 0;
     color: lightblue;
 }
 
@@ -41,7 +43,7 @@ hr {
     color: rgb(160, 160, 160);
     font-size: 15px;
     margin: 0;
-    margin-top: 10px;
+    margin-top: 40px;
 }
 
 .order-price-container {
@@ -60,7 +62,7 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .order-card-quantity-button {
@@ -82,29 +84,51 @@ hr {
 #item-count {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    margin: 0;
 }
 
 #button-minus {
     background-color: rgb(255, 0, 0);
     border-radius: 5px;
     border: none;
-    height: 40%;
+    height: 20px;
 }
 
 #button-plus {
     background-color: rgb(12, 174, 0);
     border-radius: 5px;
     border: none;
-    height: 40%;
+    height: 20px;
 }
 
 @media only screen and (max-width: 700px) { 
     .order-card {
-        width: 450px;
+        flex-direction: column;
+        width: 300px;
     }
 
     .order-card-title {
-        font-size: 30px;
+        text-align: left;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .order-card-image {
+        width: 290px;
+        height: 230px;
+    }
+
+    .order-price-container {
+        width: 290px;
+    }
+
+    .order-select-quantity {
+        margin-top: 15px;
+    }
+
+    .order-total-container {
+        margin: 0;
+        padding: 0 5px;
     }
 }

@@ -29,6 +29,10 @@ export default function SoapDetailPage({handleAddToOrder}) {
         //// USEEFFECT CLEANUP
     }, [])
     
+    function handleQuantity() {
+        alert(`Coming Soon!`)
+    }
+
     function modalTimeOut() {
         setIsOpen(false)
     }
@@ -49,7 +53,7 @@ export default function SoapDetailPage({handleAddToOrder}) {
                 <div className="details-header-bottom-container">
                     <div className="details-header-quantity-container">
                         <h5 className="details-header-quantity-title">Select Quantity</h5>
-                        <button className="details-header-quantity-button">.number</button>
+                        <button className="details-header-quantity-button" onClick={handleQuantity}>.number</button>
                     </div>
                     <div className="details-header-order-container">
                         <p className="details-order-price">
