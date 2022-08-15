@@ -1,8 +1,8 @@
 import "./ProfilePage.css"
-import { Routes, Route, Link } from 'react-router-dom';
-import ProfileNav from "../../components/ProfileNav/ProfileNav";
-import ProfileOverview from "../../components/ProfileOverview/ProfileOverview";
-import ProfileSettings from "../../components/ProfileSettings/ProfileSettings";
+import { Link } from 'react-router-dom';
+// import ProfileNav from "../../components/ProfileNav/ProfileNav";
+// import ProfileOverview from "../../components/ProfileOverview/ProfileOverview";
+// import ProfileSettings from "../../components/ProfileSettings/ProfileSettings";
 
 export default function ProfilePage({user}) {
 
