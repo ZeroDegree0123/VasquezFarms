@@ -1,10 +1,12 @@
 .profile-page-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
     margin-bottom: 1000px;
+}
+
+.profile-page-content {
+    height: 100%;
 }
 
 .profile-page-title {

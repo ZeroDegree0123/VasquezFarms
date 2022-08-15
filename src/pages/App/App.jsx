@@ -99,7 +99,7 @@ export default function App() {
             setUser={setUser} 
             redirect={redirect}/>}/>
         {/* //Profile */}
-        <Route path="/profile" 
+        <Route path="/profile/*" 
           element={<ProfilePage
             user={user}/>}/>
 

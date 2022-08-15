@@ -1,13 +1,24 @@
 import "./ProfilePage.css"
-import { getUser } from '../../utilities/users-service';
-import { useState } from "react";
-import { Link } from "react-router-dom"; 
+import { Routes, Route, Link } from 'react-router-dom';
+import ProfileNav from "../../components/ProfileNav/ProfileNav";
+import ProfileOverview from "../../components/ProfileOverview/ProfileOverview";
+import ProfileSettings from "../../components/ProfileSettings/ProfileSettings";
 
 export default function ProfilePage({user}) {
 
     return (
         <>
-            <main className="profile-page-container">
+            {/* <main className="profile-page-container">
+                <section className="profile-page-nav-container">
+                    <ProfileNav/>
+                </section>
+                <section className="profile-page-content">
+                    
+                    <Routes>
+                        <Route path="/profile/overview" element={<ProfileOverview/>}/>
+                        <Route path="/profile/settings" element={<ProfileSettings/>}/>
+                    </Routes>
+                </section> */}
                 <h1 className="profile-page-title">OVERVIEW</h1>
                 <section className="profile-account-container">
                     <h1 className="profile-container-titles">Account Information</h1>
@@ -29,7 +40,7 @@ export default function ProfilePage({user}) {
                         </div>
                     </div>
                 </section>
-            </main>
+            {/* </main> */}
         </>
     )
 }
