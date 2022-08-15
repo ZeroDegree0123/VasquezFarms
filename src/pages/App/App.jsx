@@ -61,7 +61,7 @@ export default function App() {
     navigate(path);
   };
 
-  // window.scrollTo(0, 0);
+  window.scrollTo(0, 0);
 
   return (
     <main className="App">
