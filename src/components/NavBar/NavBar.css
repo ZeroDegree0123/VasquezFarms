@@ -7,7 +7,8 @@ nav {
     width: 100%;
     top: 0;
     z-index: 9999;
-    background: url("https://imgur.com/Kfwp1WE.png") no-repeat center center;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0)),
+                url("https://imgur.com/Kfwp1WE.png") no-repeat center center;
 }
 
 .link {

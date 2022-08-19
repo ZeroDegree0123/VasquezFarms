@@ -1,25 +1,24 @@
 import "./ProfilePage.css"
-import { Link } from 'react-router-dom';
-// import ProfileNav from "../../components/ProfileNav/ProfileNav";
-// import ProfileOverview from "../../components/ProfileOverview/ProfileOverview";
-// import ProfileSettings from "../../components/ProfileSettings/ProfileSettings";
+import { Link, Routes, Route } from 'react-router-dom';
+import ProfileNav from "../../components/ProfileNav/ProfileNav";
+import ProfileOverview from "../../components/ProfileOverview/ProfileOverview";
+import ProfileSettings from "../../components/ProfileSettings/ProfileSettings";
 
 export default function ProfilePage({user}) {
 
     return (
         <>
-            {/* <main className="profile-page-container">
+            <main className="profile-page-container">
                 <section className="profile-page-nav-container">
                     <ProfileNav/>
                 </section>
                 <section className="profile-page-content">
-                    
                     <Routes>
                         <Route path="/profile/overview" element={<ProfileOverview/>}/>
                         <Route path="/profile/settings" element={<ProfileSettings/>}/>
                     </Routes>
-                </section> */}
-                <h1 className="profile-page-title">OVERVIEW</h1>
+                </section>
+                {/* <h1 className="profile-page-title">OVERVIEW</h1>
                 <section className="profile-account-container">
                     <h1 className="profile-container-titles">Account Information</h1>
                     <div className="account-subcontainers">
@@ -39,8 +38,8 @@ export default function ProfilePage({user}) {
                             <Link to="/orders" className="previous-orders-link"> <strong>PREVIOUS ORDERS</strong></Link>
                         </div>
                     </div>
-                </section>
-            {/* </main> */}
+                </section> */}
+            </main>
         </>
     )
 }

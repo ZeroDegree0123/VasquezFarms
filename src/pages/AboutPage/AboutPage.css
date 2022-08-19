@@ -213,8 +213,9 @@
     }
 
     .about-main-container {
-        padding: 30px;
-        background: url("https://imgur.com/Kfwp1WE.png");
+        margin-bottom: 30px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0)),
+                    url("https://imgur.com/Kfwp1WE.png") no-repeat center center;
     }
 
    .about-main-top-container {
@@ -244,6 +245,7 @@
         align-items: center;
         justify-content: center;
         background: none;
+        margin: 0;
         padding: 10px;
    }
 
@@ -265,18 +267,22 @@
 
    #image-left {
         border-radius: 10px;
-        width: 500px;
-        height: 400PX;
-        margin-bottom: 50px;
+        width: 450px;
+        height: 330PX;
+        margin-bottom: 40px;
    }
 
    #image-right {
-    border-radius: 10px;
-    width: 500px;
-    height: 400PX;
-    margin-bottom: 50px;
+        border-radius: 10px;
+        width: 450px;
+        height: 330PX;
+        margin-bottom: 40px;
    }
 
 }
 
-
+@media only screen and (max-width: 600px) {
+    .about-main-body-bodies {
+        font-size: 16px;
+    }
+}
