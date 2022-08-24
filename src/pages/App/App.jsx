@@ -88,6 +88,7 @@ export default function App() {
         {/* //SOAPDETAIL */}
         <Route path="/soaps/:soapId" 
           element={<SoapDetailPage
+            user={user}
             handleAddToOrder={handleAddToOrder}/>}/>
         {/* //NEWORDER */}
         <Route path="/orders/new" 

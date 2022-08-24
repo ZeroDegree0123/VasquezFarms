@@ -1,17 +1,18 @@
 import './SoapDetailPage.css'
 import { useEffect, useState, useRef } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import * as soapsAPI from '../../utilities/soaps-api';
 import * as reviewsAPI from '../../utilities/reviews-api'
 import ReviewForm from '../../components/ReviewForm/ReviewForm';
 import ReviewList from '../../components/ReviewList/ReviewList';
 import CartModal from '../../components/CartModal/CartModal';
 
-export default function SoapDetailPage({handleAddToOrder}) {
+export default function SoapDetailPage({handleAddToOrder, user}) {
     const { soapId } = useParams();
     const [soap, setSoap] = useState([]);
     const [reviews, setReviews] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(function () {
         //GETS INDIVIDUAL SOAP DATA
@@ -29,6 +30,10 @@ export default function SoapDetailPage({handleAddToOrder}) {
         //// USEEFFECT CLEANUP
     }, [])
     
+    function handleRedirect() {
+        navigate('/login')
+    }
+
     function handleQuantity() {
         alert(`Coming Soon!`)
     }
@@ -60,12 +65,20 @@ export default function SoapDetailPage({handleAddToOrder}) {
                             ${soap.price}.00
                         </p>
                         <div>
-                            <button onClick={() => {
-                                handleAddToOrder(soap._id);
-                                setIsOpen(true);
-                                setTimeout(modalTimeOut, 2000);
-                                }
-                            } className="details-order-button">Add To Cart</button>
+                            {user ? 
+                                <button 
+                                    onClick={() => {
+                                        handleAddToOrder(soap._id);
+                                        setIsOpen(true);
+                                        setTimeout(modalTimeOut, 2000);
+                                        }
+                                    } 
+                                    className="details-order-button">Add To Cart</button>
+                                    :
+                                    <button 
+                                    onClick={handleRedirect} 
+                                    className="details-order-button">Add To Cart</button>
+                            }
                             <CartModal open={isOpen}/>
                         </div>
                     </div>
