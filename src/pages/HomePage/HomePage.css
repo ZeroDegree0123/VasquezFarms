@@ -7,33 +7,28 @@ hr {
   color: rgb(175, 99, 51)
 }
 
+/* --------------------------------
+# Home Header
+-------------------------------- */
 .home-header-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
     margin: 0;
     margin-bottom: 100px;
-    padding: 0;
     width: 100%;
-}
-
-.home-header-image-container {
-    grid-area: 1 / 1 / 2 / 2;  
-}
-
-.home-header-image {
-    width: 100%;
-    height: 600px;
+    height: 100vh;
+    background: linear-gradient(70deg, rgba(0, 0, 255, 0.3), rgba(0, 128, 0, 0.35)),
+                url("https://imgur.com/aKLqJ5Q.png");
 }
 
 .home-header-body-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    grid-area: 1 / 2 / 2 / 3;
-    background: linear-gradient(90deg, lightblue, white);
-    height: 600px;
+    align-items: center;
 }
 
 .home-header-body {
@@ -43,17 +38,45 @@ hr {
     padding-left: 10px;
 }
 
+#home-header-body-title {
+    font-size: 60px;    
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    margin-bottom: 10px;
+}
+
+#home-header-body-subtitle {
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#home-header-body-body {
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    margin-top: 0;
+}
+
+/* --------------------------------
+# Home Order
+-------------------------------- */
 .home-order-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px 2px rgba(255, 187, 0, 0.2);
     margin: 0;
-    margin-bottom: 40px;
     padding: 0;
-    width: 100%;
-    height: 700px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0)),
-                url("https://imgur.com/Kfwp1WE.png") no-repeat center center;
+    height: 90vh;
+    margin: 20px 50px;
+    margin-bottom: 70px;
+    background: url("https://imgur.com/RsCmqo8.png") center center;
 }
 
 .home-order-image-container {
@@ -78,7 +101,7 @@ hr {
 
 .home-order-image-titles {
     position: absolute;
-    color: lightblue;
+    color: var(--secondary);
     margin-bottom: 30px;
     padding: 5px;
     width: 340px;
@@ -100,35 +123,58 @@ hr {
 }
 
 .home-order-body-title {
-    color: lightblue;
+    color: white;
     font-size: 50px;
-    text-shadow: 1px 1px black;
+    /* text-shadow: 1px 1px black; */
 }
 
 .home-order-body {
-    color: lightblue;
+    color: white;
     font-size: 28px;
     font-weight: 600;
     padding: 10px;
-    text-shadow: 1px 1px black;
+    /* text-shadow: 1px 1px black; */
 }
 
+#home-order-button {
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+    width: 200px;
+    border: 2px solid rgba(65, 105, 225, .7);
+    border-radius: 10px;
+    background-color: var(--secondary);
+}
 
+#home-order-button:hover {
+    border-radius: 10px;
+    background-color: rgba(255, 187, 0, 0.5);
+}
+
+/* --------------------------------
+# Home Feature
+-------------------------------- */
 .home-feature-title {
     text-align: left;
     font-size: 50px;
-    text-shadow: 1px 2px lightblue;
-    margin: 10px;
+    text-shadow: 1px 2px var(--secondary);
+    margin: 10px 0 10px 50px;
 }
 
 .home-feature-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     background-color: white;
+    margin: 0 0 0 90px;
     margin-bottom: 50px;
-    width: 100%;
+    width: 90%;
     height: 100%;
+}
+
+.home-feature-subcontainers {
+    margin: 20px 5px;
 }
 
 .home-feature-links {
@@ -137,113 +183,102 @@ hr {
     justify-content: flex-end;
     align-items: flex-start;
     padding: 10px;
+    transition: transform 0.5s;
 }
 
 .home-feature-links:hover {
     transform: scale(1.025);
-    transition: 0.4s;
 }
 
 .home-feature-image-titles {
     position: absolute;
     text-align: left;
-    color: lightblue;
+    color: var(--secondary);
     font-size: 35px;
     margin-bottom: 0;
+    margin-left: 2px;
     padding: 10px;
     padding-left: 15px;
-    width: 300px;
-    text-shadow: 1px 1px black;
+    width: 325px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0), black);
 }
 
 .home-feature-images {
     border: 2px solid white;
-    width: 100%;
-    height: 100%;
+    width: 350px;
+    height: 300px;
 }
 
-#left-order-container {
-    grid-area: 1 / 1 / 3 / 2;
+#home-feature-image-lrg {
+    border: 2px solid white;
+    width: 700px;
+    height: 624px;
 }
 
-#right-order-container {
-    grid-area: 1 / 3 / 3 / 4;
-}
-
-#link-1 {
-    grid-area: 1 / 1 / 3 / 3;
-}
-
-#link-2 {
-    grid-area: 1 / 3 / 2 / 4;
-}
-
-#link-3 {
-    grid-area: 1 / 4 / 2 / 5;
-}
-
-#link-4 {
-    grid-area: 2 / 3 / 3 / 4;
-}
-
-#link-5 {
-    grid-area: 2 / 4 / 3 / 5;
-}
 
 #home-feature-image-titles-lrg {
-    width: 400px;
+    position: absolute;
+    text-align: left;
+    color: var(--secondary);
+    font-size: 35px;
+    margin-bottom: 0;
+    margin-left: 2px;
+    padding: 15px;
+    width: 670px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0), black);
     font-size: 45px;
 }
 
-
-#home-order-button {
-    text-decoration: none;
-    font-weight: 500;
-    color: black;
-    width: 200px;
-    border: 2px solid lightblue;
-    border-radius: 10px;
-    background-color: rgb(207, 243, 255);
-}
-
-#home-order-button:hover {
-    border-radius: 10px;
-    background-color: lightblue;
-}
-
-#home-header-body-title {
-    font-size: 50px;    
-    margin-bottom: 20px;
-}
-
-#home-header-body-subtitle {
-    font-size: 30px;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-#home-header-body-body {
-    font-size: 20px;
-    margin-top: 0;
-}
-
-@media only screen and (min-width: 1600px) {
-
-}
-
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1500px) {
+    .home-feature-images {
+        width: 275px;
+        height: 225px;
+    }
+    
     .home-feature-image-titles {
         font-size: 25px;
+        width: 250px;
+    }
+    
+    #home-feature-image-lrg {
+        width: 525px;
+        height: 474px;
     }
 
+    #home-feature-image-titles-lrg {
+        font-size: 35px;
+        width: 495px;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
     .home-order-images {
         width: 300px;
         height: 250px; 
     }
-
+    
     .home-order-image-titles {
         width: 290px;
+    }
+    
+    .home-feature-images {
+        width: 225px;
+        height: 175px;
+    }
+    
+    .home-feature-image-titles {
+        font-size: 25px;
+        width: 200px;
+    }
+    
+    #home-feature-image-lrg {
+        width: 425px;
+        height: 374px;
+    }
+
+    #home-feature-image-titles-lrg {
+        font-size: 35px;
+        width: 395px;
     }
 
     #home-order-button {
@@ -252,89 +287,12 @@ hr {
     }
 
 }
-@media only screen and (max-width: 1300px) {
-    .home-header-image {
-        height: 500px;
-    }
-    
-    .home-header-body-container {
-        height: 500px;
-    }
-}
 
-@media only screen and (max-width: 1000px) {
-    .home-header-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .home-header-image-container {
-        width: 100%;
-    }
-
-    .home-header-image {
-        height: 500px;
-    }
-
-    .home-header-body-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        background: none;
-        /* background: radial-gradient(rgba(173, 216, 230, 0.642), rgb(255, 255, 255, 0%)); */
-    }
-
+@media only screen and (max-width: 1050px) {
     .home-header-body {
-        color: white;
-        text-shadow: 1px 2px black;
         text-align: center;
-        width: 100%;
     }
 
-    .home-order-images {
-        width: 250px;
-        height: 200px; 
-    }
-
-    .home-order-image-titles {
-        width: 250px;
-    }
-
-    .home-order-body-title {
-        font-size: 35px;
-    }
-
-    .home-order-body {
-        font-size: 20px;
-    }
-
-    .home-feature-image-titles {
-        font-size: 20px;
-    }
-
-    #home-feature-image-titles-lrg {
-        font-size: 35px;
-    }
-
-    #home-header-body-title {
-        font-size: 35px;
-    }
-
-    #home-header-body-subtitle {
-        font-size: 25px;
-    }
-
-    #home-header-body-body {
-        font-size: 20px;
-    }
-}
-
-
-@media only screen and (max-width: 800px) {
     .home-order-container {
         height: 600px;
     }
@@ -349,11 +307,18 @@ hr {
     
     .home-order-body-title {
         font-size: 50px;
+        color: white;
     }
     
     .home-order-body {
-        margin-top: 0;
         font-size: 25px;
+        color: white;
+        margin-top: 0;
+    }
+
+    .home-feature-title {
+        text-align: center;
+        margin: 0;
     }
     
     .home-feature-container {
@@ -361,24 +326,61 @@ hr {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-
-    .home-feature-title {
-        text-align: center;
+        width: 100%;
+        margin: 0;
     }
 
     .home-feature-images {
-        width: 400px;
+        width: 600px;
         height: 300px;
+        margin: 0;
     }
 
     .home-feature-image-titles {
-        text-align: center;
         font-size: 30px;
-        width: 400px;
+        width: 575px;
     }
-
+    
     #home-feature-image-titles-lrg {
         font-size: 30px;
+        width: 570px;
+    }
+
+    #home-feature-image-lrg {
+        width: 600px;
+        height: 300px;
+        margin: 0;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    .home-feature-title {
+        text-align: center;
+        margin: 0;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .home-feature-images {
+        width: 450px;
+        height: 300px;
+        margin: 0;
+    }
+
+    .home-feature-image-titles {
+        width: 425px;
+    }
+    
+    #home-feature-image-titles-lrg {
+        font-size: 20px;
+        width: 420px;
+    }
+
+    #home-feature-image-lrg {
+        width: 450px;
+        height: 300px;
+        margin: 0;
     }
 }

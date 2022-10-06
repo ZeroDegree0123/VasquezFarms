@@ -7,20 +7,33 @@ nav {
     width: 100%;
     top: 0;
     z-index: 9999;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0)),
-                url("https://imgur.com/Kfwp1WE.png") no-repeat center center;
+    background: url("https://imgur.com/yzzClGm.png");
+}
+
+.left-side-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    height: 100%;
 }
 
 .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     text-decoration: none;
     font-size: 25px;
     font-weight: 600;
-    height: 30px;
+    width: 200px;
+    height: 100%;
+    margin: 0;
 }
 
 .link:hover {
-    color: lightblue;
+    color: var(--secondary);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .profile-image {
@@ -47,6 +60,7 @@ nav {
     padding: 15px;
     padding-left: 0;
     margin: 0;
+    margin-left: 120px;
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
@@ -61,8 +75,9 @@ nav {
     border: none;
     background-color: rgba(255, 255, 255, 0);
     padding: 0;
-    margin: 0;
     padding-top: 8px;
+    margin: 0 40px;
+    width: 200px;
 }
 
 .dropdown-content {
@@ -80,13 +95,16 @@ nav {
 
 .dropdown-content:hover {
     color: white;
-    background-color: lightblue;
+    background-color: var(--secondary);
 }
 
-
 #app-logo-container {
-    width: 50px;
+    width: 200px;
     height: 50px;
+}
+
+#app-logo-container:hover {
+    background-color: rgba(0, 0, 0, 0);
 }
 
 #app-logo {
@@ -94,9 +112,6 @@ nav {
     width: 50px;
     height: 50px;
 }
-
-
-
 
 @media only screen and (min-width: 1600px) {
     .dropdown-menu {

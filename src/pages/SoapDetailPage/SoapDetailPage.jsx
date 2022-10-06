@@ -88,9 +88,9 @@ export default function SoapDetailPage({handleAddToOrder, user}) {
                 <h2 className="details-ingredients-title">INGREDIENTS</h2>
                 <h4 className="details-ingredients-body">{soap.ingredients}</h4> 
             </section>
-            {/* <section className="reviews-container">
+            <section className="reviews-container">
             <ReviewForm soapId={soapId}/>
-            <ReviewList reviews={reviews}/>
+            {/* <ReviewList reviews={reviews}/> */}
                 <div className="reviews-header-container">
                     <h1 className="reviews-header-title">REVIEWS</h1>
                     <p className="reviews-header-rating">overall rating</p>
@@ -99,13 +99,13 @@ export default function SoapDetailPage({handleAddToOrder, user}) {
                     <div className="reviews-top-body-container">
                         <div className="reviews-top-body">
                             <h1 className="reviews-top-body-name">name</h1>
-                            <p className="reviews-top-body-rating">{reviews.rated}</p>
+                            {/* <p className="reviews-top-body-rating">{reviews.rated}</p> */}
                         </div>
                         <div className="reviews-date">date</div>
                     </div>
-                   <p className="reviews-body">{reviews.message}</p>
+                   {/* <p className="reviews-body">{reviews.message}</p> */}
                 </div>
-            </section> */}
+            </section>
        </main>
     )
 }

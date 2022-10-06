@@ -27,17 +27,12 @@ export default function NavBar( {user, setUser} ) {
 
     return(
         <nav>
-            &nbsp;&nbsp; 
-            <Link className="link" id="app-logo-container" to="/"><img className="" id="app-logo" src="https://imgur.com/SKZLmSw.png" alt="" /></Link>
-            &nbsp;&nbsp; 
-            <Link className="link" to="/soaps">Soaps</Link>
-            &nbsp;&nbsp;
-            {/* <Link className="link" to="/admin">Admin</Link> */}
-            {/* &nbsp;&nbsp;  */}
-            <Link className="link" to="/about">About Us</Link>
-            &nbsp;&nbsp; 
-            &nbsp;&nbsp; 
-            &nbsp;&nbsp; 
+            <div className="left-side-nav">
+                <Link className="link" id="app-logo-container" to="/"><img className="" id="app-logo" src="https://imgur.com/SKZLmSw.png" alt="" /></Link>
+                <Link className="link" to="/soaps">Soaps</Link>
+                {/* <Link className="link" to="/admin">Admin</Link> */}
+                <Link className="link" to="/about">About Us</Link>
+            </div>
                 { user ?
                 <>
                     <div className="dropdown" data-dropdown>
@@ -58,7 +53,6 @@ export default function NavBar( {user, setUser} ) {
                 </>:
                     <Link className="link" to="/login">Login</Link>
                 }
-                &nbsp;&nbsp; 
         </nav>
     ) 
 }

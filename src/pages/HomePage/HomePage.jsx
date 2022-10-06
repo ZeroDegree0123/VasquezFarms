@@ -6,13 +6,10 @@ export default function HomePage() {
         <>
             <main className="home-page-container">
                 <section className="home-header-container">
-                    <div className="home-header-image-container"> 
-                        <img className="home-header-image" src="https://imgur.com/aKLqJ5Q.png" alt="" />
-                    </div>
                     <div className="home-header-body-container">
                         <h1 id="home-header-body-title" className="home-header-body">WELCOME TO VASQUEZ FARMS LLC</h1>
                         <h3 id="home-header-body-subtitle" className="home-header-body"><strong>Feel Clean, Smell Clean</strong></h3>
-                        <p id="home-header-body-body" className="home-header-body">Natural Ingredients, Wide variety, Straight From The Farm.</p> 
+                        <p id="home-header-body-body" className="home-header-body">Natural Ingredients, Wide variety, Straight From The Farm.</p>
                     </div>
                 </section>
                 <section className="home-order-container">
@@ -46,26 +43,32 @@ export default function HomePage() {
                 </section>
                 <h1 className="home-feature-title">FEATURED</h1>
                 <section className="home-feature-container">
-                        <Link id="link-1" className="home-feature-links" to="/soaps/62d9bf111145ef5d44129a50">
-                            <h1 id="home-feature-image-titles-lrg" className="home-feature-image-titles">Black Jasmine</h1>
-                            <img className="home-feature-images" src="https://imgur.com/GmIZZey.png" alt="" />
+                    <div className="home-feature-subcontainers">
+                        <Link className="home-feature-links" to="/soaps/62d9bf111145ef5d44129a50">
+                            <h1 id="home-feature-image-titles-lrg">Black Jasmine</h1>
+                            <img id="home-feature-image-lrg" src="https://imgur.com/GmIZZey.png"/>
                         </Link>
-                        <Link id="link-2" className="home-feature-links" to="/soaps/62313d4be51f3213c011d4a2">
+                    </div>
+                    <div className="home-feature-subcontainers">
+                        <Link className="home-feature-links" to="/soaps/62313d4be51f3213c011d4a2">
                             <h1 className="home-feature-image-titles">Sea Salt Agave</h1>
-                            <img className="home-feature-images" src="https://imgur.com/Rcmqln0.png" alt="" />
+                            <img className="home-feature-images" src="https://imgur.com/Rcmqln0.png"/>
                         </Link>
-                        <Link id="link-3" className="home-feature-links" to="/soaps/62d9be8c1145ef5d44129a4d">
+                        <Link className="home-feature-links" to="/soaps/62d9be8c1145ef5d44129a4d">
                             <h1 className="home-feature-image-titles">Rejuvination</h1>
-                            <img className="home-feature-images" src="https://imgur.com/4jCRkug.png" alt="" />
+                            <img className="home-feature-images" src="https://imgur.com/4jCRkug.png"/>
                         </Link>
-                        <Link id="link-4" className="home-feature-links" to="/soaps/62d9bd731145ef5d44129a47">
+                    </div>
+                    <div className="home-feature-subcontainers">
+                        <Link className="home-feature-links" to="/soaps/62d9bd731145ef5d44129a47">
                             <h1 className="home-feature-image-titles">Black Rasberry</h1>
-                            <img className="home-feature-images" src="https://imgur.com/PtNeTrK.png" alt="" />
+                            <img className="home-feature-images" src="https://imgur.com/PtNeTrK.png"/>
                         </Link>
-                        <Link id="link-5" className="home-feature-links" to="/soaps/62d9bdc91145ef5d44129a49">
+                        <Link className="home-feature-links" to="/soaps/62d9bdc91145ef5d44129a49">
                             <h1 className="home-feature-image-titles">Lemon Loaf</h1>
-                            <img className="home-feature-images" src="https://imgur.com/hFmEvN3.png" alt="" />   
+                            <img className="home-feature-images" src="https://imgur.com/hFmEvN3.png"/>   
                         </Link>
+                    </div>
                 </section>
             </main>
         </>
