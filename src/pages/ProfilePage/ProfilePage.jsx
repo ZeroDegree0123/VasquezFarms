@@ -1,21 +1,25 @@
 import "./ProfilePage.css"
-import { Link, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import * as userService from '../../utilities/users-service';
 import ProfileNav from "../../components/ProfileNav/ProfileNav";
 import ProfileOverview from "../../components/ProfileOverview/ProfileOverview";
 import ProfileSettings from "../../components/ProfileSettings/ProfileSettings";
 
-export default function ProfilePage({user}) {
-
+export default function ProfilePage({user, setUser}) {
+    function handleLogOut() {
+        userService.logOut();
+        setUser(null);
+    }
     return (
         <>
             <main className="profile-page-container">
                 <section className="profile-page-nav-container">
-                    <ProfileNav/>
+                    <ProfileNav handleLogOut={handleLogOut}/>
                 </section>
                 <section className="profile-page-content">
                     <Routes>
-                        <Route path="/profile/overview" element={<ProfileOverview/>}/>
-                        <Route path="/profile/settings" element={<ProfileSettings/>}/>
+                        <Route path="/overview" element={<ProfileOverview user={user}/>}/>
+                        <Route path="/settings" element={<ProfileSettings user={user}/>}/>
                     </Routes>
                 </section>
                 {/* <h1 className="profile-page-title">OVERVIEW</h1>

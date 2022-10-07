@@ -1,0 +1,26 @@
+.settings-container {
+    text-align: left;
+    margin: 50px;
+}
+
+.settings-title {
+    font-size: 45px;
+}
+
+.setting-sections {
+    margin: 100px;
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+}
+
+.setting-content {
+    margin: 10px;
+}
+
+.user-information {
+    font-weight: 600;
+}
+
+.user-information > span {
+    font-weight: 100;
+}

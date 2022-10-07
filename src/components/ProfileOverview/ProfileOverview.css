@@ -1,0 +1,33 @@
+.overview-container {
+    text-align: left;
+    margin: 50px;
+}
+
+.overview-title {
+    font-size: 45px;
+}
+
+.overview-sections {
+    margin: 100px;
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+}
+
+.overview-content {
+    margin: 10px;
+}
+
+.orderhistory-link {
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    margin-left: 20px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.orderhistory-link:hover {
+    color: var(--secondary);
+    border: 2px solid var(--secondary)
+}

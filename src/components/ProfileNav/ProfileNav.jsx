@@ -1,8 +1,7 @@
 import "./ProfileNav.css"
 import { Link } from 'react-router-dom';
-import { render } from "@testing-library/react";
 
-export default function profileNav() {
+export default function profileNav({handleLogOut}) {
     return (
         <> 
             <section className="profile-nav-container">
@@ -11,7 +10,7 @@ export default function profileNav() {
                 &nbsp;
                 <Link className="profile-nav-links" to="/profile/settings">Account Settings</Link>
                 &nbsp;
-                <Link className="profile-nav-links" to="/logout">Log Out</Link>
+                <Link className="profile-nav-links" to="/" onClick={handleLogOut}>Log Out</Link>
             </section>
         </>
     )

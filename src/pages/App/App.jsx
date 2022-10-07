@@ -102,6 +102,7 @@ export default function App() {
         {/* //Profile */}
         <Route path="/profile/*" 
           element={<ProfilePage
+            setUser={setUser}
             user={user}/>}/>
 
         <Route path="/" element={<HomePage/>}/>
