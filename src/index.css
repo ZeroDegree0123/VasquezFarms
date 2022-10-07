@@ -1,9 +1,10 @@
 :root {
   --white: #FFFFFF;
   --button: rgb(207, 243, 255);
-  --primary: rgba(0, 0, 0, 0.7);
+  --primary: rgba(0, 50, 158, 0.9);
   --secondary: rgba(255, 187, 0);
   --third: rgb(106, 187, 214);
+  --shadow: rgba(255, 187, 0, 0.5);
 }
 
 body {

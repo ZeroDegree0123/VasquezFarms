@@ -93,7 +93,7 @@
     margin-left: 0;
     padding: 10px;
     padding-left: 20px;
-    background: linear-gradient(90deg, lightblue, rgb(255, 255, 255, 0%));
+    background: linear-gradient(90deg, var(--secondary), rgb(255, 255, 255, 0%));
     height: 280px;
 }
 
@@ -104,20 +104,21 @@
     margin-right: 0;
     padding: 10px;
     padding-left: 20px;
-    background: linear-gradient(270deg, lightblue, rgb(255, 255, 255, 0%));
+    background: linear-gradient(270deg, var(--secondary), rgb(255, 255, 255, 0%));
     height: 280px;
 }
 
 .about-main-body-titles{
     font-size: 30px;
     text-align: left;
+    margin-bottom: 0;
 }
 
 .about-main-body-bodies{
     text-align: left;
     padding-left: 10px;
     border-left: 2px solid rgb(52, 52, 52);
-    font-size: 18px;
+    font-size: 19px;
 }
 
 
@@ -129,7 +130,7 @@
     margin: 50px;
     padding: 30px;
     border-radius: 5px;
-    box-shadow: 1px 2px 10px 2px lightblue;
+    box-shadow: 1px 2px 8px 2px var(--secondary);
 }
 
 .about-contact-body-container {
@@ -171,7 +172,7 @@
     }
 
     .about-main-body-bodies {
-        font-size: 20px;
+        font-size: 19px;
     }
 }
 
@@ -220,8 +221,8 @@
 
     .about-main-container {
         margin-bottom: 30px;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0)),
-                    url("https://imgur.com/Kfwp1WE.png") no-repeat center center;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
+                    url("https://imgur.com/RsCmqo8.png") no-repeat center center;
     }
 
    .about-main-top-container {
@@ -256,8 +257,8 @@
    }
 
    .about-main-body-titles {
-        color: lightblue;
-        border-bottom: 2px solid lightblue;
+        color: var(--secondary);
+        border-bottom: 2px solid white;
         text-shadow: 1px 1px black;
         margin: 0;
    }
@@ -266,7 +267,7 @@
         font-size: 18px;
         border: none;
         text-align: center;
-        color: lightblue;
+        color: var(--secondary);
         text-shadow: 1px 1px rgb(0, 0, 0);
         font-weight: 1000;
    }

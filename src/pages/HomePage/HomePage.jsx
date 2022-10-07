@@ -16,28 +16,27 @@ export default function HomePage() {
                     <div id="left-order-container" className="home-order-image-container">
                         <div className="home-order-image-subcontainer">
                             <h1 className="home-order-image-titles">Natural</h1>
-                            <img className="home-order-images" src="https://imgur.com/zCJ3siV.png" alt="" />
+                            <img className="home-order-images" src="https://imgur.com/zCJ3siV.png"/>
                         </div>
                         <div className="home-order-image-subcontainer">
                             <h1 className="home-order-image-titles">Fruity</h1>
-                            <img className="home-order-images" src="https://imgur.com/lVLFgX0.png" alt="" />
+                            <img className="home-order-images" src="https://imgur.com/lVLFgX0.png"/>
                         </div>
                     </div>
                     <div className="home-order-body-container">
                         <h1 className="home-order-body-title">START EXPLORING</h1>
-                        <p className="home-order-body">We have a wide variety of different scents, and check out our seasonals
-                            before they go
-                        </p>
+                        <p className="home-order-body">Come check out our wide variety of scents </p>
+                        <p className="home-order-body">And be sure to see our Seasonals before they go</p>
                         <a className="home-order-body" id="home-order-button" href="/soaps">ORDER NOW</a>
                     </div>
                     <div id="right-order-container" className="home-order-image-container">
                         <div className="home-order-image-subcontainer">
                             <h1 className="home-order-image-titles">Floral</h1>
-                            <img className="home-order-images" src="https://imgur.com/uXs82zm.png" alt="" />
+                            <img className="home-order-images" src="https://imgur.com/uXs82zm.png"/>
                         </div>
                         <div className="home-order-image-subcontainer">
                             <h1 className="home-order-image-titles">Masculine</h1>
-                            <img className="home-order-images" src="https://imgur.com/6Z4SmwJ.png" alt="" />
+                            <img className="home-order-images" src="https://imgur.com/6Z4SmwJ.png"/>
                         </div>
                     </div>
                 </section>

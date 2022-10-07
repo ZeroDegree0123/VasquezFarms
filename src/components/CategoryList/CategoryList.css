@@ -16,48 +16,49 @@
     font-size: 1.7vw;
   }
   
-  .category div {
-    padding: .6vmin;
-    text-align: center;
-    border-radius: .5vmin;
-    margin-bottom: .5vmin;
-  }
-      
-  .category div:hover:not(.active) {
-    cursor: pointer;
-    color: lightblue;
-    text-decoration: underline;
-  }
-  
-  .category div.active {
-    color: lightblue;
-  }
+.category div {
+  padding: .6vmin;
+  text-align: center;
+  border-radius: .5vmin;
+  margin-bottom: .5vmin;
+}
+    
+.category div:hover:not(.active) {
+  cursor: pointer;
+  color: var(--secondary);
+  text-decoration: underline;
+}
 
-  .category-button {
-    display: flex;
-    justify-content: flex-start;
-    font-size: 25px;
-    width: 200px;
-  }
+.category div.active {
+  color: var(--secondary);
+}
 
-  .category-header {
-    font-size: 35px;
-  }
+.category-button {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 25px;
+  width: 200px;
+}
 
-  @media only screen and (min-width: 1600px) {
+.category-header {
+  color: black;
+  font-size: 35px;
+}
 
-  }
-  
-  @media only screen and (max-width: 1200px) { 
-      
-  }
+@media only screen and (min-width: 1600px) {
 
-  @media only screen and (max-width: 800px) { 
-      .category-header {
-        font-size: 25px;
-      }
+}
 
-      .category-button {
-        font-size: 18px;
-      }
-  }
+@media only screen and (max-width: 1200px) { 
+    
+}
+
+@media only screen and (max-width: 800px) { 
+    .category-header {
+      font-size: 25px;
+    }
+
+    .category-button {
+      font-size: 18px;
+    }
+}

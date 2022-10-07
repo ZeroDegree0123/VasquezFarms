@@ -21,7 +21,7 @@ export default function OrderHistory() {
     <>
       <main className="order-history-page-container">
         <div className="new-orders-link-container">
-          <Link to="/orders/new" className="new-orders-link"> <strong>NEW ORDER</strong></Link>
+          <Link className="new-orders-link" to="/orders/new"> <strong>NEW ORDER</strong></Link>
         </div>
         <OrderHistoryList orders={orders}/>
         <OrderDetail/>

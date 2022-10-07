@@ -27,8 +27,8 @@
 }
 
 .soap-page-link:hover {
-    color: lightblue;
-    border: 1px solid lightblue;
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
 }
 
 #checkout-button {
@@ -40,6 +40,6 @@
 }
 
 #checkout-button:hover {
-    color: lightblue;
-    border: 1px solid lightblue;
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
 }

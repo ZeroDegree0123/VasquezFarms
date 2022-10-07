@@ -1,15 +1,23 @@
 .login-button {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    color: white;
-    background-color: lightblue;
+    border: 2px solid white;
     border-radius: 5px;
-    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.input-labels {
+    font-size: 20px;
+    color: white;
 }
 
 .login-button:hover {
-    background-color: rgb(96, 211, 250);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
 }
 
 #login-form{

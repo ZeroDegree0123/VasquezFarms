@@ -44,7 +44,6 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
                 :
                 <button
                   id="checkout-button"
-                  className="btn btn-sm btn-warning"
                   onClick={handleCheckout}
                   disabled={!lineSoaps.length}
                 >PROCEED TO CHECKOUT</button>

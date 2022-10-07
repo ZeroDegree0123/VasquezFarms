@@ -1,20 +1,22 @@
 .form-title {
-    color: lightblue;
+    color: var(--secondary);
     text-shadow: 1px 1px darkblue;
 }
 
 .signup-button {
+    font-size: 18px;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    color: white;
-    background-color: lightblue;
+    color: black;
+    border: 1px solid black;
     border-radius: 5px;
-    border: none;
+    background-color: white;
 }
 
 .signup-button:hover {
-    background-color: rgb(96, 211, 250);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
 }
 
 #sign-up {

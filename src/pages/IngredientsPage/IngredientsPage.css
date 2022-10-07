@@ -9,7 +9,7 @@
 .ingredients-header-container {
     margin: 50px;
     margin-bottom: 100px;
-    border-bottom: 2px solid lightblue;
+    border-bottom: 2px solid var(--secondary);
     width: 70%;
 }
 
@@ -67,5 +67,5 @@
 #ingredient-uses {
     font-size: 14px;
     margin-top: 0;
-    color: var(--third);
+    color: var(--secondary);
 }

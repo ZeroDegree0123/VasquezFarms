@@ -1,7 +1,7 @@
 .products-page-container {
     display: flex;
     flex-direction: row;
-    margin-bottom: 500px;
+    height: 100vh;
 }
 
 .products-category-container {

@@ -25,8 +25,8 @@
 
 .back-to-soaps-link:hover {
     text-decoration: none;
-    color: lightblue;
-    border: 2px solid lightblue;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
 }
 
 /* header */
@@ -65,7 +65,7 @@
     padding: 0;
     padding-left: 10px;
     height: 400px;
-    background: linear-gradient(90deg, lightblue, white);
+    background: linear-gradient(90deg, var(--secondary), white);
 }
 
 .details-header-body-title {

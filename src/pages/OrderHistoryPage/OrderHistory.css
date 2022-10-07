@@ -26,6 +26,6 @@
 }
 
 .new-orders-link:hover {
-    color: lightblue;
-    border: 1px solid lightblue;
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
 }
