@@ -12,10 +12,8 @@ export default function SoapList({soaps, handleAddToOrder, user}) {
         />
     );
     return (
-        <section>
-            <div id="soap-list">
-                {allSoaps}
-            </div>
-        </section>
+        <div id="soap-list">
+            {allSoaps}
+        </div>
     )
 }

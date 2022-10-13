@@ -1,5 +1,6 @@
 import "./index.css";
 import { BrowserRouter as Router } from "react-router-dom";
+import {HelmetProvider} from 'react-helmet-async';
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./pages/App/App";
@@ -8,7 +9,9 @@ import App from "./pages/App/App";
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <App />
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

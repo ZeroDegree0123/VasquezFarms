@@ -1,10 +1,9 @@
 .order-history-page-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    margin: 40px;
-    margin-bottom: 700px;
+    margin: 50px;
 }
 
 .new-orders-link-container {

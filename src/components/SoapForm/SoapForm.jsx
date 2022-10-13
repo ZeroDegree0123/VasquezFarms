@@ -8,8 +8,9 @@ export default function SoapForm({cats}) {
         description: '',
         ingredients: '',
         price: '',
+        stock: '',
         category: '',
-
+        // reviews: [],
     })
     const categoryOptions = cats.map((cat) => 
         <option key={cat.id} value={cat._id}>
@@ -30,45 +31,51 @@ export default function SoapForm({cats}) {
             description: '',
             ingredients: '',
             price: '',
+            stock: '',
             category: '',
+            // reviews: [],
         })
         
     }
     return (
         <>
-            <form id="cat-form" autoComplete="off" onSubmit={handleSubmit}>
-                <div className="input-group input-group-sm mb-3 rounded">
-                    <span className="input-group-text" id="inputGroup-sizing-sm">Soap Name</span>
-                    <input className="rounded" type="text" name="name" value={soap.name} onChange={handleChange}/>
+            <form autoComplete="off" onSubmit={handleSubmit}>
+                <div className="input-container">
+                    <span>Soap Name</span>
+                    <input type="text" name="name" value={soap.name} onChange={handleChange}/>
                     
                 </div>
-                <div className="input-group input-group-sm mb-3 rounded">
-                    <span className="input-group-text" id="inputGroup-sizing-sm">Img Url</span>
-                    <input className="rounded" type="text" name="image" value={soap.image} onChange={handleChange}/>
+                <div className="input-container">
+                    <span>Img Url</span>
+                    <input type="text" name="image" value={soap.image} onChange={handleChange}/>
                     
                 </div>
-                <div className="input-group input-group-sm mb-3 rounded">
-                    <span className="input-group-text" id="inputGroup-sizing-sm">Description</span>
-                    <input className="rounded" type="text" name="description" value={soap.description} onChange={handleChange}/>
+                <div className="input-container">
+                    <span>Description</span>
+                    <input type="text" name="description" value={soap.description} onChange={handleChange}/>
                     
                 </div>
-                <div className="input-group input-group-sm mb-3 rounded">
-                    <span className="input-group-text" id="inputGroup-sizing-sm">Ingredients</span>
-                    <input className="rounded" type="text" name="ingredients" value={soap.ingredients} onChange={handleChange}/>
+                <div className="input-container">
+                    <span>Ingredients</span>
+                    <input type="text" name="ingredients" value={soap.ingredients} onChange={handleChange}/>
                     
                 </div>
-                <div className="input-group input-group-sm mb-3 rounded">
-                    <span className="input-group-text" id="inputGroup-sizing-sm">Price</span>
-                    <input className="rounded" type="text" name="price" value={soap.price} onChange={handleChange}/>
+                <div className="input-container">
+                    <span>Price</span>
+                    <input type="text" name="price" value={soap.price} onChange={handleChange}/>
                     
                 </div>
-                <label htmlFor=""> Category:</label>
+                <div className="input-container">
+                    <span>Stock</span>
+                    <input type="text" name="stock" value={soap.stock} onChange={handleChange}/>
+                </div>
+                <label>Category:</label>
                 <div>
-                    <select className="rounded" name="category" value={soap.category} onChange={handleChange}>
+                    <select name="category" value={soap.category} onChange={handleChange}>
                         {categoryOptions}
                     </select>
                 </div>
-                <button className="btn btn-light">Add Soap</button>
+                <button>Add Soap</button>
             </form>
         </>
     )

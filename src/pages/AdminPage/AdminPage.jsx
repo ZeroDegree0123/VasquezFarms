@@ -14,9 +14,9 @@ export default function AdminPage({cats}) {
 
     return (
         <>
-            <section className="admin">
+            <main className="admin">
                 <div className="category">
-                    <div>
+                    <div className="temp">
                         <>
                             <br />
                             <h2>ADD A CATEGORY</h2>
@@ -28,7 +28,7 @@ export default function AdminPage({cats}) {
                         </>
                     </div>
                 </div>
-            </section>
+            </main>
         </>
     )
 }

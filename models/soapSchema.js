@@ -35,6 +35,11 @@ const soapSchema = new Schema({
         default: 4,
         required: true
     },
+    stock:{
+        type: Number,
+        default: 0,
+        required: true
+    },
     category:{
         type: Schema.Types.ObjectId,
         ref: 'Category'

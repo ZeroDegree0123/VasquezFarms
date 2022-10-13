@@ -33,8 +33,8 @@ module.exports = {
           description:req.body.description,
           ingredients:req.body.ingredients,
           price:req.body.price,
+          stock:req.body.stock,
           category:req.body.category,
-          reviews:req.body.reviews,
           timestamps: req.body.timestamps
         });
        await newSoap.save();

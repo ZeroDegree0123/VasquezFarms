@@ -20,7 +20,7 @@ export default function AboutPage() {
                     <p className="about-header-bodies">
                         Although we both have full time jobs off the farm, my husband and I 
                         are homesteaders at heart! We enjoy caring for our many animals, love to garden, and hope to one day produce most of our own 
-                        food. We hope to grow and potntially expand our products.
+                        food. We hope to grow and potentially expand our products.
                     </p>
                 </div>
             </section>

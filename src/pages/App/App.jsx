@@ -1,6 +1,7 @@
 import './App.css';
 import {useState, useEffect, useRef} from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async'
 import { getUser } from '../../utilities/users-service';
 import * as categorysAPI from '../../utilities/categories-api';
 import * as soapsAPI from '../../utilities/soaps-api';
@@ -65,16 +66,19 @@ export default function App() {
 
   return (
     <main className="App">
+      <Helmet>
+        <title>VasquezFarms</title>
+      </Helmet>
       <NavBar setUser={setUser} user={ user }/>
       <br />
       <br />
       <Routes>
         {/* //ADMIN */}
-        {/* <Route path="/admin" 
+        <Route path="/admin" 
           element={<AdminPage 
           user={user} 
           soaps={soaps} 
-          cats={cats}/>}/> */}
+          cats={cats}/>}/>
         {/* //PRODUCTS */}
         <Route path="/soaps" 
           element={<ProductsPage
