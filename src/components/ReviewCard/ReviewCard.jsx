@@ -7,6 +7,7 @@ export default function ReviewCard(props) {
                 <div className="reviews-top-body-container">
                     <div className="reviews-top-body">
                         <h1 className="reviews-top-body-name">name</h1>
+                        <p>{props.user}</p>
                         <p className="reviews-top-body-rating">{props.rating}</p>
                     </div>
                     <div className="reviews-date">date</div>

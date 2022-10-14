@@ -2,10 +2,12 @@ import './ReviewForm.css'
 import { useState } from 'react';
 import * as reviewAPI from '../../utilities/reviews-api'
 
-export default function ReviewForm() {
+export default function ReviewForm({soapId, user}) {
     const [newReview, setNewReview] = useState({
         message: '',
         rating: '',
+        soapId: soapId,
+        user: user._id
     })
 
     function handleChange(evt) {
@@ -15,7 +17,7 @@ export default function ReviewForm() {
     async function handleSubmit(evt) {
         evt.preventDefault();
         reviewAPI.makeReview(newReview);
-        setNewReview({message: '', rating: ''});
+        setNewReview({message: '', rating: '', soapId: soapId, user: user._id});
     }
 
     return (

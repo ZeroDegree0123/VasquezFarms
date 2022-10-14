@@ -1,26 +1,32 @@
 import './ReviewList.css'
 import ReviewCard from '../../components/ReviewCard/ReviewCard';
+import user from '../../../models/user';
 
 export default function ReviewList({reviews}) {
-    const allReviews = reviews.map((review, idx) => 
-        <ReviewCard
-            key={idx}
+    const allReviews = reviews.map((review) => {
+        if (user.id === review.user) {
+            let userName = user.name;
+        }
+        if (review === undefined) {
+            return (
+                <div className="undefined">
+                    <h1>This Soap Has no reviews</h1>
+                </div>
+            )
+        } else if (review !== undefined) {
+           return (<ReviewCard
+            key={review._id}
             message={review.message}
             rating={review.rating}
-        />   
-        );
+            user={review.user.name}
+            />)   
+        }
+    } 
+    );
     
     return (
         <>
-            <section className="reviews-container">
-                <div className="reviews-header-container">
-                    <h1 className="reviews-header-title">REVIEWS</h1>
-                    <p className="reviews-header-rating">overall rating</p>
-                </div>
-                <div>
-                    {allReviews}
-                </div>
-            </section>
+            {allReviews}
         </>
     )
 }

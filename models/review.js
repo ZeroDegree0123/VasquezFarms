@@ -2,7 +2,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const reviewSchema = new Schema({
-    message: String,
+    user: String,
+    soapId: String,
+    message: {
+        type: String,
+        required: true
+    },
     rating: {
         type: Number,
         min: 1,

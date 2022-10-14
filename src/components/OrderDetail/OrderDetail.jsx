@@ -1,11 +1,15 @@
 import './OrderDetail.css'
 import { Link } from 'react-router-dom';
+import {useState} from 'react';
+import CheckoutModal from '../CheckoutModal/CheckoutModal';
 import OrderCard from "../OrderCard/OrderCard";
 
 
 export default function OrderDetail({ order, handleChangeQty, handleCheckout }) {
-    if (!order) return null;
-    // if (order) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  if (!order) return null;
+  
      const lineSoaps = order.lineSoaps.map((soapItem, idx) => (
         <OrderCard
             soapName={soapItem.name}
@@ -17,15 +21,21 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
             key={idx}
         />
         ))
-// }
+
     return (
-        <div>
+      <>
+        { isOpen ?
+          <CheckoutModal order={order} open={isOpen}/>
+
+            :
+
+          <div>
             <div>
-                {order.isPaid ?
-                    <span><h1 id="order-title">ORDER</h1><span>{order.orderId}</span></span>
-                    :
-                    <span><h1 id="order-title">NEW ORDER</h1></span>
-                }
+              {order.isPaid ?
+                <span><h1 id="order-title">ORDER</h1><span>{order.orderId}</span></span>
+                :
+                <span><h1 id="order-title">NEW ORDER</h1></span>
+              }
                 {/* <span>{new Date(order.updatedAt).toLocaleDateString()}</span> */}
             </div>
             <br />
@@ -44,9 +54,13 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
                 :
                 <button
                   id="checkout-button"
-                  onClick={handleCheckout}
-                  disabled={!lineSoaps.length}
-                >PROCEED TO CHECKOUT</button>
+                  onClick={() => {
+                    setIsOpen(true);
+                  }}
+                  // onClick={handleCheckout}
+                  disabled={!lineSoaps.length}>
+                  PROCEED TO CHECKOUT
+                </button>
               }
             </section>
           </>
@@ -58,7 +72,9 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
             </div>
           </>
         }
+      </div> 
       </div>
-    </div>
+    }     
+    </>
   );
 }

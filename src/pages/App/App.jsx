@@ -18,7 +18,8 @@ import OrderPage from '../OrderPage/OrderPage';
 import OrderHistory from '../OrderHistoryPage/OrderHistory';
 import ProductsPage from '../ProductsPage/ProductsPage';
 import SoapDetailPage from '../SoapDetailPage/SoapDetailPage';
-import ProfilePage from '../ProfilePage/ProfilePage'
+import ProfilePage from '../ProfilePage/ProfilePage';
+import Loading from '../../components/Loading/Loading'
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -69,7 +70,7 @@ export default function App() {
       <Helmet>
         <title>VasquezFarms</title>
       </Helmet>
-      <NavBar setUser={setUser} user={ user }/>
+      <NavBar setUser={setUser} user={user}/>
       <br />
       <br />
       <Routes>
@@ -107,6 +108,7 @@ export default function App() {
         <Route path="/profile/*" 
           element={<ProfilePage
             setUser={setUser}
+            cart={cart}
             user={user}/>}/>
 
         <Route path="/" element={<HomePage/>}/>

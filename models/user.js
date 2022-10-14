@@ -4,6 +4,15 @@ const Schema = mongoose.Schema;
 
 const SALT_ROUNDS = 6;
 
+const addressSchema = new Schema({
+  name: String,
+  address: String,
+  city: String,
+  postalCode: Number
+}, {
+  timestamps: true
+})
+
 const userSchema = new Schema({
   name: { type: String, required: true },
   email: {
@@ -11,14 +20,15 @@ const userSchema = new Schema({
     unique: true,
     trim: true,
     lowercase: true,
-    required: true
+    required: true,
   },
   password: {
     type: String,
     trim: true,
-    minlength: 3,
+    minlength: 8,
     required: true
-  }
+  },
+  address: [addressSchema]
 }, {
   timestamps: true,
   toJSON: {

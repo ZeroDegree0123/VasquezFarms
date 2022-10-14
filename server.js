@@ -28,8 +28,8 @@ app.use('/api/orders', ensureLoggedIn, require('./routes/api/orders'));
 app.use('/api/reviews', require('./routes/api/reviews'));
 
 // "Catch All" route
-app.get("/*", (req, res) =>
-  res.sendFile(path.join(__dirname, "build", "index.html"))
+app.get("/*", (req, res) => 
+    res.sendFile(path.join(__dirname, "build", "index.html"))
 );
 
 //Listening for HTTP requests on a certain port
