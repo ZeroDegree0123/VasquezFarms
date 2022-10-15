@@ -44,7 +44,7 @@ const soapSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Category'
     },
-    reviews: [reviewSchema],
+    reviews: [reviewSchema]
 }, {
     timestamps: true
 });

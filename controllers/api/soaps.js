@@ -3,8 +3,22 @@ const Soap = require('../../models/soap');
 module.exports = {
    create,
    index, 
-   show
+   show,
+   createReview
   };
+
+  async function createReview(req, res) {
+    const post = req.body;
+    const soap = await Soap.findById(req.params.id);
+    try {
+      soap.reviews.push(post);
+      soap.save()
+      res.status(201).json(soap)
+    } catch(error) {
+      console.log(error)
+      res.status(409).json({ message: error.message})
+    }
+  }
  
   async function show(req, res) {
     try {

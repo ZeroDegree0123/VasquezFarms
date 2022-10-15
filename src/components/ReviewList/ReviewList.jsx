@@ -1,8 +1,7 @@
 import './ReviewList.css'
 import ReviewCard from '../../components/ReviewCard/ReviewCard';
-import user from '../../../models/user';
 
-export default function ReviewList({reviews}) {
+export default function ReviewList({reviews, user}) {
     const allReviews = reviews.map((review) => {
         if (user.id === review.user) {
             let userName = user.name;

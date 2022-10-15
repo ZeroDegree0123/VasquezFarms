@@ -1,5 +1,5 @@
 import './SoapDetailPage.css'
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import {Helmet} from 'react-helmet-async'
 import * as soapsAPI from '../../utilities/soaps-api';
@@ -23,17 +23,17 @@ export default function SoapDetailPage({handleAddToOrder, user}) {
         };
         getSoap();
         //GETS REVIEW DATA
-        async function getReviews() {
-            const reviewData = await reviewsAPI.allReviews();
-            const soapReviews = reviewData.map((data) => {
-                if (data.soapId === soapId) {
-                    console.log(data)
-                   return data
-                } 
-            }); 
-            setReviews(soapReviews)
-        }
-        getReviews();
+        // async function getReviews() {
+        //     const reviewData = await reviewsAPI.allReviews();
+        //     // const soapReviews = reviewData.map((data) => {
+        //     //     if (data.soapId === soapId) {
+        //     //         console.log(data)
+        //     //        return data
+        //     //     } 
+        //     // }); 
+        //     setReviews(soapReviews)
+        // }
+        // getReviews();
         //// USEEFFECT CLEANUP
     }, [])
     
@@ -107,7 +107,7 @@ export default function SoapDetailPage({handleAddToOrder, user}) {
             </section>
             <section className="reviews-container">
                 <ReviewForm soapId={soapId} user={user}/>
-                <ReviewList reviews={reviews} user={user}/>
+                {/* <ReviewList reviews={reviews} user={user}/> */}
             </section>
        </main>
     )

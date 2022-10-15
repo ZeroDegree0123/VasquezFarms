@@ -1,13 +1,14 @@
 import './ReviewForm.css'
 import { useState } from 'react';
-import * as reviewAPI from '../../utilities/reviews-api'
+import { useParams } from "react-router-dom";
+import * as soapAPI from '../../utilities/soaps-api'
 
-export default function ReviewForm({soapId, user}) {
+export default function ReviewForm({user}) {
+    const { soapId } = useParams();
     const [newReview, setNewReview] = useState({
         message: '',
         rating: '',
-        soapId: soapId,
-        user: user._id
+        user: user,
     })
 
     function handleChange(evt) {
@@ -16,14 +17,14 @@ export default function ReviewForm({soapId, user}) {
 
     async function handleSubmit(evt) {
         evt.preventDefault();
-        reviewAPI.makeReview(newReview);
-        setNewReview({message: '', rating: '', soapId: soapId, user: user._id});
+        soapAPI.makeReview(soapId, newReview);
+        setNewReview({message: '', rating: '', user: user});
     }
 
     return (
         <>
             <section className="review-container">
-                <form autoComplete="off" onSubmit={handleSubmit}>
+               <form autoComplete="off" onSubmit={handleSubmit}>
                     <div>
                         <span>Review text</span>
                         <input type="text" name="message" value={newReview.message} onChange={handleChange}/>
