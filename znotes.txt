@@ -5,7 +5,8 @@ GUIDE IN CASE YOU F*CK UP
 
 2- heroku isnt working because you didn't register the keys dumbass
 
-
+3- DO NOT MESS WITH FAVICON, you will regret it... Or maybe not I really dont know 
+just dont touch it
 
 
 

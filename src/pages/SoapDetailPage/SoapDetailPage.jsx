@@ -91,15 +91,17 @@ export default function SoapDetailPage({handleAddToOrder, user}) {
                 <h2 className="details-ingredients-title">INGREDIENTS</h2>
                 <h4 className="details-ingredients-body">{singleSoap.ingredients}</h4> 
             </section>
-                <ReviewForm user={user} formOpen={formOpen} setFormOpen={setFormOpen}/>
             <section className="reviews-container">
                 <h1 className="reviews-container-title">{soapReviews.length} REVIEWS</h1>
                 { user ?
+                <>
+                    <ReviewForm user={user} formOpen={formOpen} setFormOpen={setFormOpen}/> 
                     <button className="review-link-button"
                         onClick={() => {
                             setFormOpen(true)
                         }} 
                     >Leave A Review</button>
+                </>
                     :
                     <p>Login or Sign-up to post a review</p>
                 }
