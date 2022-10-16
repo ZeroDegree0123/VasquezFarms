@@ -28,7 +28,7 @@ export default function NavBar( {user, setUser} ) {
             <div className="left-side-nav">
                 <Link className="link" id="app-logo-container" to="/"><img className="" id="app-logo" src="https://imgur.com/SKZLmSw.png" alt="" /></Link>
                 <Link className="link" to="/soaps">Soaps</Link>
-                <Link className="link" to="/admin">Admin</Link>
+                {/* <Link className="link" to="/admin">Admin</Link> */}
                 <Link className="link" to="/about">About Us</Link>
             </div>
                 { user ?

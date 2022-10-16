@@ -73,11 +73,11 @@ export default function App() {
       <br />
       <Routes>
         {/* //ADMIN */}
-        <Route path="/admin" 
+        {/* <Route path="/admin" 
           element={<AdminPage 
           user={user} 
           soaps={soaps} 
-          cats={cats}/>}/>
+          cats={cats}/>}/> */}
         {/* //PRODUCTS */}
         <Route path="/soaps" 
           element={<ProductsPage
