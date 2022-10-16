@@ -51,6 +51,7 @@ export default function NavBar( {user, setUser} ) {
                 </>:
                     <Link className="link" to="/login">Login</Link>
                 }
+                
         </nav>
     ) 
 }
