@@ -138,20 +138,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    margin: 0;
     padding: 20px;
+    width: 100%;
+    background: url("https://imgur.com/AU1OHDs.png");
     border-radius: 5px;
     box-shadow: 1px 2px 10px 2px rgb(220, 220, 220);
 }
 
 .details-ingredients-title {
     font-size: 35px;
+    color: white;
 }
 
 .details-ingredients-body {
     text-align: left;
+    color: white;
+    font-size: 25px;
     margin: 0;
-    margin-top: 10px;
-
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
 .reviews-container {
@@ -159,70 +165,41 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
     width: 100%;
 }
 
-.reviews-header-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+.reviews-container-title {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 60px;
     width: 100%;
 }
 
-.reviews-header-title {
-    font-size: 35px;
-}
-
-.reviews-header-rating {
-    font-size: 18px;
-}
-
-.reviews-body-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.reviews-list {
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 5px;
-    box-shadow: 1px 2px 10px 2px rgb(220, 220, 220);
+    margin: 0 50px;
 }
 
-.reviews-top-body-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    width: 100%
-}
-
-.reviews-top-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.reviews-top-body-name {
-    margin: 0;
-}
-
-.reviews-top-body-rating {
-    font-size: 15px;
-}
-
-.reviews-date {
-    font-size: 15px;
-}
-
-.reviews-body {
+.reviews-list > p {
     text-align: left;
-    padding: 20px;
-    width: 100%;
+    font-weight: 600;
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+.review-link-button {
+    font-size: 20px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 20px 0 0 0;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.review-link-button:hover {
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
 }
 
 @media only screen and (min-width: 1600px) {

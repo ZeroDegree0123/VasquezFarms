@@ -38,6 +38,9 @@ export default function SoapCard({soap, handleAddToOrder, user}) {
                         <button className="soap-card-button" onClick={() => handleRedirect()}>ADD TO CART</button> 
                     }
                 </div>         
+                <div>
+                    
+                </div>
             </section> 
         </>
     )

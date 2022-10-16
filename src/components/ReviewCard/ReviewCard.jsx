@@ -1,18 +1,17 @@
 import './ReviewCard.css'
 
-export default function ReviewCard(props) {
+export default function ReviewCard({review}) {
     return (
         <>
-            <div className="reviews-body-container">
-                <div className="reviews-top-body-container">
-                    <div className="reviews-top-body">
-                        <h1 className="reviews-top-body-name">name</h1>
-                        <p>{props.user}</p>
-                        <p className="reviews-top-body-rating">{props.rating}</p>
+            <div className="reviews-main-container">
+                <div className="reviews-body-container">
+                    <div className="reviews-header">
+                        <p className="reviews-username">{review.userName}</p>
+                        <p className="reviews-date">{review.createdAt}</p>
                     </div>
-                    <div className="reviews-date">date</div>
+                    <p className="reviews-rating">Rating: {review.rating}</p>
+                    <p className="reviews-body">{review.message}</p>
                 </div>
-                <p className="reviews-body">{props.message}</p>
             </div>
         </>
     )

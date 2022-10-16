@@ -4,7 +4,8 @@ module.exports = {
    create,
    index, 
    show,
-   createReview
+   createReview,
+   showReviews
   };
 
   async function createReview(req, res) {
@@ -16,16 +17,27 @@ module.exports = {
       res.status(201).json(soap)
     } catch(error) {
       console.log(error)
-      res.status(409).json({ message: error.message})
+      res.status(409).json({ message: error.message })
     }
   }
- 
+  
+  async function showReviews(req, res) {
+    try {
+      const soap = await Soap.findById(req.params.id);
+      const reviews = soap.reviews;
+      res.status(200).json(reviews)
+    } catch (error) {
+      console.log(error)
+      res.status(400).json({ message: error.message })
+    }
+  }
+  
   async function show(req, res) {
     try {
       const soap = await Soap.findById(req.params.id)
       res.json(soap);
-    } catch (err) {
-      res.send(err)
+    } catch (error) {
+      res.send(error)
     }
   }
   

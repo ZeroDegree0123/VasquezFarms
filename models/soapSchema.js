@@ -2,12 +2,14 @@ const Schema = require('mongoose').Schema;
 
 const reviewSchema = new Schema({
     message: String,
+
     rating: {
         type: Number,
         min: 1,
         max: 5,
         default: 3,
     },
+    userName: String,
     user: {type: Schema.Types.ObjectId, ref: 'User'},
 }, {
     timestamps: true

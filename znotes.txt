@@ -4,3 +4,13 @@ GUIDE IN CASE YOU F*CK UP
     check the data base
 
 2- heroku isnt working because you didn't register the keys dumbass
+
+
+
+
+
+NOTES BC YOU F*CKED UP 😂
+
+1- App renders individual soap 4 or 5 times at once, first render appears undefined.
+That being said the soaps review list renders like 4 to 6 times at once, first 2 renders
+appear undefined, cant map undefined, temporary gate function, need to find a better solution

@@ -16,3 +16,7 @@ export function showSoap(soapId) {
 export function makeReview(soapId, reviews) {
     return sendRequest(`${BASE_URL}/${soapId}/review`, "POST", reviews)
 }
+
+export function showReviews(soapId) {
+    return sendRequest(`${BASE_URL}/${soapId}`)
+}

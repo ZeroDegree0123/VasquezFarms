@@ -19,7 +19,6 @@ import OrderHistory from '../OrderHistoryPage/OrderHistory';
 import ProductsPage from '../ProductsPage/ProductsPage';
 import SoapDetailPage from '../SoapDetailPage/SoapDetailPage';
 import ProfilePage from '../ProfilePage/ProfilePage';
-import Loading from '../../components/Loading/Loading'
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -29,7 +28,6 @@ export default function App() {
   const [cats, setCats] = useState([]);
   const categoryRef = useRef([]);
   const navigate = useNavigate()
-  // const [loading, setLoading] = useState(true);
 
   useEffect(function() {
     // GETS SOAP DATA
@@ -91,7 +89,7 @@ export default function App() {
             setActiveCat={setActiveCat}
             handleAddToOrder={handleAddToOrder}/>}/>
         {/* //SOAPDETAIL */}
-        <Route path="/soaps/:soapId" 
+        <Route path="/soaps/:soapId/*" 
           element={<SoapDetailPage
             user={user}
             handleAddToOrder={handleAddToOrder}/>}/>
@@ -116,6 +114,7 @@ export default function App() {
         <Route path="/help" element={<HelpPage/>}/>
         <Route path="/ingredients" element={<IngredientsPage/>}/>
         <Route path="/orders" element={<OrderHistory/>}/>
+        {/* <Route path={`/soaps/:id/review-form`} element={<ReviewForm user={user}/>}/> */}
       </Routes>
       <Footer/>
     </main>
