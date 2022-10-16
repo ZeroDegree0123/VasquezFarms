@@ -14,6 +14,10 @@ export default function ReviewForm({user, formOpen, setFormOpen}) {
 
     if (!formOpen) return null;
 
+    function handleClick() {
+        setFormOpen(false);
+    }
+
     function handleChange(evt) {
         setNewReview({...newReview, [evt.target.name]: evt.target.value});
     };
@@ -47,6 +51,8 @@ export default function ReviewForm({user, formOpen, setFormOpen}) {
                         </div>
                     </div>
                     <button className="review-submit-button">Submit Review</button>
+                    &nbsp;
+                    <button className="review-cancel-button" onClick={() => {handleClick()}}>CANCEL</button>
                 </form>
             </section>
         </>

@@ -5,6 +5,7 @@
     align-items: center;
     background-color: white;
     margin: 40px;
+    min-height: 100vh;
 }
 
 .back-to-soaps {
@@ -91,6 +92,7 @@
 .details-header-quantity-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .details-header-quantity-title {
@@ -99,14 +101,16 @@
 }
 
 .details-header-quantity-button {
+    font-size: 15px;
     background-color: white;
     border-radius: 5px;
     border: 1px solid black;
+    padding: 2px;
 }
 
 .details-header-quantity-button:hover {
-    background-color: lightblue;
-    border: 1px solid lightblue;
+    background-color: var(--secondary);
+    border: 1px solid var(--secondary);
 }
 
 .details-header-order-container {
@@ -126,11 +130,12 @@
     background-color: white;
     border-radius: 5px;
     border: 1px solid black;
+    padding: 2px;
 }
 
 .details-order-button:hover {
-    background-color: lightblue;
-    border: 1px solid lightblue;
+    background-color: lightgreen;
+    border: 1px solid black;
 }
 
 .details-ingredients-container {

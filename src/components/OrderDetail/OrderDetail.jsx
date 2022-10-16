@@ -54,10 +54,10 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
                 :
                 <button
                   id="checkout-button"
-                  onClick={() => {
-                    setIsOpen(true);
-                  }}
-                  // onClick={handleCheckout}
+                  // onClick={() => {
+                  //   setIsOpen(true);
+                  // }}
+                  onClick={handleCheckout}
                   disabled={!lineSoaps.length}>
                   PROCEED TO CHECKOUT
                 </button>

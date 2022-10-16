@@ -57,11 +57,11 @@ export default function SoapDetailPage({handleAddToOrder, user}) {
                 <div className="details-header-bottom-container">
                     <div className="details-header-quantity-container">
                         <h5 className="details-header-quantity-title">Status</h5>
-                        {singleSoap.stock > 0 ? (
-                            <p className="details-header-quantity-button">In Stock</p>
-                            ) : (
-                                <p className="details-header-quant“ity-button">Unavailable</p>      
-                                )}
+                        {singleSoap.stock > 0 ? 
+                                (<p className="details-header-quantity-button">In Stock</p>)
+                            : 
+                                (<p className="details-header-quant“ity-button">Unavailable</p>)
+                        }
                     </div>
                     <div className="details-header-order-container">
                         <p className="details-order-price">
