@@ -14,7 +14,7 @@ const app = express();
 app.use(logger("dev"));
 app.use(express.json());
 app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "build")));
 
 //Middleware to verify token and assign user object to req object
 app.use(require("./config/checkToken"));
@@ -28,7 +28,7 @@ app.use('/api/orders', ensureLoggedIn, require('./routes/api/orders'));
 
 // "Catch All" route
 app.get("/*", (req, res) => 
-    res.sendFile(path.join(__dirname, "public", "index.html"))
+    res.sendFile(path.join(__dirname, "build", "index.html"))
 );
 
 //Listening for HTTP requests on a certain port
