@@ -208,7 +208,7 @@ hr {
 .home-feature-images {
     border: 2px solid white;
     width: 350px;
-    height: 300px;
+    height: 100%;
 }
 
 #home-feature-image-lrg {
