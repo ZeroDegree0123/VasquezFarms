@@ -27,6 +27,16 @@
     align-items: center;
 }
 
+#sign-up > p {
+    color: white;
+    margin: 0;
+    margin-top: 20px;
+}
+
+#sign-up > p > span {
+    text-decoration: underline;
+}
+
 #signup-label {
     display: flex;
     align-items: flex-start;

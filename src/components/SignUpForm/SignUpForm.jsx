@@ -50,6 +50,7 @@ export default class SignUpForm extends Component {
                 <input type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
                 <label className="input-labels">Email</label>
                 <input type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
+                <p>Password <span><strong>MUST</strong></span> be 8 characters or longer</p>
                 <label className="input-labels">Password</label>
                 <input type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
                 <label className="input-labels">Confirm Password</label>

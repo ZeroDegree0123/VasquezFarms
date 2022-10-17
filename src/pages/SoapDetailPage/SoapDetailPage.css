@@ -213,6 +213,12 @@
     }
 }
 
+@media only screen and (max-width: 1050px) { 
+    .details-header-body-description {
+        width: 75%;
+    }
+}
+
 @media only screen and (max-width: 950px) { 
     .details-header-top-container {
         flex-direction: column;
@@ -223,7 +229,7 @@
     .details-header-body-container {
         align-items: center;
         background: none;
-        background-color: lightblue;
+        background-color: var(--secondary);
         border-radius: 10px;
     }
 

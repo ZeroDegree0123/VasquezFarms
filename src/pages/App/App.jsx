@@ -62,13 +62,13 @@ export default function App() {
   };
 
   window.scrollTo(0, 0);
-
+  
   return (
     <main className="App">
       <Helmet>
         <title>VasquezFarms</title>
       </Helmet>
-      <NavBar setUser={setUser} user={user}/>
+      <NavBar cart={cart} setUser={setUser} user={user}/>
       <br />
       <br />
       <Routes>

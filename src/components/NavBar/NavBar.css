@@ -98,6 +98,17 @@ nav {
     background-color: var(--secondary);
 }
 
+.cart-item-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(255, 56, 56);
+    color: white;
+}
+
 #app-logo-container {
     width: 200px;
     height: 50px;
@@ -125,13 +136,22 @@ nav {
 }
 
 
-@media only screen and (max-width: 1100px) { 
+/* @media only screen and (max-width: 1100px) { 
+  
+
+} */
+
+@media only screen and (max-width: 950px) { 
+    .dropdown {
+        margin-right: 30px;
+    }
+
     .dropdown-menu {
-        width: 100px;
+        width: 90px;
     }
     
     .dropdown-content {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .link {
@@ -147,18 +167,11 @@ nav {
         margin: 0;
     }
 
+
+.cart-item-counter {
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
 }
 
-@media only screen and (max-width: 950px) { 
-    .dropdown {
-        margin-right: 30px;
-    }
-
-    .dropdown-menu {
-        width: 80px;
-    }
-    
-    .dropdown-content {
-        font-size: 15px;
-    }
 }

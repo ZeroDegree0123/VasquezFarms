@@ -176,6 +176,13 @@
     }
 }
 
+
+@media only screen and (max-width: 1500px) {
+    .about-main-body-bodies {
+        font-size: 17px;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .about-header-container {
         display: grid;
@@ -289,6 +296,18 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .about-header-left-body-container {
+        display: flex;
+        padding: 20px 0;
+    }
+
+    .about-header-right-body-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+    }
+
     .about-main-body-bodies {
         font-size: 16px;
     }
