@@ -26,7 +26,7 @@ export default function OrderPage({soaps}) {
         await ordersAPI.checkout();
         navigate('/orders');
       }
-
+      
     return (
         <> 
             <main className="order-page-container">

@@ -51,8 +51,8 @@ export default function App() {
 
   // HANDLE FUNCTIONS
   async function handleAddToOrder(soapId) {
-      const updatedCart = await ordersAPI.addSoapToCart(soapId);
-      setCart(updatedCart);
+    const updatedCart = await ordersAPI.addSoapToCart(soapId);
+    setCart(updatedCart);
     }
 
   // NAVIGATE FUNCTIONS

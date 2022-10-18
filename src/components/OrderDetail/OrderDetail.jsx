@@ -21,7 +21,7 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
             key={idx}
         />
         ))
-
+        
     return (
       <>
         { isOpen ?
