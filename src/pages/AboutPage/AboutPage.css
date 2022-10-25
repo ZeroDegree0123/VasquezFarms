@@ -295,7 +295,15 @@
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) { 
+    .about-header-container {
+        grid-template-rows: 360px 200px 200px;
+    }
+
+    .about-header-image {
+        height: 100%;
+    }
+
     .about-header-left-body-container {
         display: flex;
         padding: 20px 0;

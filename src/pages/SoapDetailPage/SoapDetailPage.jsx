@@ -22,9 +22,7 @@ export default function SoapDetailPage({handleAddToOrder, user}) {
         const getSoap = async function() {
             const soapData = await soapsAPI.showSoap(soapId);
             setSingleSoap(soapData);
-            
-            setTimeout(setSoapReviews(soapData.reviews), 1000);
-            
+            setSoapReviews(soapData.reviews);  
         };
         getSoap();
         

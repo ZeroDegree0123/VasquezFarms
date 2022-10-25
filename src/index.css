@@ -7,6 +7,11 @@
   --shadow: rgba(255, 187, 0, 0.5);
 }
 
+html {
+  scroll-behavior: smooth;
+  animation: pageload .5s;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -23,6 +28,19 @@ code {
 main {
   min-height: 100vh;
 }
+
+@keyframes pageload {
+  from {
+      opacity: 0;
+      transform: rotateX(-7deg);
+  }
+
+  to {
+      opacity: 1;
+      transform: rotateX(0);
+  }
+}
+
 
 /* @media only screen and (min-width: 1600px) {
 

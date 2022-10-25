@@ -11,8 +11,9 @@ const reviewSchema = new Schema({
     },
     userName: String,
     user: {type: Schema.Types.ObjectId, ref: 'User'},
+    date: Date,
 }, {
-    timestamps: true
+    timestamps: true  
 })
 
 const soapSchema = new Schema({

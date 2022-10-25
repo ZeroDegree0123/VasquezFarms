@@ -26,27 +26,30 @@ export default function App() {
   const [soaps, setSoaps] = useState([]);
   const [activeCat, setActiveCat] = useState('');
   const [cats, setCats] = useState([]);
+
   const categoryRef = useRef([]);
   const navigate = useNavigate()
 
   useEffect(function() {
     // GETS SOAP DATA
     async function getSoaps() {
-        const soapData = await soapsAPI.allSoaps();
-        categoryRef.current = soapData.reduce((cats, soap) => {
-            const cat = soap.category.name;// turns into string
-            return cats.includes(cat) ? cats : [...cats, cat]; 
-        }, []);
-        setSoaps(soapData)
-        setActiveCat(categoryRef.current[0]);
+      const soapData = await soapsAPI.allSoaps();
+      categoryRef.current = soapData.reduce((cats, soap) => {
+          const cat = soap.category.name;// turns into string
+          return cats.includes(cat) ? cats : [...cats, cat]; 
+      }, []);
+      setSoaps(soapData)
+      setActiveCat(categoryRef.current[0]);
     }
     getSoaps();
+
     // GETS CATEGORY DATA
     async function getCat() {
-        const catData = await categorysAPI.showCategory();
-        setCats(catData);
+      const catData = await categorysAPI.showCategory();
+      setCats(catData);
     }
     getCat();
+
   }, []);
 
   // HANDLE FUNCTIONS

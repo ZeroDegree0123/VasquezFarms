@@ -40,6 +40,7 @@ export default function OrderPage({soaps}) {
                 </div>
                 <br />
             </main>
+            {/* <NavBar/> */}
         </>
     )
 }

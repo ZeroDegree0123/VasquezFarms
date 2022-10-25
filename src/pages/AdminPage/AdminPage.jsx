@@ -1,12 +1,9 @@
 import './AdminPage.css'
-import { useState, useEffect } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
-import * as categoryAPI from "../../utilities/categories-api"
+import { useState } from 'react';
 import CategoryForm from "../../components/CategoryForm/CategoryForm"
 import SoapForm from "../../components/SoapForm/SoapForm";
 
 export default function AdminPage({cats}) {
-    const navigate = useNavigate()
     const [categories, setCategories] = useState({
         name: '',
         sortOrder: '',

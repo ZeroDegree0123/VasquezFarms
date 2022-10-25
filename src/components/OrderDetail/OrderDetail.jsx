@@ -4,7 +4,6 @@ import {useState} from 'react';
 import CheckoutModal from '../CheckoutModal/CheckoutModal';
 import OrderCard from "../OrderCard/OrderCard";
 
-
 export default function OrderDetail({ order, handleChangeQty, handleCheckout }) {
   const [isOpen, setIsOpen] = useState(false);
 

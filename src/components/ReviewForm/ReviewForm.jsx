@@ -10,6 +10,7 @@ export default function ReviewForm({user, formOpen, setFormOpen}) {
         rating: '',
         userName: user.name,
         user: user,
+        date: new Date().toLocaleDateString(),
     });
 
     if (!formOpen) return null;
@@ -26,7 +27,7 @@ export default function ReviewForm({user, formOpen, setFormOpen}) {
         setFormOpen(false);
         evt.preventDefault();
         soapAPI.makeReview(soapId, newReview);
-        setNewReview({message: '', rating: '', user: user, userName: user.name});
+        setNewReview({message: '', rating: '', user: user, userName: user.name, date: new Date().toLocaleDateString()});
     };
 
     return (
