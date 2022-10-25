@@ -1,5 +1,5 @@
 import './SoapList.css'
-import SoapCard from '../../components/SoapCard/SoapCard';
+import SoapCard from '../../SoapComponent/SoapCard/SoapCard';
 
 export default function SoapList({soaps, handleAddToOrder, user}) {
     

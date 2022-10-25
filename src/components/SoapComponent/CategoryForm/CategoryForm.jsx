@@ -1,5 +1,5 @@
 import './CategoryForm.css'
-import * as categoryApi from '../../utilities/categories-api'
+import * as categoryApi from '../../../utilities/categories-api'
 
 
 export default function CategoryForm({categories, setCategories}) {

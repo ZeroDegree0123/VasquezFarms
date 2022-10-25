@@ -1,5 +1,5 @@
 import './ReviewList.css'
-import ReviewCard from '../../components/ReviewCard/ReviewCard';
+import ReviewCard from '../../ReviewComponent/ReviewCard/ReviewCard';
 
 export default function ReviewList({reviews}) {
 

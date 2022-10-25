@@ -1,7 +1,7 @@
 import './AdminPage.css'
 import { useState } from 'react';
-import CategoryForm from "../../components/CategoryForm/CategoryForm"
-import SoapForm from "../../components/SoapForm/SoapForm";
+import CategoryForm from "../../components/SoapComponent/CategoryForm/CategoryForm"
+import SoapForm from "../../components/SoapComponent/SoapForm/SoapForm";
 
 export default function AdminPage({cats}) {
     const [categories, setCategories] = useState({

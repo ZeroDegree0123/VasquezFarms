@@ -1,7 +1,7 @@
 import './ReviewForm.css'
 import { useState } from 'react';
 import { useParams } from "react-router-dom";
-import * as soapAPI from '../../utilities/soaps-api'
+import * as soapAPI from '../../../utilities/soaps-api'
 
 export default function ReviewForm({user, formOpen, setFormOpen}) {
     const { soapId } = useParams();

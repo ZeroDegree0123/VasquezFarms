@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import * as soapsAPI from '../../utilities/soaps-api'
+import * as soapsAPI from '../../../utilities/soaps-api'
 
 export default function SoapForm({cats}) {
     const [soap, setSoap] = useState({

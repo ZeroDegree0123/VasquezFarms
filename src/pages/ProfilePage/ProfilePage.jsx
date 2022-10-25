@@ -1,9 +1,9 @@
 import "./ProfilePage.css"
 import { Routes, Route } from 'react-router-dom';
 import * as userService from '../../utilities/users-service';
-import ProfileNav from "../../components/ProfileNav/ProfileNav";
-import ProfileOverview from "../../components/ProfileOverview/ProfileOverview";
-import ProfileSettings from "../../components/ProfileSettings/ProfileSettings";
+import ProfileNav from "../../components/ProfileComponent/ProfileNav/ProfileNav";
+import ProfileOverview from "../../components/ProfileComponent/ProfileOverview/ProfileOverview";
+import ProfileSettings from "../../components/ProfileComponent/ProfileSettings/ProfileSettings";
 
 export default function ProfilePage({user, setUser}) {
     function handleLogOut() {

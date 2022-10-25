@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import {Helmet} from 'react-helmet-async'
 import * as soapsAPI from '../../utilities/soaps-api';
-import ReviewForm from '../../components/ReviewForm/ReviewForm';
-import ReviewList from '../../components/ReviewList/ReviewList';
+import ReviewForm from '../../components/ReviewComponent/ReviewForm/ReviewForm';
+import ReviewList from '../../components/ReviewComponent/ReviewList/ReviewList';
 import CartModal from '../../components/CartModal/CartModal';
 
 export default function SoapDetailPage({handleAddToOrder, user}) {

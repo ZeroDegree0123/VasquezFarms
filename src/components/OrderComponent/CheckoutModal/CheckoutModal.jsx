@@ -1,6 +1,6 @@
 import './CheckoutModal.css'
 import { useState} from 'react';
-import * as userAPI from '../../utilities/users-api';
+import * as userAPI from '../../../utilities/users-api';
 
 export default function CheckoutModal({open}) {
     const [address, setAddress] = useState({

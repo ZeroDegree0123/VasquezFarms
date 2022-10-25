@@ -2,7 +2,7 @@ import './OrderPage.css'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import * as ordersAPI from '../../utilities/orders-api';
-import OrderDetail from "../../components/OrderDetail/OrderDetail"
+import OrderDetail from "../../components/OrderComponent/OrderDetail/OrderDetail"
 
 export default function OrderPage({soaps}) {
     const [cart, setCart] = useState(null)

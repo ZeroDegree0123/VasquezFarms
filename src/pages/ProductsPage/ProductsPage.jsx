@@ -1,7 +1,7 @@
 import './ProductsPage.css'
 import { useState } from 'react';
-import CategoryList from '../../components/CategoryList/CategoryList';
-import SoapList from '../../components/SoapList/SoapList'
+import CategoryList from '../../components/SoapComponent/CategoryList/CategoryList';
+import SoapList from '../../components/SoapComponent/SoapList/SoapList'
 
 export default function ProductsPage({user, soaps, cats, activeCat, setActiveCat, categories, handleAddToOrder}) {
     return (
