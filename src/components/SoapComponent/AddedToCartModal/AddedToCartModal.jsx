@@ -1,4 +1,4 @@
-import "./CartModal.css"
+import "./AddedToCartModal.css"
 
 export default function CartModal({open}) {
     if (!open) return null;

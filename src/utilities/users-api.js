@@ -14,6 +14,6 @@ export function checkToken() {
   return sendRequest(`${BASE_URL}/check-token`);
 }
 
-export function saveAddress(address) {
+export function saveAddress(userId, address) {
   return sendRequest(`${BASE_URL}/address`, "POST")
 }

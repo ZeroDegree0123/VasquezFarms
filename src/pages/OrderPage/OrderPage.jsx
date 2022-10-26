@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import * as ordersAPI from '../../utilities/orders-api';
 import OrderDetail from "../../components/OrderComponent/OrderDetail/OrderDetail"
 
-export default function OrderPage({soaps}) {
+export default function OrderPage({soaps, user}) {
     const [cart, setCart] = useState(null)
     const navigate = useNavigate()
 
@@ -14,7 +14,13 @@ export default function OrderPage({soaps}) {
             const cartData = await ordersAPI.getCart();
             setCart(cartData);
             }
-            getCart();
+        getCart();
+
+        async function getAddress() {
+            return;
+        }
+        getAddress();
+        
     }, []);
 
     async function handleChangeQty(soapId, newQty) {
@@ -32,6 +38,7 @@ export default function OrderPage({soaps}) {
             <main className="order-page-container">
                 <div className="order-page">
                     <OrderDetail 
+                        user={user}
                         soaps={soaps}
                         order={cart}
                         handleChangeQty={handleChangeQty}

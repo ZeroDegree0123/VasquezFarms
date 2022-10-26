@@ -5,7 +5,7 @@ import {Helmet} from 'react-helmet-async'
 import * as soapsAPI from '../../utilities/soaps-api';
 import ReviewForm from '../../components/ReviewComponent/ReviewForm/ReviewForm';
 import ReviewList from '../../components/ReviewComponent/ReviewList/ReviewList';
-import CartModal from '../../components/CartModal/CartModal';
+import CartModal from '../../components/SoapComponent/AddedToCartModal/AddedToCartModal';
 
 export default function SoapDetailPage({handleAddToOrder, user}) {
     const { soapId } = useParams();

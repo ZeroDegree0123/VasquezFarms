@@ -99,6 +99,7 @@ export default function App() {
         {/* //NEWORDER */}
         <Route path="/orders/new" 
           element={<OrderPage
+            user={user}
             soaps={soaps}/>}/>
         {/* //LOGIN/SIGNUP */}
         <Route path="/login"

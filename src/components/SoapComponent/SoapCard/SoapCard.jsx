@@ -1,7 +1,7 @@
 import './SoapCard.css'
 import { Link, useNavigate } from "react-router-dom"
 import { useState } from 'react';
-import CartModal from '../../CartModal/CartModal';
+import CartModal from '../AddedToCartModal/AddedToCartModal';
 
 export default function SoapCard({soap, handleAddToOrder, user}) {
     const [isOpen, setIsOpen] = useState(false);

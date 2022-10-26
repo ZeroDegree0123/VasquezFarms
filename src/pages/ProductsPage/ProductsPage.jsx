@@ -1,5 +1,4 @@
 import './ProductsPage.css'
-import { useState } from 'react';
 import CategoryList from '../../components/SoapComponent/CategoryList/CategoryList';
 import SoapList from '../../components/SoapComponent/SoapList/SoapList'
 

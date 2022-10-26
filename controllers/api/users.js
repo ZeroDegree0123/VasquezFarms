@@ -1,7 +1,6 @@
 const jwt = require("jsonwebtoken");
 const User = require("../../models/user");
 const bcrypt = require("bcrypt");
-const user = require("../../models/user");
 
 const createJWT = (user) => {
   return jwt.sign(
@@ -26,13 +25,16 @@ const create = async (req, res) => {
   }
 };
 
-const addAddress =  async (req, res) => {
+const createAddress =  async (req, res) => {
+  const post = req.body;
+  const user = await User.findById(req.params.id);
   try { 
-    const address = await new User.address.create(req.body);
-    res.json(address)
-  } catch (err) {
-    console.log(err)
-    res.status(400).json(err);
+    user.address.push(post);
+    user.save();
+    res.status(201).json(user)
+  } catch (error) {
+    console.log(error)
+    res.status(409).json({message: error.message});
   } 
 }
 
@@ -59,5 +61,5 @@ module.exports = {
   create,
   login,
   checkToken,
-  addAddress
+  createAddress
 };

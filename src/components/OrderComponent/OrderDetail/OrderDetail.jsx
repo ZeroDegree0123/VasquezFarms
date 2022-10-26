@@ -4,7 +4,7 @@ import {useState} from 'react';
 import CheckoutModal from '../CheckoutModal/CheckoutModal';
 import OrderCard from "../OrderCard/OrderCard";
 
-export default function OrderDetail({ order, handleChangeQty, handleCheckout }) {
+export default function OrderDetail({ user, order, handleChangeQty, handleCheckout }) {
   const [isOpen, setIsOpen] = useState(false);
 
   if (!order) return null;
@@ -24,7 +24,7 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
     return (
       <>
         { isOpen ?
-          <CheckoutModal order={order} open={isOpen}/>
+          <CheckoutModal user={user} order={order} setIsOpen={setIsOpen} open={isOpen}/>
 
             :
 
@@ -53,10 +53,10 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
                 :
                 <button
                   id="checkout-button"
-                  // onClick={() => {
-                  //   setIsOpen(true);
-                  // }}
-                  onClick={handleCheckout}
+                  onClick={() => {
+                    setIsOpen(true);
+                  }}
+                  // onClick={handleCheckout}
                   disabled={!lineSoaps.length}>
                   PROCEED TO CHECKOUT
                 </button>

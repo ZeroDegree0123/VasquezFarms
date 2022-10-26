@@ -9,7 +9,7 @@ router.post("/", usersCtrl.create);
 
 router.post("/login", usersCtrl.login);
 
-router.post("/address", usersCtrl.addAddress)
+router.post("/:id/address", usersCtrl.createAddress)
 // GET /api/users/check-token
 router.get("/check-token", ensureLoggedIn, usersCtrl.checkToken);
 
