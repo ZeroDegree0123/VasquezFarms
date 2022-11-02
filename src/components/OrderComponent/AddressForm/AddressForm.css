@@ -1,0 +1,40 @@
+.address-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px;
+    width: 100%;
+}
+
+.address-title {
+    font-size: 40px;
+}
+
+.address-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.address-link-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 0 0 0;
+    width: 100%;
+}
+
+.address-submit {
+    margin: 20px 0 0 0;
+}
+
+.address-submit:hover {
+    background-color: var(--secondary);
+    color:white;
+}
+
+.address-cancel:hover {
+    background-color: red;
+    color: white;
+}

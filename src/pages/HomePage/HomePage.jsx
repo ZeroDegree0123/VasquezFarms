@@ -13,6 +13,19 @@ export default function HomePage() {
                     </div>
                 </section>
                 <section className="home-order-container">
+                    <div className="home-order-left">
+                        <img className="home-order-image" src="https://imgur.com/GmIZZey.png" alt="" />
+                    </div>
+                    <div className="home-order-right">
+                        <h1 className="home-order-seasonal">Floral Scents</h1>
+                        <div className="home-order-body-container">
+                            <h1 className="home-order-soap-name">Black Jasmine</h1>
+                            <p className="home-order-soap-description">A mixture of bergamot, cassis, rose, jasmine, and more. That provides a thourough but gentle exfoliation.</p>
+                        </div>
+                        <button className="home-order-button">ORDER</button>
+                    </div>
+                </section>
+                {/* <section className="home-order-container">
                     <div id="left-order-container" className="home-order-image-container">
                         <div className="home-order-image-subcontainer">
                             <h1 className="home-order-image-titles">Natural</h1>
@@ -39,7 +52,7 @@ export default function HomePage() {
                             <img className="home-order-images" src="https://imgur.com/6Z4SmwJ.png" alt="images"/>
                         </div>
                     </div>
-                </section>
+                </section> */}
                 <h1 className="home-feature-title">FEATURED</h1>
                 <section className="home-feature-container">
                     <div className="home-feature-subcontainers">

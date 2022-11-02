@@ -1,15 +1,19 @@
 import './OrderPage.css'
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Routes, Route } from 'react-router-dom';
 import * as ordersAPI from '../../utilities/orders-api';
 import OrderDetail from "../../components/OrderComponent/OrderDetail/OrderDetail"
+import AddressForm from '../../components/OrderComponent/AddressForm/AddressForm';
+import PaymentForm from '../../components/OrderComponent/PaymentForm/PaymentForm';
+import ConfirmOrder from '../../components/OrderComponent/ConfirmOrder/ConfirmOrder';
 
 export default function OrderPage({soaps, user}) {
     const [cart, setCart] = useState(null)
+    const [address, setAddress] = useState([])
+    const [isOpen, setIsOpen] = useState(true)
     const navigate = useNavigate()
 
     useEffect(function() {
-        //GETS ORDER DATA
         async function getCart() {
             const cartData = await ordersAPI.getCart();
             setCart(cartData);
@@ -17,9 +21,10 @@ export default function OrderPage({soaps, user}) {
         getCart();
 
         async function getAddress() {
-            return;
+            const userData = user.address;
+            setAddress(userData);
         }
-        getAddress();
+        getAddress();   
         
     }, []);
 
@@ -32,22 +37,32 @@ export default function OrderPage({soaps, user}) {
         await ordersAPI.checkout();
         navigate('/orders');
       }
-      
+
+    async function handleRedirect() {
+        let path = "/orders/new"
+        await navigate(path)
+    }
     return (
         <> 
             <main className="order-page-container">
-                <div className="order-page">
+                <section className="order-page">
                     <OrderDetail 
                         user={user}
+                        isOpen={isOpen}
+                        setIsOpen={setIsOpen}
                         soaps={soaps}
                         order={cart}
                         handleChangeQty={handleChangeQty}
                         handleCheckout={handleCheckout}
                     />
-                </div>
+                    <Routes>
+                        <Route path="/address" element={<AddressForm isOpen={isOpen} setIsOpen={setIsOpen} handleRedirect={handleRedirect} user={user} address={address}/>} />
+                        <Route path="/payment" element={<PaymentForm isOpen={isOpen} setIsOpen={setIsOpen} handleRedirect={handleRedirect} user={user}/>} />
+                        <Route path="/confirm" element={<ConfirmOrder isOpen={isOpen} setIsOpen={setIsOpen} handleRedirect={handleRedirect} user={user}/>} />
+                    </Routes>
+                </section>
                 <br />
             </main>
-            {/* <NavBar/> */}
         </>
     )
 }

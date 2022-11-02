@@ -1,11 +1,23 @@
 import './PaymentForm.css'
+import { Link } from 'react-router-dom';
 
-export default function PaymentForm() {
+export default function PaymentForm({isOpen, handleRedirect}) {
+
+    if(isOpen) {
+        handleRedirect();
+    }
+
     return (
         <>
-            <h1>
-                hello payment
-            </h1>
+            <section>
+                {/* <form action="">
+                    <label htmlFor="">hello</label>
+                    <input type="text" />
+                    <button></button>
+                </form> */}
+                <h1>Payment</h1>
+                <Link to="/orders/new/confirm">Review Order</Link>
+            </section>
         </>
     )
 }

@@ -97,7 +97,7 @@ export default function App() {
             user={user}
             handleAddToOrder={handleAddToOrder}/>}/>
         {/* //NEWORDER */}
-        <Route path="/orders/new" 
+        <Route path="/orders/new/*" 
           element={<OrderPage
             user={user}
             soaps={soaps}/>}/>
