@@ -56,7 +56,7 @@ export default function OrderPage({soaps, user}) {
                         handleCheckout={handleCheckout}
                     />
                     <Routes>
-                        <Route path="/address" element={<AddressForm isOpen={isOpen} setIsOpen={setIsOpen} handleRedirect={handleRedirect} user={user} address={address}/>} />
+                        <Route path="/address" element={<AddressForm isOpen={isOpen} setIsOpen={setIsOpen} handleRedirect={handleRedirect} user={user} currentAddress={address}/>} />
                         <Route path="/payment" element={<PaymentForm isOpen={isOpen} setIsOpen={setIsOpen} handleRedirect={handleRedirect} user={user}/>} />
                         <Route path="/confirm" element={<ConfirmOrder isOpen={isOpen} setIsOpen={setIsOpen} handleRedirect={handleRedirect} user={user}/>} />
                     </Routes>

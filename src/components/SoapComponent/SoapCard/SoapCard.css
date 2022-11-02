@@ -31,7 +31,7 @@
     text-align: left;
     margin: 0;
     padding: 0 10px;
-    height: 100px;
+    height: 89px;
     color: black;
 }
 
@@ -48,9 +48,14 @@
 }
 
 .soap-card-button {
+    margin-bottom: 10px;
     padding: 5px;
     width: 90%;
     border: none;
     background-color: rgba(255, 187, 0, .8);
     border-radius: 5px;
+}
+
+.soap-card-button:hover {
+    background-color: rgba(255, 187, 0, .5);
 }

@@ -1,10 +1,10 @@
 import './AddressForm.css'
 import { useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import UserAddress from '../UserAddress/UserAddress';
+import UserAddressList from '../UserAddressList/UserAddressList';
 import * as userAPI from '../../../utilities/users-api';
 
-export default function AddressForm({user, setIsOpen, isOpen, handleRedirect}) {
+export default function AddressForm({user, setIsOpen, isOpen, handleRedirect, currentAddress}) {
     const [address, setAddress] = useState({
         name: '',
         address: '',
@@ -43,7 +43,7 @@ export default function AddressForm({user, setIsOpen, isOpen, handleRedirect}) {
     return (
         <>
             <section className="address-form-container">
-                {user.address.length < 1 ?
+                {currentAddress.length < 1 ?
                     <>
                         <h1 className="address-title">Shipping Address</h1>
                         <form className="address-form" onSubmit={handleSubmit}>
@@ -63,7 +63,7 @@ export default function AddressForm({user, setIsOpen, isOpen, handleRedirect}) {
                 :
                     <div>
                         <h2>current address</h2>
-                       <UserAddress user={user}/>
+                        <UserAddressList currentAddress={currentAddress}/>
                     </div>
                 
                 }

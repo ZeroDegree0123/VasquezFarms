@@ -31,11 +31,11 @@ export default function SoapCard({soap, handleAddToOrder, user}) {
                                     setIsOpen(true);
                                     setTimeout(modalTimeOut, 2000);
                                     }
-                                }>ADD TO CART</button> 
+                                }>ADD TO CART +</button> 
                             <CartModal open={isOpen}/>
                         </div>
                         :
-                        <button className="soap-card-button" onClick={() => handleRedirect()}>ADD TO CART</button> 
+                        <button className="soap-card-button" onClick={() => handleRedirect()}>ADD TO CART +</button> 
                     }
                 </div>         
                 <div>

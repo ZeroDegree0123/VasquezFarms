@@ -10,7 +10,7 @@ export default function ProfileSettings({user}) {
                         <h1>User Information</h1>
                         <p className="user-information">UserName: <span>{user.name}</span></p>
                         <p className="user-information">Email: <span>{user.email}</span></p>
-                        <p className="user-information">Address: <span>{user.address}</span></p>
+                        {/* <p className="user-information">Address: <span>{user.address}</span></p> */}
                     </div>
                 </section>
                 <section className="setting-sections">

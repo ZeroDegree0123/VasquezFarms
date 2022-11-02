@@ -1,0 +1,10 @@
+.user-address-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.user-address-item {
+    margin: 5px 0;
+}

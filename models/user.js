@@ -29,7 +29,7 @@ const userSchema = new Schema({
     minlength: 8,
     required: true
   },
-  address: [addressSchema]
+  address: [addressSchema],
 }, {
   timestamps: true,
   toJSON: {
