@@ -113,7 +113,7 @@ export default function App() {
             cart={cart}
             user={user}/>}/>
 
-        <Route path="/" element={<HomePage/>}/>
+        <Route path="/" element={<HomePage soaps={soaps}/>}/>
         <Route path="/about" element={<AboutPage/>}/>
         <Route path="/help" element={<HelpPage/>}/>
         <Route path="/ingredients" element={<IngredientsPage/>}/>

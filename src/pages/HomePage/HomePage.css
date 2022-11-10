@@ -7,6 +7,12 @@ hr {
   color: rgb(175, 99, 51)
 }
 
+.divider {
+    width: 100%;
+    height: 20px;
+    background: url("https://imgur.com/RsCmqo8.png") center center;
+}
+
 /* --------------------------------
 # Home Header
 -------------------------------- */
@@ -17,7 +23,7 @@ hr {
     align-items: center;
     padding: 0;
     margin: 0;
-    margin-bottom: 100px;
+    margin-bottom: 0;
     width: 100%;
     height: 100vh;
     background: linear-gradient(70deg, rgba(0, 0, 255, 0.3), rgba(0, 128, 0, 0.35)),
@@ -72,8 +78,8 @@ hr {
     align-items: center;
     height: 100vmin;
     width: 100%;
-    background: linear-gradient(45deg, rgba(255, 187, 0), rgba(255, 187, 0, 0)), 
-                url("https://imgur.com/zCJ3siV.png");
+    /* background: linear-gradient(45deg, rgba(255, 187, 0), rgba(255, 187, 0, 0)), 
+                url("https://imgur.com/zCJ3siV.png"); */
 }
 
 .home-order-left {
@@ -139,101 +145,15 @@ hr {
     border: 2px solid var(--primary);
 }
 
-/* .home-order-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.501);
-    margin: 0;
-    padding: 40px 0;
-    height: 100%;
-    margin: 20px 50px;
-    margin-bottom: 70px;
-    background: url("https://imgur.com/RsCmqo8.png") center center;
-}
-
-.home-order-image-container {
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.home-order-image-subcontainer {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.home-order-images {
-    margin: 30px;
-    width: 350px;
-    height: 300px;
-    border-radius: 10px;
-}
-
-.home-order-image-titles {
-    position: absolute;
-    color: var(--secondary);
-    margin-bottom: 30px;
-    padding: 5px;
-    width: 340px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    text-shadow: 1px 1px black;
-    background: linear-gradient(0deg, black, rgb(255, 255, 255, 0%));
-}
-
-.home-order-body-container {
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10PX;
-    margin-bottom: 10PX;
-    border-radius: 20px;
-    width: 750px;
-}
-
-.home-order-body-title {
-    color: white;
-    font-size: 50px;
-}
-
-.home-order-body {
-    color: white;
-    font-size: 28px;
-    font-weight: 600;
-    margin: 0;
-    padding: 10px;
-}
-
-#home-order-button {
-    text-decoration: none;
-    font-weight: 500;
-    color: black;
-    margin-top: 40px;
-    width: 200px;
-    border: 2px solid rgba(65, 105, 225, .7);
-    border-radius: 10px;
-    background-color: var(--secondary);
-}
-
-#home-order-button:hover {
-    border-radius: 10px;
-    background-color: var(--shadow);
-} */
-
 /* --------------------------------
 # Home Feature
 -------------------------------- */
 .home-feature-title {
     text-align: left;
-    font-size: 50px;
-    text-shadow: 1px 2px var(--secondary);
-    margin: 10px 0 10px 50px;
+    font-size: 60px;
+    color: var(--secondary);
+    text-shadow: 1px 1px var(--primary);
+    margin: 10px 0 0 50px;
 }
 
 .home-feature-container {
@@ -248,6 +168,52 @@ hr {
     width: 90%;
     height: 100%;
 }
+
+.home-feature-cards {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 30px;
+    width: 350px;
+    height: 480px;
+    background-color: var(--secondary);
+    transition: transform 0.5s;
+}
+
+.home-feature-cards:hover {
+    transform: scale(1.025);
+}
+
+.home-feature-card-image {
+    width: 350px;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
+}
+
+.home-feature-card-title {
+    text-decoration: underline;
+    color: white;
+    margin: 10px 10px 0 10px;
+}
+
+.home-feature-card-description {
+    text-align: left;
+    color: white;
+    margin: 10px;
+}
+
+.home-feature-card-view {
+    margin: 10px;
+    color: white;
+}
+
+.home-feature-card-view:hover {
+    color: var(--primary);
+}
+
+
+/* 
+
 
 .home-feature-subcontainers {
     margin: 20px 5px;
@@ -303,7 +269,7 @@ hr {
     width: 670px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0), black);
     font-size: 45px;
-}
+} */
 
 @media only screen and (max-width: 1500px) {
     .home-feature-images {
