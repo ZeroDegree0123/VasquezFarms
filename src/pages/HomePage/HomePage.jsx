@@ -44,29 +44,29 @@ export default function HomePage({soaps}) {
     )
 }
 
-{/* <div className="home-feature-subcontainers">
-    <Link className="home-feature-links" to="/soaps/634c48301fea53e138c37a86">
-        <h1 id="home-feature-image-titles-lrg">Black Jasmine</h1>
-        <img id="home-feature-image-lrg" src="https://imgur.com/GmIZZey.png" alt="images"/>
-    </Link>
-</div>
-<div className="home-feature-subcontainers">
-    <Link className="home-feature-links" to="/soaps/634c46001fea53e138c37a70">
-        <h1 className="home-feature-image-titles">Sea Salt Agave</h1>
-        <img className="home-feature-images" src="https://imgur.com/Rcmqln0.png" alt="images"/>
-    </Link>
-    <Link className="home-feature-links" to="/soaps/634c46831fea53e138c37a79">
-        <h1 className="home-feature-image-titles">Rejuvination</h1>
-        <img className="home-feature-images" src="https://imgur.com/4jCRkug.png" alt="images"/>
-    </Link>
-</div>
-<div className="home-feature-subcontainers">
-    <Link className="home-feature-links" to="/soaps/634c49951fea53e138c37a99">
-        <h1 className="home-feature-image-titles">Black Rasberry</h1>
-        <img className="home-feature-images" src="https://imgur.com/PtNeTrK.png" alt="images"/>
-    </Link>
-    <Link className="home-feature-links" to="/soaps/634c49ca1fea53e138c37a9b">
-        <h1 className="home-feature-image-titles">Lemon Loaf</h1>
-        <img className="home-feature-images" src="https://imgur.com/hFmEvN3.png" alt="images"/>   
-    </Link>
-</div> */}
+// {/* <div className="home-feature-subcontainers">
+//     <Link className="home-feature-links" to="/soaps/634c48301fea53e138c37a86">
+//         <h1 id="home-feature-image-titles-lrg">Black Jasmine</h1>
+//         <img id="home-feature-image-lrg" src="https://imgur.com/GmIZZey.png" alt="images"/>
+//     </Link>
+// </div>
+// <div className="home-feature-subcontainers">
+//     <Link className="home-feature-links" to="/soaps/634c46001fea53e138c37a70">
+//         <h1 className="home-feature-image-titles">Sea Salt Agave</h1>
+//         <img className="home-feature-images" src="https://imgur.com/Rcmqln0.png" alt="images"/>
+//     </Link>
+//     <Link className="home-feature-links" to="/soaps/634c46831fea53e138c37a79">
+//         <h1 className="home-feature-image-titles">Rejuvination</h1>
+//         <img className="home-feature-images" src="https://imgur.com/4jCRkug.png" alt="images"/>
+//     </Link>
+// </div>
+// <div className="home-feature-subcontainers">
+//     <Link className="home-feature-links" to="/soaps/634c49951fea53e138c37a99">
+//         <h1 className="home-feature-image-titles">Black Rasberry</h1>
+//         <img className="home-feature-images" src="https://imgur.com/PtNeTrK.png" alt="images"/>
+//     </Link>
+//     <Link className="home-feature-links" to="/soaps/634c49ca1fea53e138c37a9b">
+//         <h1 className="home-feature-image-titles">Lemon Loaf</h1>
+//         <img className="home-feature-images" src="https://imgur.com/hFmEvN3.png" alt="images"/>   
+//     </Link>
+// </div> */}
