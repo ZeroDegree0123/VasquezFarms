@@ -35,7 +35,7 @@ export default function AboutPage() {
                             friends and family in May 2020. I love knowing where the products I use on my body
                             come from, and with encouragement and positive feedback from my family and friends 
                             I've branched out to marketing my soap beyond my close circle. I use all natural 
-                            ingredients in my soap products. I hope to expand my body care line later this year!
+                            ingredients in my soap products. I hope to expand my body care line later this year.
                         </p>
                     </div>
                 </div>
