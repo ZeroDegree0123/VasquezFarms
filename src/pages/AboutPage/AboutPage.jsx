@@ -58,11 +58,11 @@ export default function AboutPage() {
                 <div className="about-contact-body-container">
                     <div className="contact-cards">
                         <h1 className="contact-card-titles">PHONE</h1>
-                        <a className="contact-card-links" href="">link(not available)</a>
+                        {/* <a className="contact-card-links" href="">link(not available)</a> */}
                     </div>
                     <div className="contact-cards">
                         <h1 className="contact-card-titles">EMAIL</h1>
-                        <a className="contact-card-links" href="">link(not available)</a>
+                        {/* <a className="contact-card-links" href="">link(not available)</a> */}
                     </div>
                 </div>
             </section>
