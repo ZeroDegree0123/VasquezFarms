@@ -35,5 +35,3 @@ app.get("/*", (req, res) =>
 const port = process.env.PORT || 3001;
 
 app.listen(port, () => console.log(`Express App running on port ${port}`));
-
-module.exports = app;
