@@ -7,6 +7,11 @@ hr {
   color: rgb(175, 99, 51)
 }
 
+/* .spacer {
+    width: 100%;
+    height: 500px;
+} */
+
 .divider {
     width: 100%;
     height: 20px;
@@ -331,10 +336,10 @@ hr {
 }
 
 @media only screen and (max-width: 1050px) {
-    /* .home-header-body {
+   .home-header-body {
         text-align: center;
     }
-
+ /* 
     .home-order-container {
         height: 600px;
     }
@@ -360,7 +365,7 @@ hr {
 
     .home-feature-title {
         text-align: center;
-        margin: 0;
+        padding: 100px 0 0 0;
     }
     
     .home-feature-container {
@@ -369,7 +374,11 @@ hr {
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin: 0;
+        margin: 50px 0;
+    }
+
+    .home-feature-cards {
+        margin: 20px;
     }
 
     .home-feature-images {

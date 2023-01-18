@@ -15,6 +15,9 @@ export default function HomePage({soaps}) {
                     </div>
                 </section>
                 {/* <div className="divider"></div> */}
+                <section>
+                    <div className="spacer"></div>
+                </section>
                 <section className="home-order-container">
                       <HomeOrderComponent/>
                 </section>
