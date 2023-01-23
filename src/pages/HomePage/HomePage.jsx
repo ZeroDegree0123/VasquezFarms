@@ -2,7 +2,7 @@ import './HomePage.css'
 import { Link } from 'react-router-dom';
 import HomeOrderComponent from '../../components/HomeOrderComponent/HomeOrderComponent';
 
-export default function HomePage({soaps}) {
+export default function HomePage({redirect}) {
 
     return (
         <>
@@ -15,11 +15,25 @@ export default function HomePage({soaps}) {
                     </div>
                 </section>
                 {/* <div className="divider"></div> */}
-                <section>
-                    <div className="spacer"></div>
+                <section className="home-hook-container">
+                    <div className="hook-card">
+                        <img className="hook-card-icon" src="https://imgur.com/5XSo0UT.png" alt="" />
+                        <h2 className="hook-card-header">Bubbly</h2>
+                        <p className="hook-card-body">All our soaps are super bubbly. We know how much our customers love suds, so we made sure to make our soap super soapy, leaving you feel cleaner than ever</p>
+                    </div>
+                    <div className="hook-card">
+                        <img className="hook-card-icon" src="https://imgur.com/F4zz4Ga.png" alt="" />
+                        <h2 className="hook-card-header">Exfoliating</h2>
+                        <p className="hook-card-body">We add natural exfoliating ingredients to our select soap to give you the scrub you need. Some of the ingredients include coffee grains and poppy seeds</p>
+                    </div>
+                    <div className="hook-card">
+                        <img className="hook-card-icon" src="https://imgur.com/KKV2PIS.png" alt="" />
+                        <h2 className="hook-card-header">Hydrating</h2>
+                        <p className="hook-card-body">Clean and fresh is our motto. Our soaps leave you feeling renewed with a feeling of silky smoothness. All bar soaps will give a nice hydrated sensation</p>
+                    </div>  
                 </section>
                 <section className="home-order-container">
-                      <HomeOrderComponent/>
+                      <HomeOrderComponent redirect={redirect}/>
                 </section>
                 <h1 className="home-feature-title">FEATURED</h1>
                 <section className="home-feature-container">

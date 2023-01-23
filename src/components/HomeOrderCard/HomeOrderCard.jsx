@@ -1,6 +1,7 @@
 import './HomeOrderCard.css'
 
-export default function HomeOrderCard({soap}) {
+export default function HomeOrderCard({soap, redirect}) {
+
     return (
         <>
             <div className="home-order-soap-card">
@@ -13,7 +14,7 @@ export default function HomeOrderCard({soap}) {
                         <h1 className="home-order-soap-name">{soap.name}</h1>
                         <p className="home-order-soap-description">{soap.description}</p>
                     </div>
-                    <button className="home-order-button">ORDER</button>
+                    <button className="home-order-button" onClick={redirect}>ORDER</button>
                 </div>
             </div>
         </>

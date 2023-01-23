@@ -1,5 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/VASQUEZFARMS/public/index.html
-    - /bin/cp -R images $DEPLOYPATH
