@@ -5,60 +5,61 @@
     align-items: center;
 }
 
+/* --------------------------------
+# About Header
+-------------------------------- */
 .about-header-container {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
-    margin: 40px;
-    margin-top: 80px;
-    margin-bottom: 80px;
-    width: 100%;
-    height: 100%;
-}
-
-.about-header-image-container {
-    width: 40%;
-}
-
-.about-header-image {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.about-header-left-body-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    margin: 20px;
-    margin-top: 40px;
-    width: 30%;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(70deg, rgba(0, 0, 255, 0.3), rgba(0, 128, 0, 0.35)),
+                url("https://imgur.com/KbFJHhN.png") no-repeat center center / cover;
 }
 
-.about-header-right-body-container {
+.about-header-top {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin: 20px;
-    margin-top: 40px;
-    width: 30%;
+    justify-content: center;
+    align-items: center;
+    margin-top: -220px;
+    margin-right: -150px;
+    width: 380px;
+    height: 380px;
+    background-color: var(--secondary);
+}
+.about-header-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -220px;
+    width: 380px;
+    height: 380px;
+    background-color: white;
 }
 
-.about-header-titles {
-    font-size: 30px;
+.about-header-title {
+    font-size: 35px;
+    color: white;
+    padding-bottom: 30px;
 }
 
-.about-header-bodies {
-    font-size: 18px;
+.about-header-body {
+    font-size: 22px;
+    color: var(--secondary);
+    padding: 30px;
 }
 
+/* --------------------------------
+# About Main
+-------------------------------- */
 .about-main-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100%;
     /* background: url("https://imgur.com/Kfwp1WE.png"); */
 }
 
@@ -68,7 +69,8 @@
     justify-content: center;
     align-content: center;
     margin: 20px 0;
-    width: 90%;
+    width: 70%;
+    height: 350px;
 }
 
 .about-main-bottom-container {
@@ -77,41 +79,38 @@
     justify-content: center;
     align-items: center;
     margin: 20px 0;
-    width: 90%;
+    width: 70%;
+    height: 350px;
 }
 
 .about-main-images {
     width: 400px;
-    height: 300px;
-    border-radius: 10px;
+    height: 350px;
     margin: 10px;
 }
 
 .about-main-top-body {
     text-align: left;
-    margin: 10px;
-    margin-left: 0;
-    padding: 10px;
+    margin: 10px 10px 10px 0;
+    padding:0;
     padding-left: 20px;
     background: linear-gradient(90deg, var(--secondary), rgb(255, 255, 255, 0%));
-    height: 280px;
+    height: 350px;
 }
 
 .about-main-bottom-body {
     text-align: left;
-    margin: 10px;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 10px;
-    padding-left: 20px;
+    margin: 10px 0 10px 10px;
+    padding:0;
+    padding-right: 20px;
     background: linear-gradient(270deg, var(--secondary), rgb(255, 255, 255, 0%));
-    height: 280px;
+    height: 350px;
 }
 
 .about-main-body-titles{
     font-size: 30px;
     text-align: left;
-    margin-bottom: 0;
+    margin-top: 10px;
 }
 
 .about-main-body-bodies{
@@ -163,13 +162,13 @@
 }
 
 @media only screen and (min-width: 1600px) {
-    .about-main-top-container {
+    /* .about-main-top-container {
         width: 75%;        
     }
 
     .about-main-bottom-container {
         width: 75%;
-    }
+    } */
 
     .about-main-body-bodies {
         font-size: 19px;
@@ -184,64 +183,25 @@
 }
 
 @media only screen and (max-width: 1200px) {
-    .about-header-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 500px 200px 200px;
-        margin: 0;
-        margin-bottom: 80px;
-    }
-
-    .about-header-image-container {
-        grid-area: 1 / 1 / 2 / 2;
-        width: 100%;
-    }
-
-    .about-header-image {
-        height: 500px;
-        border-radius: 0;
-    }
-
-    .about-header-left-body-container {
-        grid-area: 2 / 1 / 3 / 2;
-        margin: 0;
-        padding: 10px;
-        width: 100%;
-    }
-
-    .about-header-right-body-container {
-        grid-area: 3 / 1 / 4 / 2;
-        margin: 0;
-        margin-bottom: 40px;
-        padding: 10px;
-        width: 100%;
-    }
-
-    .about-header-titles {
-        font-size: 35px;
-        margin-bottom: 12px;
-    }
-
-    .about-header-bodies {
-        font-size: 15px;
-    }
-
     .about-main-container {
         margin-bottom: 30px;
+        height: 100%;
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
-                    url("https://imgur.com/RsCmqo8.png") no-repeat center center;
+                    url("https://imgur.com/RsCmqo8.png") no-repeat center center / cover;
     }
 
    .about-main-top-container {
         flex-direction: column;
         align-items: center;
         margin: 10px;
+        height: 100%;
    }
 
    .about-main-bottom-container {
         flex-direction: column-reverse;
         align-items: center;
         margin: 10px;
+        height: 100%;
    }
 
    .about-main-top-body {
@@ -250,7 +210,8 @@
         align-items: center;
         justify-content: center;
         background: none;  
-        padding: 10px;  
+        padding: 10px; 
+        width: 100%; 
    }
 
    .about-main-bottom-body {
@@ -261,6 +222,7 @@
         background: none;
         margin: 0;
         padding: 10px;
+        width: 100%;
    }
 
    .about-main-body-titles {
@@ -277,45 +239,26 @@
         color: var(--secondary);
         text-shadow: 1px 1px rgb(0, 0, 0);
         font-weight: 1000;
+        padding: 0;
    }
 
    #image-left {
         border-radius: 10px;
         width: 450px;
         height: 330PX;
-        margin-bottom: 40px;
+        margin: 20px;
    }
 
    #image-right {
         border-radius: 10px;
         width: 450px;
         height: 330PX;
-        margin-bottom: 40px;
+        margin: 20px;
    }
 
 }
 
 @media only screen and (max-width: 600px) { 
-    .about-header-container {
-        grid-template-rows: 360px 200px 200px;
-    }
-
-    .about-header-image {
-        height: 100%;
-    }
-
-    .about-header-left-body-container {
-        display: flex;
-        padding: 20px 0;
-    }
-
-    .about-header-right-body-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px 0;
-    }
-
     .about-main-body-bodies {
         font-size: 16px;
     }

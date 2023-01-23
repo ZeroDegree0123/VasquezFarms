@@ -4,23 +4,14 @@ export default function AboutPage() {
     return (
         <main className="about-page-container">
             <section className="about-header-container">
-                <div className="about-header-left-body-container">
-                    <h1 className="about-header-titles">WHO WE ARE</h1>
-                    <p className="about-header-bodies">
+                <div className="about-header-top">
+                    <h1 className="about-header-title">About Us</h1>
+                </div>
+                <div className="about-header-bottom">
+                    <p className="about-header-body">
                         Vasquez Farms LLC is a small family farm located in Washougal,
                         WA. We currently raise goats, (meat and dairy), sheep, chickens, 
                         ducks and turkeys. We hope to have vegetable and flower starters available soon!
-                    </p>
-                </div>
-                <div className="about-header-image-container">
-                    <img className="about-header-image" src="https://imgur.com/ZIK3ZQx.png" alt="" />
-                </div>
-                <div className="about-header-right-body-container">
-                    <h1 className="about-header-titles">A LITTLE ABOUT US</h1>
-                    <p className="about-header-bodies">
-                        Although we both have full time jobs off the farm, my husband and I 
-                        are homesteaders at heart! We enjoy caring for our many animals, love to garden, and hope to one day produce most of our own 
-                        food. We hope to grow and potentially expand our products.
                     </p>
                 </div>
             </section>
@@ -73,3 +64,23 @@ export default function AboutPage() {
 
 
 
+
+{/* <div className="about-header-left-body-container">
+    <h1 className="about-header-titles">WHO WE ARE</h1>
+    <p className="about-header-bodies">
+        Vasquez Farms LLC is a small family farm located in Washougal,
+        WA. We currently raise goats, (meat and dairy), sheep, chickens, 
+        ducks and turkeys. We hope to have vegetable and flower starters available soon!
+    </p>
+</div>
+<div className="about-header-image-container">
+    <img className="about-header-image" src="https://imgur.com/ZIK3ZQx.png" alt="" />
+</div>
+<div className="about-header-right-body-container">
+    <h1 className="about-header-titles">A LITTLE ABOUT US</h1>
+    <p className="about-header-bodies">
+        Although we both have full time jobs off the farm, my husband and I 
+        are homesteaders at heart! We enjoy caring for our many animals, love to garden, and hope to one day produce most of our own 
+        food. We hope to grow and potentially expand our products.
+    </p>
+</div> */}
