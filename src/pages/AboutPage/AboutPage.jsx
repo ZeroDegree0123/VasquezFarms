@@ -9,9 +9,8 @@ export default function AboutPage() {
                 </div>
                 <div className="about-header-bottom">
                     <p className="about-header-body">
-                        Vasquez Farms LLC is a small family farm located in Washougal,
-                        WA. We currently raise goats, (meat and dairy), sheep, chickens, 
-                        ducks and turkeys. We hope to have vegetable and flower starters available soon!
+                        Vasquez Farms is a small family farm, we raise goats(meat and dairy), sheep, chickens, 
+                        ducks and turkeys.
                     </p>
                 </div>
             </section>

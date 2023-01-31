@@ -43,7 +43,7 @@ export default function OrderDetail({ user, order, handleChangeQty, handleChecko
                   {order.isPaid ?
                     <span className="right">TOTAL&nbsp;&nbsp;</span>
                     :
-                    <Link id="checkout-button" to="/orders/new/address" disabled={!lineSoaps.length} onClick={() => {setIsOpen(false)}}>PROCEED TO CHECKOUT</Link>
+                    <Link id="checkout-button" to="/orders/new/address" disabled={!lineSoaps.length} onClick={handleCheckout}>PROCEED TO CHECKOUT</Link>
                   }
                 </section>
               </>
