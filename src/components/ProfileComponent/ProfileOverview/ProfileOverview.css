@@ -33,6 +33,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .overview-container {
+        margin: 0;
+    }
+
     .overview-sections {
         margin: 30px 0;
     }

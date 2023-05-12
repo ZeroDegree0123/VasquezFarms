@@ -5,6 +5,12 @@
     align-items: center;
 }
 
+#ingredients-subpage-header {
+    padding: 0;
+    background: linear-gradient(65deg, var(--primary-faded), var(--primary-faded)),
+    url("https://imgur.com/Ss6iAAz.png") no-repeat center center / cover;
+}
+
 .ingredients-header-container {
     margin: 50px;
     margin-bottom: 100px;

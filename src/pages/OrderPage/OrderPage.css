@@ -1,21 +1,17 @@
 .order-page-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    margin: 40px;
-    width: 90%;
-}
-
-.order-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     width: 100%;
 }
 
 .test-list {
     width: 100%;
 }
+
+#cart-subpage-header {
+    padding: 0;
+    background: linear-gradient(65deg, var(--primary-faded), var(--primary-faded)),
+    url("https://imgur.com/PD83N1r.png") no-repeat center center / cover;
+} 

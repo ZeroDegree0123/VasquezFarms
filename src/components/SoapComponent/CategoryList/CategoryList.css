@@ -3,17 +3,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 10px
+  margin: 10px 35px;
 }
 
 .category {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
-    list-style: none;
+    align-items: center;
     padding: 0;
-    font-size: 1.7vw;
+    width: 100%;
   }
   
 .category div {
@@ -21,6 +20,9 @@
   text-align: center;
   border-radius: .5vmin;
   margin-bottom: .5vmin;
+  padding-right: 20px;
+  padding-left: 2px;
+
 }
     
 .category div:hover:not(.active) {
@@ -36,21 +38,14 @@
 .category-button {
   display: flex;
   justify-content: flex-start;
-  font-size: 25px;
-  width: 200px;
+  font-size: 24px;
+  padding: 0;
 }
 
 .category-header {
   color: black;
   font-size: 35px;
-}
-
-@media only screen and (min-width: 1600px) {
-
-}
-
-@media only screen and (max-width: 1200px) { 
-    
+  margin-bottom: 25px;
 }
 
 @media only screen and (max-width: 800px) { 
@@ -60,5 +55,20 @@
 
     .category-button {
       font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 600px) { 
+    .category-container {
+      margin: 0;
+    }
+
+    .category-header {
+      margin-left: 10px;
+    }
+
+    .category div {
+      padding: 0 10px;
+    
     }
 }

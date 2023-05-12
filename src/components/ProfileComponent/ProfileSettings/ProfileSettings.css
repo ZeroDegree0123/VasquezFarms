@@ -26,6 +26,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .settings-container {
+        margin: 0;
+    }
+    
     .setting-sections {
         margin: 30px 0;
     }

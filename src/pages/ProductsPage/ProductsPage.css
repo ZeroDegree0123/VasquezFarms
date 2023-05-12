@@ -1,21 +1,21 @@
 .products-page-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
+
 
 .products-category-container {
     display: flex;
-    flex-direction: column;
-    margin: 10px;
-    width: 300px;
+    margin: 10px 0;
+    width: 100%;
 }
 
 .products-soaps-container {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     width: 100%;
-    margin: 0;
-    margin-top: 50px;
+    margin: 50px 0 100px 0;
 }
 
 .soap-of-the-month {

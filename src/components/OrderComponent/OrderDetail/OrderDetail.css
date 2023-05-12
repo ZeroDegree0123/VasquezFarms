@@ -32,6 +32,8 @@
 }
 
 #checkout-button {
+    text-decoration: none;
+    color: black;
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
