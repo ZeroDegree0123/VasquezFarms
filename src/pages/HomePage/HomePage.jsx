@@ -1,17 +1,20 @@
 import './HomePage.css'
 import { Link } from 'react-router-dom';
+import NavBar from '../../components/NavBar/NavBar';
 import HomeOrderComponent from '../../components/HomeOrderComponent/HomeOrderComponent';
 
-export default function HomePage({redirect}) {
+export default function HomePage({redirect, user, cart, setCart}) {
 
     return (
         <>
             <main className="home-page-container">
                 <section className="home-header-container">
+                    {/* <div className="home-nav-container">
+                        <Link to="/">test</Link>
+                    </div> */}
+                    <NavBar user={user} cart={cart} setCart={setCart}/>
                     <div className="home-header-body-container">
-                        <h1 id="home-header-body-title" className="home-header-body">WELCOME TO VASQUEZ FARMS LLC</h1>
-                        <h3 id="home-header-body-subtitle" className="home-header-body"><strong>Feel Clean, Smell Clean</strong></h3>
-                        <p id="home-header-body-body" className="home-header-body">Natural Ingredients, Wide variety, Straight From The Farm.</p>
+                        <h1 id="home-header-body-title" className="home-header-body">VASQUEZ FARMS LLC</h1>
                     </div>
                 </section>
                 {/* <div className="divider"></div> */}

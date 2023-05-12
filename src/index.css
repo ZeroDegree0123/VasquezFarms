@@ -3,6 +3,9 @@
   --button: rgb(207, 243, 255);
   --primary: rgba(0, 50, 158, 0.9);
   --secondary: rgba(255, 187, 0);
+  --primary-faded: rgba(0, 50, 158, 0.7);
+  --secondary-faded: rgba(255, 187, 0, 0.6);
+
   --third: rgb(106, 187, 214);
   --shadow: rgba(255, 187, 0, 0.5);
 }

@@ -71,16 +71,20 @@ export default function App() {
       <Helmet>
         <title>VasquezFarms</title>
       </Helmet>
-      <NavBar cart={cart} setUser={setUser} user={user}/>
-      <br />
-      <br />
+      {/* <NavBar cart={cart} setUser={setUser} user={user}/> */}
       <Routes>
         {/* //ADMIN */}
         {/* <Route path="/admin" 
           element={<AdminPage 
-          user={user} 
-          soaps={soaps} 
+            user={user} 
+            soaps={soaps} 
           cats={cats}/>}/> */}
+        <Route path="/" 
+          element={<HomePage 
+            cart={cart} 
+            setUser={setUser} 
+            user={user}
+            redirect={redirect} />}/>
         {/* //PRODUCTS */}
         <Route path="/soaps" 
           element={<ProductsPage
@@ -113,7 +117,6 @@ export default function App() {
             cart={cart}
             user={user}/>}/>
 
-        <Route path="/" element={<HomePage redirect={redirect} />}/>
         <Route path="/about" element={<AboutPage/>}/>
         <Route path="/help" element={<HelpPage/>}/>
         <Route path="/ingredients" element={<IngredientsPage/>}/>

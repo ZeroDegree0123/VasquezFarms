@@ -2,23 +2,77 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
-    height: 60px;
+    height: 35vh;
     width: 100%;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0)),
-                url("https://imgur.com/yzzClGm.png")  center center;
+                url("https://imgur.com/RsCmqo8.png")  center center;
     z-index: 9999;
 }
 
-.footer-titles {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
+
+/* --------------------------------
+# Footer Socials
+-------------------------------- */
+.footer-contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
 }
 
-.footer-titles:hover {
+.footer-contact-container > h1 {
+    font-size: 30px;
+    color: white;
+    margin: 20px 0;
+    margin-bottom: 10px;
+}
+
+.footer-contact-info {
+    color: white;
+    margin: 5px 0;
+
+}
+
+.footer-socials-container {
+    display: flex;
+}
+
+.footer-socials {
+    color: white;
+    padding: 0 5px;
+}
+
+
+
+/* --------------------------------
+# Footer Links
+-------------------------------- */
+.footer-link-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.footer-link-container > h1 {
+    font-size: 30px;
+    color: white;
+    margin: 20px 0;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+.footer-links:hover {
     color: var(--secondary);
 }
 
