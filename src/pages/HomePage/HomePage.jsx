@@ -19,7 +19,7 @@ export default function HomePage({redirect}) {
                     <div className="hook-card">
                         <img className="hook-card-icon" src="https://imgur.com/5XSo0UT.png" alt="" />
                         <h2 className="hook-card-header">Bubbly</h2>
-                        <p className="hook-card-body">All our soaps are super bubbly. We know how much our customers love suds, so we made sure to make our soap super soapy, leaving you feel cleaner than ever</p>
+                        <p className="hook-card-body">All our soaps are super bubbly. We know how much our customers love the suds, so we made sure to make our soap super soapy, leaving you feel cleaner than ever</p>
                     </div>
                     <div className="hook-card">
                         <img className="hook-card-icon" src="https://imgur.com/F4zz4Ga.png" alt="" />

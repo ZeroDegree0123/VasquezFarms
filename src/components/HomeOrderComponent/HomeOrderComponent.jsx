@@ -9,10 +9,18 @@ export default function HomeOrderComponent({redirect}) {
             redirect={redirect}
             soap={soap}
         />
-        )
+        );
+    const slideShow = () => {
+        for (let i = 0; i < soaps.length; i++) {
+            
+        }
+    }
+        console.log(soaps[0].props.soap)
     return (
         <>
             {soaps}
         </>
     )
 }
+
+

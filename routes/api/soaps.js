@@ -5,6 +5,7 @@ const soapsCtrl = require('../../controllers/api/soaps')
 router.get('/', soapsCtrl.index)
 router.post('/new', soapsCtrl.create)
 router.get('/:id', soapsCtrl.show)
+
 router.post('/:id/review', soapsCtrl.createReview)
 router.get('/:id', soapsCtrl.showReviews)
 

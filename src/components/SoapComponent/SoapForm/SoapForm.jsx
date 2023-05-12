@@ -33,7 +33,6 @@ export default function SoapForm({cats}) {
             price: '',
             stock: '',
             category: '',
-            // reviews: [],
         })
         
     }
