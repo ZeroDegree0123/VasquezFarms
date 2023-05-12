@@ -3,10 +3,10 @@
 This is an ecommerce app where you can buy soaps. Users can add soaps to a cart then confirm their order. Every order is kept on record and users are able to view their past orders.
 
 ## ScreenShots
-![Home Page](https://i.imgur.com/eRti0Q3.png)
-![Products Page](https://i.imgur.com/sZWBvbO.png)
-![About Page](https://i.imgur.com/zvx33j9.png)
-![Login & SignUp](https://i.imgur.com/BUF36Db.png)
+![Home Page](https://imgur.com/v4Q8ICC.png)
+![Products Page](https://imgur.com/JFaZ9k6.png)
+![About Page](https://imgur.com/Bknutz1.png)
+![Login & SignUp](https://imgur.com/1GlfrGa.png)
 
 
 ## Technologies Used
