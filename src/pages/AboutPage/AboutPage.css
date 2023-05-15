@@ -71,6 +71,7 @@
     justify-content: center;
     align-content: center;
     margin: 20px 0;
+    margin-bottom: 50px;
     width: 70%;
     height: 350px;
 }
@@ -90,6 +91,7 @@
     width: 400px;
     height: 350px;
     margin: 10px;
+    border-radius: 5px;
 }
 
 .about-main-top-body {
@@ -97,7 +99,6 @@
     margin: 10px 10px 10px 0;
     padding:0;
     padding-left: 20px;
-    background: linear-gradient(90deg, var(--secondary), rgb(255, 255, 255, 0%));
     height: 350px;
 }
 
@@ -106,7 +107,6 @@
     margin: 10px 0 10px 10px;
     padding:0;
     padding-right: 20px;
-    background: linear-gradient(270deg, var(--secondary), rgb(255, 255, 255, 0%));
     height: 350px;
 }
 
@@ -119,7 +119,7 @@
 .about-main-body-bodies{
     text-align: left;
     padding-left: 10px;
-    border-left: 2px solid rgb(52, 52, 52);
+    border-left: 2px solid var(--secondary);
     font-size: 19px;
 }
 

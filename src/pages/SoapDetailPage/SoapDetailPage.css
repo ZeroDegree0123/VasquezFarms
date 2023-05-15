@@ -102,16 +102,16 @@
 
 .details-header-quantity-button {
     font-size: 15px;
-    background-color: white;
+    background-color: var(--secondary);
     border-radius: 5px;
     border: 1px solid black;
-    padding: 2px;
+    padding: 2px 5px;
 }
 
-.details-header-quantity-button:hover {
+/* .details-header-quantity-button:hover {
     background-color: var(--secondary);
     border: 1px solid var(--secondary);
-}
+} */
 
 .details-header-order-container {
     display: flex;
@@ -127,15 +127,16 @@
 }
 
 .details-order-button {
+    font-size: 15px;
     background-color: white;
     border-radius: 5px;
     border: 1px solid black;
-    padding: 2px;
+    padding: 5px;
 }
 
 .details-order-button:hover {
-    background-color: lightgreen;
-    border: 1px solid black;
+    background-color: var(--secondary);
+    border: 1px solid var(--secondary);
 }
 
 .details-ingredients-container {
@@ -143,22 +144,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin: 0;
-    padding: 20px;
+    margin-bottom: 50px;
     width: 100%;
-    background: url("https://imgur.com/AU1OHDs.png");
-    border-radius: 5px;
-    box-shadow: 1px 2px 10px 2px rgb(220, 220, 220);
 }
 
 .details-ingredients-title {
+    text-align: left;
     font-size: 35px;
-    color: white;
+    color: black;
+    width: 90%;
+    border-bottom: 2px solid var(--secondary);
 }
 
 .details-ingredients-body {
     text-align: left;
-    color: white;
+    color: black;
     font-size: 25px;
     margin: 0;
     margin-bottom: 20px;
