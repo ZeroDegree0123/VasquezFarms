@@ -4,13 +4,8 @@ body {
 }
 
 hr {
-  color: rgb(175, 99, 51)
+    color: rgb(175, 99, 51)
 }
-
-/* .spacer {
-    width: 100%;
-    height: 500px;
-} */
 
 .divider {
     width: 100%;
@@ -26,57 +21,19 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 0;
     width: 100%;
     height: 85vh;
     background: linear-gradient(65deg, var(--primary-faded), var(--primary-faded)),
-                url("https://imgur.com/aKLqJ5Q.png");
+        url("https://imgur.com/aKLqJ5Q.png");
 }
 
-/* .home-nav-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100%;
-} */
-
-.home-header-body-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.home-header-body {
-    text-align: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-}
-
-#home-header-body-title {
-    font-size: 80px;    
+.home-header-title {
+    font-size: 7rem;
     color: var(--secondary);
+    text-align: center;
     margin: 0;
-    margin-bottom: 10px;
-}
-
-#home-header-body-subtitle {
-    font-size: 40px;
-    color: white;
-    text-shadow: 2px 2px 2px black;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-#home-header-body-body {
-    font-size: 20px;
-    color: white;
-    text-shadow: 2px 2px 2px black;
-    margin-top: 0;
+    padding: 10px;
+    padding-bottom: 20px;
 }
 
 /* --------------------------------
@@ -118,7 +75,7 @@ hr {
 .hook-card-body {
     font-size: 17px;
     color: white;
-    padding: 0 30px 0 30px; 
+    padding: 0 30px 0 30px;
 }
 
 /* --------------------------------
@@ -260,149 +217,10 @@ hr {
     color: var(--primary);
 }
 
-
-@media only screen and (max-width: 1500px) {
-    .home-feature-images {
-        width: 275px;
-        height: 225px;
-    }
-    
-    .home-feature-image-titles {
-        font-size: 25px;
-        width: 250px;
-    }
-    
-    #home-feature-image-lrg {
-        width: 525px;
-        height: 474px;
-    }
-
-    #home-feature-image-titles-lrg {
-        font-size: 35px;
-        width: 495px;
-    }
-}
-
-@media only screen and (max-width: 1250px) {
-    
-    .home-feature-images {
-        width: 225px;
-        height: 175px;
-    }
-    
-    .home-feature-image-titles {
-        font-size: 25px;
-        width: 200px;
-    }
-    
-    #home-feature-image-lrg {
-        width: 425px;
-        height: 374px;
-    }
-
-    #home-feature-image-titles-lrg {
-        font-size: 35px;
-        width: 395px;
-    }
-
-}
-
-@media only screen and (max-width: 1050px) {
-    .home-header-body {
-        text-align: center;
-    }
-
-    .home-hook-container {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 190vh;
-    }
-
-    .hook-card {
-        width: 60%;
-        box-shadow: none;
-        padding-bottom: 40px;
-    }
-
-    .home-feature-title {
-        text-align: center;
-        padding: 100px 0 0 0;
-    }
-    
-    .home-feature-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin: 50px 0;
-    }
-
-    .home-feature-cards {
-        margin: 20px;
-    }
-
-    .home-feature-images {
-        width: 600px;
-        height: 300px;
-        margin: 0;
-    }
-
-    .home-feature-image-titles {
-        font-size: 30px;
-        width: 575px;
-    }
-    
-    #home-feature-image-titles-lrg {
-        font-size: 30px;
-        width: 570px;
-    }
-
-    #home-feature-image-lrg {
-        width: 600px;
-        height: 300px;
-        margin: 0;
-    }
-
-}
-
-@media only screen and (max-width: 800px) {
-    .home-feature-title {
-        text-align: center;
-        margin: 0;
-    }
-
-}
-
 @media only screen and (max-width: 600px) {
-    .home-hook-container {
-        margin-bottom: 50px;
-    }
 
-    .hook-card {
-        width: 90%;
-    }
-
-    .home-feature-images {
-        width: 450px;
-        height: 300px;
-        margin: 0;
-    }
-
-    .home-feature-image-titles {
-        width: 425px;
-    }
-
-    #home-feature-image-titles-lrg {
-        font-size: 20px;
-        width: 420px;
-    }
-
-    #home-feature-image-lrg {
-        width: 450px;
-        height: 300px;
-        margin: 0;
+    /* Header */
+    .home-header-title {
+        font-size: 3rem;
     }
 }

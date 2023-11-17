@@ -3,21 +3,21 @@ import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import HomeOrderComponent from '../../components/HomeOrderComponent/HomeOrderComponent';
 
-export default function HomePage({redirect, user, cart, setCart}) {
-
+export default function HomePage({ redirect, user, cart, setCart }) {
     return (
         <>
             <main className="home-page-container">
                 <section className="home-header-container">
-                    {/* <div className="home-nav-container">
-                        <Link to="/">test</Link>
-                    </div> */}
-                    <NavBar user={user} cart={cart} setCart={setCart}/>
-                    <div className="home-header-body-container">
-                        <h1 id="home-header-body-title" className="home-header-body">VASQUEZ FARMS LLC</h1>
-                    </div>
+                    <NavBar user={user} cart={cart} setCart={setCart} />
+                    <h1 className="home-header-title">Bellamoon Soaps</h1>
                 </section>
-                {/* <div className="divider"></div> */}
+
+
+
+
+
+
+
                 <section className="home-hook-container">
                     <div className="hook-card">
                         <img className="hook-card-icon" src="https://imgur.com/5XSo0UT.png" alt="" />
@@ -33,10 +33,19 @@ export default function HomePage({redirect, user, cart, setCart}) {
                         <img className="hook-card-icon" src="https://imgur.com/KKV2PIS.png" alt="" />
                         <h2 className="hook-card-header">Hydrating</h2>
                         <p className="hook-card-body">Clean and fresh is our motto. Our soaps leave you feeling renewed with a feeling of silky smoothness. All bar soaps will give a nice hydrated sensation</p>
-                    </div>  
+                    </div>
                 </section>
+
+
+
+
+
+
+
+
+
                 <section className="home-order-container">
-                      <HomeOrderComponent redirect={redirect}/>
+                    <HomeOrderComponent redirect={redirect} />
                 </section>
                 <h1 className="home-feature-title">FEATURED</h1>
                 <section className="home-feature-container">
