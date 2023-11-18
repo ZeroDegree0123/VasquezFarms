@@ -17,7 +17,6 @@ export default function HomePage({ redirect, user, cart, setCart }) {
 
 
 
-
                 <section className="home-hook-container">
                     <div className="hook-card">
                         <img className="hook-card-icon" src="https://imgur.com/5XSo0UT.png" alt="" />
@@ -30,7 +29,7 @@ export default function HomePage({ redirect, user, cart, setCart }) {
                         <p className="hook-card-body">We add natural exfoliating ingredients to our select soap to give you the scrub you need. Some of the ingredients include coffee grains and poppy seeds</p>
                     </div>
                     <div className="hook-card">
-                        <img className="hook-card-icon" src="https://imgur.com/KKV2PIS.png" alt="" />
+                        <img className="hook-card-icon" src="https://imgur.com/uE4I9d6.png" alt="" />
                         <h2 className="hook-card-header">Hydrating</h2>
                         <p className="hook-card-body">Clean and fresh is our motto. Our soaps leave you feeling renewed with a feeling of silky smoothness. All bar soaps will give a nice hydrated sensation</p>
                     </div>
@@ -42,11 +41,16 @@ export default function HomePage({ redirect, user, cart, setCart }) {
 
 
 
-
-
                 <section className="home-order-container">
                     <HomeOrderComponent redirect={redirect} />
                 </section>
+
+
+
+
+
+
+
                 <h1 className="home-feature-title">FEATURED</h1>
                 <section className="home-feature-container">
                     <Link className="home-feature-cards" to="/soaps/634c48301fea53e138c37a86">
