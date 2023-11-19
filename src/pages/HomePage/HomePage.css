@@ -45,12 +45,12 @@ hr {
     justify-items: center;
     align-items: flex-start;
     width: 100%;
-    height: 50vmin;
+    height: 100%;
 }
 
 .hook-card {
     width: 80%;
-    height: 100%;
+    height: 110%;
     margin-top: -30px;
     background-color: var(--secondary);
     box-shadow: 0px 3px 15px 0px #10101013;
@@ -88,69 +88,7 @@ hr {
     position: relative;
     height: 100vmin;
     width: 100%;
-}
-
-.home-order-left {
-    display: flex;
-    justify-content: flex-start;
-    margin: 40px;
-    width: 100%;
-}
-
-.home-order-image {
-    border-radius: 5px;
-    width: 100%;
-}
-
-.home-order-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    margin: 20px;
-    width: 100%;
-
-}
-
-.home-order-seasonal {
-    font-size: 70px;
-    margin: 10px 0;
-    color: white;
-}
-
-.home-order-body-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.home-order-soap-name {
-    font-size: 25px;
-    color: white;
-    text-decoration: underline;
-    margin: 5px 0;
-}
-
-.home-order-soap-description {
-    font-size: 18px;
-    color: white;
-    text-align: left;
-    margin: 0 0 40px 0;
-}
-
-.home-order-button {
-    font-size: 20px;
-    color: white;
-    border: 2px solid white;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0);
-    padding: 5px 10px;
-}
-
-.home-order-button:hover {
-    color: var(--primary);
-    border: 2px solid var(--primary);
+    margin: 25px 0;
 }
 
 /* --------------------------------
@@ -158,7 +96,7 @@ hr {
 -------------------------------- */
 .home-feature-title {
     text-align: center;
-    font-size: 60px;
+    font-size: 50px;
     color: var(--secondary);
     text-shadow: 1px 1px var(--primary);
     margin: 20px;
@@ -166,23 +104,19 @@ hr {
 
 .home-feature-container {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    background-color: white;
     margin: 50px 0 100px 0;
-    width: 100%;
-    height: 100%;
 }
 
 .home-feature-cards {
-    text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    text-decoration: none;
     margin: 0 20px;
-    width: 350px;
-    height: 480px;
+    width: 25%;
     background-color: var(--secondary);
     transition: transform 0.5s;
 }
@@ -192,25 +126,25 @@ hr {
 }
 
 .home-feature-card-image {
-    width: 350px;
+    width: 100%;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
 }
 
 .home-feature-card-title {
-    text-decoration: underline;
     color: white;
+    text-decoration: underline;
     margin: 10px 10px 0 10px;
 }
 
 .home-feature-card-description {
-    text-align: left;
     color: white;
+    text-align: left;
     margin: 10px;
 }
 
 .home-feature-card-view {
-    margin: 10px;
     color: white;
+    margin: 10px;
 }
 
 .home-feature-card-view:hover {
@@ -223,4 +157,37 @@ hr {
     .home-header-title {
         font-size: 3rem;
     }
+
+    /* Hook */
+    .home-hook-container {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+    }
+
+    .hook-card {
+        width: 90%;
+        height: 100%;
+        margin: 25px 0;
+        background-color: var(--secondary);
+        box-shadow: 0px 3px 15px 0px #10101013;
+    }
+
+    /* Order */
+
+    .home-order-container {
+        height: 100vh;
+    }
+
+    /* Feature */
+    .home-feature-container {
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+
+    .home-feature-cards {
+        flex-direction: column;
+        margin: 10px 0;
+        width: 100%;
+    }
+
 }

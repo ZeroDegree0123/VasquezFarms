@@ -56,7 +56,7 @@ export default function HomePage({ redirect, user, cart, setCart }) {
                     <Link className="home-feature-cards" to="/soaps/634c48301fea53e138c37a86">
                         <img className="home-feature-card-image" src="https://imgur.com/GmIZZey.png" alt="" />
                         <h1 className="home-feature-card-title">Black Jasmine</h1>
-                        <p className="home-feature-card-description">This is a sophisticated mix of bergamot, cassis, rose, neroli, jasmine, and smoky musk.</p>
+                        <p className="home-feature-card-description">This is a sophisticated mix of bergamot, cassis, rose, neroli, jasmine, and smoky musk. One of our best sellers!</p>
                         <p className="home-feature-card-view">view</p>
                     </Link>
                     <Link className="home-feature-cards" to="/soaps/634c46831fea53e138c37a79">

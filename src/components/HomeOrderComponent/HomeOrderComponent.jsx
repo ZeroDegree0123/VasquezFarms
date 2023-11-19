@@ -1,21 +1,20 @@
-import "./HomeOrderComponent.css"
 import categorySoaps from '../../seed';
 import HomeOrderCard from "../HomeOrderCard/HomeOrderCard";
 
-export default function HomeOrderComponent({redirect}) {
-    const soaps = categorySoaps.map((soap, idx) => 
+export default function HomeOrderComponent({ redirect }) {
+    const soaps = categorySoaps.map((soap, idx) =>
         <HomeOrderCard
             key={idx}
             redirect={redirect}
             soap={soap}
         />
-        );
+    );
     const slideShow = () => {
         for (let i = 0; i < soaps.length; i++) {
-            
+
         }
     }
-        console.log(soaps[0].props.soap)
+    console.log(soaps[0].props.soap)
     return (
         <>
             {soaps}
