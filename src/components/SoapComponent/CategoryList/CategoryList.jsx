@@ -1,14 +1,13 @@
 import './CategoryList.css';
 
-export default function CategoryList({categories, activeCat, setActiveCat}) {
-    const categoryList = categories.map(cat => 
-        <div 
+export default function CategoryList({ categories, activeCat, setActiveCat }) {
+    const categoryList = categories.map(cat =>
+        <button
             key={cat}
-            className={cat === activeCat ? 'active' : ''} 
+            id='category-button'
+            className={cat === activeCat ? 'active' : ''}
             onClick={() => setActiveCat(cat)}
-        >
-             <div className="category-button">{cat}</div>
-        </div>
+        >{cat}</button>
     );
     return (
         <>

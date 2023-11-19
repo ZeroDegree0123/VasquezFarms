@@ -40,17 +40,18 @@ hr {
 # Home Hook
 -------------------------------- */
 .home-hook-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: flex-start;
     width: 100%;
     height: 100%;
 }
 
 .hook-card {
-    width: 80%;
-    height: 110%;
+    width: 25%;
+    height: 100%;
+    margin: 0 25px;
     margin-top: -30px;
     background-color: var(--secondary);
     box-shadow: 0px 3px 15px 0px #10101013;
@@ -106,7 +107,7 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin: 50px 0 100px 0;
 }
 
@@ -151,6 +152,12 @@ hr {
     color: var(--primary);
 }
 
+@media only screen and (min-width: 1400px) {
+    .hook-card {
+        width: 20%;
+    }
+}
+
 @media only screen and (max-width: 600px) {
 
     /* Header */
@@ -160,8 +167,11 @@ hr {
 
     /* Hook */
     .home-hook-container {
+        display: grid;
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: 1fr;
+        justify-items: center;
+        margin-bottom: 50px;
     }
 
     .hook-card {
@@ -175,7 +185,7 @@ hr {
     /* Order */
 
     .home-order-container {
-        height: 100vh;
+        height: 85vh;
     }
 
     /* Feature */

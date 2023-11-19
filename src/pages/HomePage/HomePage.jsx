@@ -1,9 +1,13 @@
 import './HomePage.css'
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import NavBar from '../../components/NavBar/NavBar';
 import HomeOrderComponent from '../../components/HomeOrderComponent/HomeOrderComponent';
 
 export default function HomePage({ redirect, user, cart, setCart }) {
+    const [categoryCards, setCategoryCards] = useState([0, 1, 2, 3])
+
     return (
         <>
             <main className="home-page-container">
@@ -11,17 +15,11 @@ export default function HomePage({ redirect, user, cart, setCart }) {
                     <NavBar user={user} cart={cart} setCart={setCart} />
                     <h1 className="home-header-title">Bellamoon Soaps</h1>
                 </section>
-
-
-
-
-
-
                 <section className="home-hook-container">
                     <div className="hook-card">
                         <img className="hook-card-icon" src="https://imgur.com/5XSo0UT.png" alt="" />
                         <h2 className="hook-card-header">Bubbly</h2>
-                        <p className="hook-card-body">All our soaps are super bubbly. We know how much our customers love the suds, so we made sure to make our soap super soapy, leaving you feel cleaner than ever</p>
+                        <p className="hook-card-body">All our soaps are super bubbly. We know how much our customers love the suds, so we made sure to make our soap super soapy, leaving you clean!</p>
                     </div>
                     <div className="hook-card">
                         <img className="hook-card-icon" src="https://imgur.com/F4zz4Ga.png" alt="" />
@@ -34,29 +32,16 @@ export default function HomePage({ redirect, user, cart, setCart }) {
                         <p className="hook-card-body">Clean and fresh is our motto. Our soaps leave you feeling renewed with a feeling of silky smoothness. All bar soaps will give a nice hydrated sensation</p>
                     </div>
                 </section>
-
-
-
-
-
-
-
                 <section className="home-order-container">
-                    <HomeOrderComponent redirect={redirect} />
+                    <HomeOrderComponent redirect={redirect} categoryCards={categoryCards} />
+
                 </section>
-
-
-
-
-
-
-
                 <h1 className="home-feature-title">FEATURED</h1>
                 <section className="home-feature-container">
                     <Link className="home-feature-cards" to="/soaps/634c48301fea53e138c37a86">
                         <img className="home-feature-card-image" src="https://imgur.com/GmIZZey.png" alt="" />
                         <h1 className="home-feature-card-title">Black Jasmine</h1>
-                        <p className="home-feature-card-description">This is a sophisticated mix of bergamot, cassis, rose, neroli, jasmine, and smoky musk. One of our best sellers!</p>
+                        <p className="home-feature-card-description">This is a sophisticated mix of bergamot, cassis, rose, neroli, jasmine, and smoky musk. Best seller!</p>
                         <p className="home-feature-card-view">view</p>
                     </Link>
                     <Link className="home-feature-cards" to="/soaps/634c46831fea53e138c37a79">

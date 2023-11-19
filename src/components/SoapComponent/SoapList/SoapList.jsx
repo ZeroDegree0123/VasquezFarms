@@ -1,9 +1,9 @@
 import './SoapList.css'
 import SoapCard from '../../SoapComponent/SoapCard/SoapCard';
 
-export default function SoapList({soaps, handleAddToOrder, user}) {
-    
-    const allSoaps = soaps.map((soap, id) => 
+export default function SoapList({ soaps, handleAddToOrder, user }) {
+
+    const allSoaps = soaps.map((soap, id) =>
         <SoapCard
             key={id}
             soap={soap}
@@ -12,7 +12,7 @@ export default function SoapList({soaps, handleAddToOrder, user}) {
         />
     );
     return (
-        <div id="soap-list">
+        <div className="soap-list">
             {allSoaps}
         </div>
     )

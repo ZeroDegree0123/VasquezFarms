@@ -1,20 +1,32 @@
+import { useEffect } from 'react'
+
 import categorySoaps from '../../seed';
 import HomeOrderCard from "../HomeOrderCard/HomeOrderCard";
 
-export default function HomeOrderComponent({ redirect }) {
-    const soaps = categorySoaps.map((soap, idx) =>
+export default function HomeOrderComponent({ redirect, categoryCards }) {
+
+    const soaps = categorySoaps.map((soap, idx) => (
         <HomeOrderCard
             key={idx}
             redirect={redirect}
             soap={soap}
         />
-    );
-    const slideShow = () => {
-        for (let i = 0; i < soaps.length; i++) {
+    ));
 
-        }
-    }
-    console.log(soaps[0].props.soap)
+    // useEffect(() => {
+    //     const showCategory = (array) => {
+    //         console.log(categoryCards);
+    //         array.forEach(() => {
+    //             return
+    //         })
+    //     }
+    //     showCategory(soaps);
+    // }, [])
+
+
+
+    console.log(soaps)
+
     return (
         <>
             {soaps}

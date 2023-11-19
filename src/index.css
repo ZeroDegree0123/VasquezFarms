@@ -39,7 +39,7 @@ main {
   height: 45vh;
   width: 100%;
   background: linear-gradient(65deg, var(--primary-faded), var(--primary-faded)),
-              url("https://imgur.com/aRsYE9f.png") no-repeat center center / cover;
+    url("https://imgur.com/aRsYE9f.png") no-repeat center center / cover;
 }
 
 .subpage-header-title {
@@ -76,33 +76,34 @@ main {
 
 @keyframes pageload {
   from {
-      opacity: 0;
-      transform: rotateX(-7deg);
+    opacity: 0;
+    transform: rotateX(-7deg);
   }
 
   to {
-      opacity: 1;
-      transform: rotateX(0);
+    opacity: 1;
+    transform: rotateX(0);
   }
 }
 
-@media only screen and (max-width: 600px) { 
+@media only screen and (max-width: 600px) {
+  .subpage-header {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 45vh;
+    width: 100%;
+    background: linear-gradient(65deg, var(--primary-faded), var(--primary-faded)),
+      url("https://imgur.com/aRsYE9f.png") no-repeat center center / cover;
+  }
+
   .subpage-header-title {
     font-size: 35px;
     padding: 0;
-    padding-left: 20px;
+    margin: 0;
   }
 
   .subpage-header-link-container {
     padding: 0;
   }
 }
-
-
-/* @media only screen and (min-width: 1600px) {
-
-}
-
-@media only screen and (max-width: 1200px) { 
-    
-} */

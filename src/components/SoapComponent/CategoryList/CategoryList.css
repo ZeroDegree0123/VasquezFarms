@@ -3,43 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 10px 35px;
-}
-
-.category {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    width: 100%;
-  }
-  
-.category div {
-  padding: .6vmin;
-  text-align: center;
-  border-radius: .5vmin;
-  margin-bottom: .5vmin;
-  padding-right: 20px;
-  padding-left: 2px;
-
-}
-    
-.category div:hover:not(.active) {
-  cursor: pointer;
-  color: var(--secondary);
-  text-decoration: underline;
-}
-
-.category div.active {
-  color: var(--secondary);
-}
-
-.category-button {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 24px;
-  padding: 0;
+  margin: 15px 22px;
 }
 
 .category-header {
@@ -48,27 +12,33 @@
   margin-bottom: 25px;
 }
 
-@media only screen and (max-width: 800px) { 
-    .category-header {
-      font-size: 25px;
-    }
-
-    .category-button {
-      font-size: 18px;
-    }
+.category {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  width: 100%;
 }
 
-@media only screen and (max-width: 600px) { 
-    .category-container {
-      margin: 0;
-    }
-
-    .category-header {
-      margin-left: 10px;
-    }
-
-    .category div {
-      padding: 0 10px;
-    
-    }
+.category button:hover:not(.active) {
+  cursor: pointer;
+  color: var(--secondary);
+  text-decoration: underline;
 }
+
+.category button.active {
+  color: var(--secondary);
+}
+
+#category-button {
+  border: none;
+  background-color: white;
+  font-size: 24px;
+  padding: 10px 0;
+  padding-right: 25px;
+}
+
+@media only screen and (max-width: 800px) {}
+
+@media only screen and (max-width: 600px) {}
