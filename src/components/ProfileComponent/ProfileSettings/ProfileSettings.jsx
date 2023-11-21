@@ -1,9 +1,9 @@
 import "./ProfileSettings.css"
 
-export default function ProfileSettings({user}) {
+export default function ProfileSettings({ user }) {
     return (
         <>
-            <main className="settings-container"> 
+            <main className="settings-container">
                 <h1 className="settings-title">Account Settings</h1>
                 <section className="setting-sections">
                     <div className="setting-content">
@@ -16,7 +16,7 @@ export default function ProfileSettings({user}) {
                 <section className="setting-sections">
                     <div className="setting-content">
                         <h1>Delete Account</h1>
-                        <p>"COMING SOON"</p>
+                        {/* <p>"COMING SOON"</p> */}
                     </div>
                 </section>
             </main>

@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
 
-import categorySoaps from '../../seed';
+import categorySoaps from '../../../seed';
 import HomeOrderCard from "../HomeOrderCard/HomeOrderCard";
 
-export default function HomeOrderComponent({ redirect, categoryCards }) {
+export default function HomeOrderList({ redirect, categoryCards }) {
 
     const soaps = categorySoaps.map((soap, idx) => (
         <HomeOrderCard

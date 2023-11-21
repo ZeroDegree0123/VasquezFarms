@@ -43,12 +43,7 @@ export default function SoapDetailPage({ handleAddToOrder, user }) {
                 <title>{singleSoap.name}</title>
             </Helmet>
             <Link className="back-to-soaps-link" to="/soaps">Back to soaps</Link>
-
-
-
             <section className="details-header-container">
-
-
                 <div className="details-header-top-container">
                     <img className="details-header-soap-image" src={singleSoap.image} alt="img" />
                     <div className="details-header-body-container">
@@ -56,67 +51,51 @@ export default function SoapDetailPage({ handleAddToOrder, user }) {
                         <p className="details-header-body-description">{singleSoap.description}</p>
                     </div>
                 </div>
-
-
                 <div className="details-header-bottom-container">
                     <div className="details-header-quantity-container">
-                        <h5 className="details-header-quantity-title">Status</h5>
+                        <h4 className="details-header-quantity-title">Status</h4>
                         {singleSoap.stock > 0 ?
                             (<p className="details-header-quantity-button">In Stock</p>)
                             :
-                            (<p className="details-header-quant“ity-button">Unavailable</p>)
+                            (<p className="details-header-quantity-button">Unavailable</p>)
                         }
                     </div>
                     <div className="details-header-order-container">
-                        <p className="details-order-price">
-                            ${singleSoap.price}.00
-                        </p>
-                        <div>
-                            {user ?
-                                <button
-                                    onClick={() => {
-                                        handleAddToOrder(singleSoap._id);
-                                        setIsOpen(true);
-                                        setTimeout(modalTimeOut, 2000);
-                                    }
-                                    }
-                                    className="details-order-button">Add To Cart</button>
-                                :
-                                <button
-                                    onClick={handleRedirect}
-                                    className="details-order-button">Add To Cart</button>
-                            }
-                            <CartModal open={isOpen} />
-                        </div>
+                        <p className="details-order-price">${singleSoap.price}.00</p>
+                        {user ?
+                            <button
+                                onClick={() => {
+                                    handleAddToOrder(singleSoap._id);
+                                    setIsOpen(true);
+                                    setTimeout(modalTimeOut, 2000);
+                                }
+                                }
+                                className="details-order-button">Add To Cart</button>
+                            :
+                            <button onClick={handleRedirect} className="details-order-button">Add To Cart</button>
+                        }
+                        <CartModal open={isOpen} />
                     </div>
                 </div>
-
-
             </section>
-
-
-
-            
             <section className="details-ingredients-container">
                 <h2 className="details-ingredients-title">INGREDIENTS</h2>
                 <h4 className="details-ingredients-body">{singleSoap.ingredients}</h4>
             </section>
             <section className="reviews-container">
-                <h1 className="reviews-container-title">{soapReviews.length} REVIEWS</h1>
                 {user ?
                     <>
                         <ReviewForm user={user} formOpen={formOpen} setFormOpen={setFormOpen} />
-                        <button className="review-link-button"
-                            onClick={() => {
-                                setFormOpen(true)
-                            }}
-                        >Leave A Review</button>
+                        <button className="review-link-button" onClick={() => { setFormOpen(true) }}>Leave A Review</button>
                     </>
                     :
                     <p>Login or Sign-up to post a review</p>
                 }
-                <div className="reviews-list">
+                <div className='reviews-list-count'>
                     <p>REVIEWS</p>
+                    <h2 className="reviews-count">{soapReviews.length} REVIEWS</h2>
+                </div>
+                <div className="reviews-list">
                     <ReviewList reviews={soapReviews} user={user} />
                 </div>
             </section>

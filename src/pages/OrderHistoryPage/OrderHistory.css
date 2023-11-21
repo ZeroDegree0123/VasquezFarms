@@ -1,27 +1,21 @@
-.order-history-page-container{
+.order-history-page-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    margin: 50px;
-}
-
-.new-orders-link-container {
+    align-items: flex-start;
     width: 100%;
 }
 
 .new-orders-link {
     display: flex;
-    flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
     text-decoration: none;
     font-size: 16px;
-    border: 1px solid black;
-    border-radius: 5px;
     color: black;
     padding: 5px;
-    width: 95px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 20px;
 }
 
 .new-orders-link:hover {

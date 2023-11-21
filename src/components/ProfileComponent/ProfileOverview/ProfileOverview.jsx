@@ -1,9 +1,9 @@
 import "./ProfileOverview.css"
 
-export default function ProfileOverview({user}) {
+export default function ProfileOverview({ user }) {
     return (
         <>
-            <main className="overview-container"> 
+            <main className="overview-container">
                 <h1 className="overview-title">OVERVIEW</h1>
                 <section className="overview-sections">
                     <div className="overview-content">
@@ -14,7 +14,7 @@ export default function ProfileOverview({user}) {
                 <section className="overview-sections">
                     <div className="overview-content">
                         <h1>Rewards stats</h1>
-                        <p>"COMING SOON"</p>
+                        {/* <p>"COMING SOON"</p> */}
                     </div>
                 </section>
             </main>

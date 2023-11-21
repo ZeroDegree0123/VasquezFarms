@@ -1,6 +1,7 @@
 .order-list {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    margin: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%
 }

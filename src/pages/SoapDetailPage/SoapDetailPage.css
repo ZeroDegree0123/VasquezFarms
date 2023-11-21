@@ -25,65 +25,63 @@
     border: 2px solid var(--secondary);
 }
 
-/* header */
+/* --------------------------------
+# Header
+-------------------------------- */
 .details-header-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .details-header-top-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
 }
 
 .details-header-soap-image {
-    margin: 0;
+    grid-area: 1 / 1 / 2 / 2;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 5px;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
 }
 
 .details-header-body-container {
+    grid-area: 1 / 2 / 2 / 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0;
     padding-left: 10px;
-    height: 400px;
     background: linear-gradient(90deg, var(--secondary), white);
 }
 
 .details-header-body-title {
+    font-size: 32px;
     text-align: left;
-    font-size: 35px;
-    width: 60%;
+    margin: 0;
+    width: 90%;
 }
 
 .details-header-body-description {
+    font-size: 16px;
     text-align: left;
-    width: 60%;
+    width: 90%;
 }
 
 .details-header-bottom-container {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
     width: 100%;
 }
 
 .details-header-quantity-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
 
@@ -93,17 +91,17 @@
 }
 
 .details-header-quantity-button {
-    font-size: 15px;
+    font-size: 16px;
     background-color: var(--secondary);
     border-radius: 5px;
     border: 1px solid black;
     padding: 2px 5px;
 }
 
-/* .details-header-quantity-button:hover {
+.details-header-quantity-button:hover {
     background-color: var(--secondary);
     border: 1px solid var(--secondary);
-} */
+}
 
 .details-header-order-container {
     display: flex;
@@ -131,32 +129,40 @@
     border: 1px solid var(--secondary);
 }
 
+/* --------------------------------
+# Ingredients
+-------------------------------- */
+
 .details-ingredients-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 50px;
     width: 100%;
 }
 
 .details-ingredients-title {
+    font-size: 32px;
     text-align: left;
-    font-size: 35px;
     color: black;
-    width: 90%;
+    padding-left: 10px;
+    width: 100%;
     border-bottom: 2px solid var(--secondary);
 }
 
 .details-ingredients-body {
     text-align: left;
     color: black;
-    font-size: 25px;
+    font-size: 24px;
     margin: 0;
-    margin-bottom: 20px;
-    padding: 10px;
+    padding-left: 10px;
+    width: 100%;
 }
 
+/* --------------------------------
+# Reviews
+-------------------------------- */
 .reviews-container {
     display: flex;
     flex-direction: column;
@@ -165,89 +171,104 @@
     width: 100%;
 }
 
-.reviews-container-title {
-    font-size: 25px;
-    text-align: center;
-    margin-top: 60px;
-    width: 100%;
-}
-
 .reviews-list {
     width: 100%;
-    margin: 0 50px;
-}
-
-.reviews-list>p {
-    text-align: left;
-    font-weight: 600;
-    color: var(--secondary);
-    text-decoration: underline;
 }
 
 .review-link-button {
     font-size: 20px;
     color: black;
+    padding: 5px;
+    margin: 5px;
     background-color: rgba(255, 255, 255, 0);
-    margin: 20px 0 0 0;
-    padding: 10px;
     border: 2px solid black;
     border-radius: 5px;
 }
 
-.review-link-button:hover {
+.reviews-link-button:hover {
     color: var(--secondary);
     border: 2px solid var(--secondary);
 }
 
-@media only screen and (min-width: 1600px) {
+.reviews-list-count {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.reviews-list-count>p {
+    color: var(--secondary);
+    text-align: left;
+    font-weight: 600;
+    text-decoration: underline;
+    margin: 0;
+}
+
+.reviews-count {
+    margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
     .details-page-container {
-        margin: 50px 150px;
+        margin: 25px;
     }
-}
 
-@media only screen and (max-width: 1050px) {
-    .details-header-body-description {
-        width: 75%;
-    }
-}
-
-@media only screen and (max-width: 950px) {
+    /* Header */
     .details-header-top-container {
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-
-    .details-header-body-container {
-        align-items: center;
-        background: none;
-        background-color: var(--secondary);
-        border-radius: 10px;
-    }
-
-    .details-header-body-title {
-        text-align: left;
-    }
-
-    .details-header-body-description {
-        text-align: left;
-        margin: 5px;
-        padding: 5px;
-        font-size: 16px;
-    }
-
-    .details-header-bottom-container {
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    .details-header-quantity-title {
-        text-align: center;
-        font-size: 15px;
+        width: 100%;
     }
 
     .details-header-soap-image {
-        border-radius: 10px;
-        margin-bottom: 20px;
+        border-radius: 0;
+        box-shadow: var(--lg-shadow);
+    }
+
+    .details-header-body-container {
+        background: linear-gradient(180deg, var(--secondary), white);
+    }
+
+    .details-header-body-title {
+        font-size: 28px;
+    }
+
+    .details-header-body-description {
+        font-size: 14px;
+    }
+
+    .details-header-bottom-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .details-header-quantity-container {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .details-header-order-container {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    /* Ingredients */
+    .details-ingredients-title {
+        text-align: center;
+        padding: 0;
+    }
+
+    .details-ingredients-body {
+        text-align: center;
+        padding: 0;
+    }
+
+    /* Reviews */
+    .review-link-button {
+        margin-bottom: 25px;
     }
 }

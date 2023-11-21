@@ -87,7 +87,7 @@ hr {
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 100vmin;
+    min-height: 100vh;
     width: 100%;
     margin: 25px 0;
 }
@@ -192,6 +192,7 @@ hr {
     .home-feature-container {
         flex-direction: column;
         margin-bottom: 25px;
+        margin-top: 0;
     }
 
     .home-feature-cards {

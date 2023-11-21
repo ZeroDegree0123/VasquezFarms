@@ -8,7 +8,7 @@ import OrderDetail from '../../components/OrderComponent/OrderDetail/OrderDetail
 export default function OrderHistory() {
   const [orders, setOrders] = useState([]);
 
-  useEffect(function() {
+  useEffect(function () {
     async function listOrders() {
       const orderData = await ordersAPI.getOrders();
       setOrders(orderData)
@@ -18,14 +18,9 @@ export default function OrderHistory() {
 
 
   return (
-    <>
-      <main className="order-history-page-container">
-        <div className="new-orders-link-container">
-          <Link className="new-orders-link" to="/orders/new"> <strong>NEW ORDER</strong></Link>
-        </div>
-        <OrderHistoryList orders={orders}/>
-        <OrderDetail/>
-      </main>
-    </>
+    <main className="order-history-page-container">
+      <Link className="new-orders-link" to="/orders/new"> <strong>NEW ORDER</strong></Link>
+      <OrderHistoryList orders={orders} />
+    </main>
   );
 }

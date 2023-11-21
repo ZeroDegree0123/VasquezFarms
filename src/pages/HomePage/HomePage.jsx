@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import NavBar from '../../components/NavBar/NavBar';
-import HomeOrderComponent from '../../components/HomeOrderComponent/HomeOrderComponent';
+import HomeOrderComponent from '../../components/HomeOrderComponent/HomeOrderList/HomeOrderList';
 
 export default function HomePage({ redirect, user, cart, setCart }) {
     const [categoryCards, setCategoryCards] = useState([0, 1, 2, 3])

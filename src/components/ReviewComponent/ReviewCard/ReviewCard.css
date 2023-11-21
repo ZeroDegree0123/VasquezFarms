@@ -3,13 +3,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px;
-    box-shadow: 1px 2px 10px 2px rgb(220, 220, 220);
-}
-
-.reviews-body-container {
-    width: 90%;
-    padding: 30px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: var(--lg-shadow);
 }
 
 .reviews-header {
@@ -22,7 +18,7 @@
     width: 100%;
 }
 
-.reviews-header > p {
+.reviews-header>p {
     margin: 0;
 }
 
@@ -35,6 +31,15 @@
 .reviews-body {
     text-align: left;
     padding: 10px;
-    width: 100%;
+    width: 95%;
     border-top: 2px solid var(--secondary);
+}
+
+@media only screen and (max-width: 600px) {
+    .reviews-header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-bottom: 0;
+    }
 }

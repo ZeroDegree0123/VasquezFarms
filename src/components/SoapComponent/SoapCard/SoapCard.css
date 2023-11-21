@@ -5,11 +5,11 @@
     align-items: center;
     width: 250px;
     margin: 40px 20px;
-    box-shadow: 1px 3px 8px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--lg-shadow);
 }
 
 .soap-card:hover {
-    box-shadow: 1px 3px 10px 5px rgba(255, 187, 0, .4);
+    box-shadow: 1px 3px 10px 5px rgba(255, 187, 0, .1);
 }
 
 .soap-link {

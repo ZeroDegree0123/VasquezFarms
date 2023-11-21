@@ -8,12 +8,11 @@
 #ingredients-subpage-header {
     padding: 0;
     background: linear-gradient(65deg, var(--primary-faded), var(--primary-faded)),
-    url("https://imgur.com/Ss6iAAz.png") no-repeat center center / cover;
+        url("https://imgur.com/Ss6iAAz.png") no-repeat center center / cover;
 }
 
 .ingredients-header-container {
     margin: 50px;
-    margin-bottom: 100px;
     border-bottom: 2px solid var(--secondary);
     width: 70%;
 }
@@ -44,7 +43,7 @@
     margin: 25px;
     padding: 10px;
     box-shadow: 1px 1px 15px 3px rgb(207, 207, 207);
-    width: 300px;
+    width: 275px;
     height: 300px;
 }
 
@@ -73,4 +72,14 @@
     font-size: 14px;
     margin-top: 0;
     color: var(--secondary);
+}
+
+@media only screen and (max-width: 600px) {
+    .ingredients-header-title {
+        font-size: 35px;
+    }
+
+    .ingredient-card {
+        margin: 10px 0;
+    }
 }
