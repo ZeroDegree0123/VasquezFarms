@@ -27,51 +27,49 @@ export default function AboutPage({ user }) {
 
 
             <section className="about-header-container">
-                <div className="about-header-top">
-                    <h1 className="about-header-title">About Us</h1>
+                <div className="about-header-image">
+                    <img src="https://imgur.com/ZIK3ZQx.png" alt="" />
                 </div>
-                <div className="about-header-bottom">
-                    <p className="about-header-body">
-                        Vasquez Farms is a small family farm, we raise goats(meat and dairy), sheep, chickens,
-                        ducks and turkeys.
+                <div className="about-header-body">
+                    <h1>About Us</h1>
+                    <p>
+                        Vasquez Farms is a small family farm, we raise goats(meat and dairy),
+                        sheep, chickens, ducks and turkeys.
+
                     </p>
                 </div>
             </section>
 
 
 
-            <section className="about-main-container">
-                <div className="about-main-top-container">
-                    <img id="image-left" className="about-main-images" src="https://imgur.com/aRsYE9f.png" alt="" />
-                    <div className="about-main-top-body">
-                        <h1 className="about-main-body-titles">MyStory</h1>
-                        <p className="about-main-body-bodies">
-                            I started making small batch goats milk soap in January 2021 after
-                            more than a year of research. I fell in love with the process and began selling to
-                            friends and family in May 2020. I love knowing where the products I use on my body
-                            come from, and with encouragement and positive feedback from my family and friends
-                            I've branched out to marketing my soap beyond my close circle. I use all natural
-                            ingredients in my soap products. I hope to expand my body care line later this year.
-                        </p>
-                    </div>
-                </div>
-                <div className="about-main-bottom-container">
-                    <div className="about-main-bottom-body">
-                        <h1 className="about-main-body-titles">OUR SECRET</h1>
-                        <p className="about-main-body-bodies">
-                            Our customers wonder why our soap leaves their skin feeling so soft... Well its all thanks
-                            to our secret ingredient Goats Milk. All of our soaps contain Goats Milk and for good reason.
-                            Goats Milk is super good for our skin, not only does it provide anti-inflammatory properties, and
-                            is toxin free, but it also leaves your skin feeling soft and moisturized. Do you have sensitive skin?
-                            Well it's no problem, Goats Milk soap is the perfect soap for you.
-                        </p>
-                    </div>
-                    <img id="image-right" className="about-main-images" src="https://imgur.com/8MmSoXg.png" alt="" />
+            <section className="about-sections">
+                <img className="about-sections-images" src="https://imgur.com/aRsYE9f.png" alt="" />
+                <div className="about-sections-body">
+                    <h1>MyStory</h1>
+                    <p>
+                        I started making small batch goats milk soap in January 2021 after
+                        more than a year of research. I fell in love with the process and began selling to
+                        friends and family in May 2020. I love knowing where the products I use on my body
+                        come from, and with encouragement and positive feedback from my family and friends
+                        I've branched out to marketing my soap beyond my close circle. I use all natural
+                        ingredients in my soap products. I hope to expand my body care line later this year.
+                    </p>
                 </div>
             </section>
 
-
-
+            <section id="about-second-section" className="about-sections">
+                <img className="about-sections-images" src="https://imgur.com/8MmSoXg.png" alt="" />
+                <div id="about-second-body" className="about-sections-body">
+                    <h1>OUR SECRET</h1>
+                    <p>
+                        Our customers wonder why our soap leaves their skin feeling so soft... Well its all thanks
+                        to our secret ingredient Goats Milk. All of our soaps contain Goats Milk and for good reason.
+                        Goats Milk is super good for our skin, not only does it provide anti-inflammatory properties, and
+                        is toxin free, but it also leaves your skin feeling soft and moisturized. Do you have sensitive skin?
+                        Well it's no problem, Goats Milk soap is the perfect soap for you.
+                    </p>
+                </div>
+            </section>
         </main>
     )
 }
