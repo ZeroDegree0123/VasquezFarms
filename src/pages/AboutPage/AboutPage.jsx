@@ -33,9 +33,8 @@ export default function AboutPage({ user }) {
                 <div className="about-header-body">
                     <h1>About Us</h1>
                     <p>
-                        Vasquez Farms is a small family farm, we raise goats(meat and dairy),
-                        sheep, chickens, ducks and turkeys.
-
+                        Vasquez Farms is a small family farm local to Washington state, we raise goats(meat and dairy),
+                        sheep, chickens, ducks and turkeys. All of our soaps are crafted and made on the farm.
                     </p>
                 </div>
             </section>
