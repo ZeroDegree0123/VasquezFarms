@@ -3,11 +3,14 @@ GUIDE IN CASE YOU F*CK UP
 1- If you break something... and your like 99.999999% sure you didnt mess with its inurds... 
     check the data base
 
+    ** So True
+
 2- heroku isnt working because you didn't register the keys dumbass
+    ** Memorized This one
 
 3- DO NOT MESS WITH FAVICON, you will regret it... Or maybe not I really dont know 
 just dont touch it
-
+    ** Still dont know and Still dont care Just dont touch it
 
 
 NOTES BC YOU F*CKED UP 😂
@@ -15,3 +18,5 @@ NOTES BC YOU F*CKED UP 😂
 1- App renders individual soap 4 or 5 times at once, first render appears undefined.
 That being said the soaps review list renders like 4 to 6 times at once, first 2 renders
 appear undefined, cant map undefined, temporary gate function, need to find a better solution
+
+** I thankfully learned how to fix this one 
